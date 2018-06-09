@@ -1,0 +1,40 @@
+remote_theme: "mmistakes/minimal-mistakes"
+
+repository: lthurner/pandapower
+
+include:
+  - _pages
+
+defaults:
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+description: "pandapower - A python based open source tool for analysis and optimization of electric power systems"
+
+author:
+#  name    : "pandapower"
+  avatar   : "pp_logo.png"
+  bio      : "A python based open source tool for analysis and optimization of electric power systems"
+  location : "Kassel, Germany"
+  email    : "leon.thurner@uni-kassel.de"
+  github   : lthurner/pandapower
+
+# Plugins (previously gems:)
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+
+# mimic GitHub Pages with --safe
+whitelist:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji

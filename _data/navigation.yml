@@ -1,0 +1,11 @@
+main:
+  - title: "About pandapower"
+    url: /
+  - title: "About us"
+    url: /about/
+  - title: Documentation
+    url: http://pandapower.readthedocs.io
+  - title: Installation
+    url: http://pandapower.readthedocs.io/en/stable/getting_started/installation.html
+  - title: Tutorials
+    url: http://pandapower.readthedocs.io/en/stable/getting_started/tutorials.html
