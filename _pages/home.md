@@ -1,29 +1,33 @@
 ---
+layout: splash
 title: "pandapower"
 permalink: /
-excerpt: ""
+header:
+  overlay_color: "#2980B9"
+  cta_label: "<i class='fas fa-download'></i> Install Now"
+  cta_url: "http://pandapower.readthedocs.io/en/v1.5.1/getting_started/installation.html"
+excerpt: "An easy to use open source tool for power system modeling, analysis and optimization with a high degree of automation."
+feature_row:
+  - image_path: /assets/images/mm-customizable-feature.png
+    title: "Electric Modeling"
+    excerpt: "Includes thoroughly validated equivalent circuit models for lines, transformers, switches and more."
+    url: "http://pandapower.readthedocs.io/en/stable/elements.html"
+    btn_class: "btn--primary"
+    btn_label: "Learn More"
+  - image_path: /assets/images/mm-responsive-feature.png
+    title: "Power System Analysis"
+    excerpt: "Supports power flow, optimal power flow, state estimation, short-circuit calculation and topological graph searches."
+    url: "http://pandapower.readthedocs.io/en/v1.5.1/powerflow.html"
+    btn_class: "btn--primary"
+    btn_label: "Learn More"
+  - image_path: /assets/images/mm-free-feature.png
+    title: "Free and Open"
+    excerpt: "Published under a BSD License and therefore free to use, modify and share however you want."
+    url: "http://pandapower.readthedocs.io/en/v1.5.1/about/license.html"
+    btn_class: "btn--primary"
+    btn_label: "View License"
 ---
 
-pandapower combines the data analysis library pandas and the power flow solver PYPOWER to create an easy to use network calculation program aimed at automation of analysis and optimization in power systems.
+{% include feature_row id="intro" type="center" %}
 
-pandapower is an element based network calculation tool that supports the following components:
-
-	- lines
-	- two-winding and three-winding transformers
-	- ideal bus-bus and bus-branch switches
-	- static generators
-	- ZIP loads
-	- shunts
-	- external grid connections
-	- synchronous generators
-	- DC lines
-	- unsymmetric impedances
-	- ward equivalents
-	
-pandapower supports the following network analysis functions:
-
-	- power flow
-	- optimal power flow
-	- state estimation
-	- short-circuit calculation according to IEC 60909
-	- topological graph searches
+{% include feature_row %}

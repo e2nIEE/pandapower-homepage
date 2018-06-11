@@ -1,6 +1,6 @@
 main:
   - title: "About pandapower"
-    url: /
+    url: /pp/
   - title: "About us"
     url: /about/
   - title: Documentation
