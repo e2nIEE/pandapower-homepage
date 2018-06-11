@@ -27,3 +27,6 @@ pandapower supports the following network analysis functions:
 	- state estimation
 	- short-circuit calculation according to IEC 60909
 	- topological graph searches
+    
+## What users say
+> <span class="teaser">I do not think of type as something that should be readable. It should be beautiful.</span><cite>[Ed Benguiat][3]</cite>
