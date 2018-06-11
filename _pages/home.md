@@ -26,8 +26,22 @@ feature_row:
     url: "http://pandapower.readthedocs.io/en/v1.5.1/about/license.html"
     btn_class: "btn--primary"
     btn_label: "View License"
+slider:
+  text_color: white
+  shadow_color: black
+  slides: 
+    - image: "/assets/images/mm-responsive-feature.png"
+      slide_html:
+    - image: "/assets/images/mm-responsive-feature.png"
+      slide_html: "Shirley, do you own a Ferrari?"
+    - image: "/assets/images/mm-responsive-feature.png"
+      slide_html: "Yes, my life is your dream."
 ---
 
 {% include feature_row id="intro" type="center" %}
 
 {% include feature_row %}
+
+{% include carousel.html name="Example" data=site.data.carousel %}
+
+{% include slider.html height="50" unit="%" transition="slide" duration="7" %}
