@@ -1,10 +1,31 @@
 main:
   - title: "About pandapower"
-    url: /pp/
-  - title: "About us"
     url: /about/
-  - title: "Get Started"
-    url: /start/
-  - title: Documentation
-    url: http://pandapower.readthedocs.io
-
+  - title: "Getting Started"
+    url: /start/install/
+  - title: "About us"
+    url: /about_us/
+    
+start:
+  - title: Getting Started
+    url: /start/install/
+    children: 
+    - title: Installation
+      url: /start/install/
+    - title: Short Introduction
+      url: /start/intro/
+    - title: Interactive Tutorials
+      url: /start/tutorials/
+    - title: Documentation
+      url: http://pandapower.readthedocs.io/
+      
+about:
+  - title: About pandapower
+    url: /about/
+    children: 
+    - title: Electric Models
+      url: /about/models/
+    - title: Power System Analysis
+      url: /about/analysis/
+    - title: License
+      url: /about/license/
