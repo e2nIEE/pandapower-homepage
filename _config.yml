@@ -14,8 +14,8 @@ defaults:
         
 author:
 #  name    : "pandapower"
-  avatar   : "pp_logo.png"
-  bio      : "An easy to use open source tool for power system modeling, analysis and optimization with a high degree of automation."
+#  avatar   : "pp_logo.png"
+#  bio      : "An easy to use open source tool for power system modeling, analysis and optimization with a high degree of automation."
   location : "Kassel, Germany"
   email    : "leon.thurner@uni-kassel.de"
   github   : lthurner/pandapower

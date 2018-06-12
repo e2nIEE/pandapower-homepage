@@ -12,16 +12,19 @@ testimonials:
     image: "/images/peter.jpeg"
     name: Peter Rottenburg
 developers:
-  - name: "Alexander Scheidler"
-    image: "/assets/images/alex.jpg"
-    text: "came up with the idea to pandapower when he ..."
   - name: "Leon Thurner"
     image: "/assets/images/leon.jpg"
     text: "..."
+  - name: "Alexander Scheidler"
+    image: "/assets/images/alex.jpg"
+    text: "came up with the idea to pandapower ..."
   - name: "Florian Schäfer"
     image: "/assets/images/flo.jpg"
     text: "..."
 ---
+{% capture to_the_top %}<div style="text-align: right"> <font size="4"><a href="{{ "/about_us/#" | relative_url }}">Back to the top</a></font></div>{% endcapture %}
+
+# About us
 
 pandapower is a joint development of the research group Energy Management and Power System Operation, University of Kassel and the Department for Distribution System Operation at the Fraunhofer Institute for Energy Economics and Energy System Technology (IEE), Kassel.
 
@@ -43,4 +46,6 @@ And these are some of the people behind pandapower:
 </div>
 
 [See Full List of authors and contributors](http://pandapower.readthedocs.io/en/stable/about/authors.html){: .btn .btn--success .btn--large}
+
+{{ to_the_top }}
 
