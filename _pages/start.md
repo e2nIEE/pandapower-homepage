@@ -7,7 +7,7 @@ sidebar:
 classes:
    - wide
 ---
-{% capture to_the_top %}<div style="text-align: right"> <font size="4"><a href="/start/#">Back to the top</a></font></div>{% endcapture %}
+{% capture to_the_top %}<div style="text-align: right"> <font size="4"><a href="{{ "/start/#" | relative_url }}">Back to the top</a></font></div>{% endcapture %}
 
 <a name="install"></a>
 
@@ -18,7 +18,7 @@ pandapower is tested with Python 2.7, 3.4, 3.5 and 3.6. We recommend the [Anacon
 
 Here are the installation instructions depending on what your system looks like or which version of pandapower you want to install:
 
-Once you have installed[test](/start/install#test)
+Once you have installed pandapower, be sure to [test if it works]({{ "/start/#test" | relative_url }}).
 
 ## Installing from Scratch
 

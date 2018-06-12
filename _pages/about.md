@@ -7,7 +7,7 @@ sidebar:
 classes:
   - wide   
 ---
-{% capture to_the_top %}<div style="text-align: right"> <font size="4"><a href="/about/#">Back to the top</a></font></div>{% endcapture %}
+{% capture to_the_top %}<div style="text-align: right"> <font size="4"><a href="{{ "/about/#" | relative_url }}">Back to the top</a></font></div>{% endcapture %}
 
 # Electric Models <a name="models"></a>
 
