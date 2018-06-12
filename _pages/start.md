@@ -7,6 +7,8 @@ sidebar:
 classes:
    - wide
 ---
+{% capture to_the_top %}<div style="text-align: right"> <font size="4"><a href="/start/">Back to the top</a></font></div>{% endcapture %}
+
 <a name="install"></a>
 
 # Installation 
@@ -51,6 +53,7 @@ If everything is installed correctly, all tests should pass or xfail (expected t
 
   [Anaconda Distribution]: https://www.continuum.io/downloads
 
+{{ to_the_top }}
   
 # A short introduction <a name="intro"></a>
 
@@ -97,7 +100,7 @@ The pandapower representation now looks like this:
 
 ![image](http://pandapower.readthedocs.io/en/latest/_images/pandapower_datastructure.png)
 
-##Running a Power Flow
+## Running a Power Flow
 
 A powerflow can be carried out with the [runpp function][]: :
 
@@ -125,15 +128,17 @@ This minimal example is also available as a [jupyter notebook].
   [runpp function]: http://pandapower.readthedocs.io/en/latest/powerflow/ac.html
   [jupyter notebook]: https://github.com/lthurner/pandapower/blob/develop/tutorials/minimal_example.ipynb
 
+{{ to_the_top }}
+  
 # Documentation <a name="docs"></a>
 
 The pandapower documentation is hosted on [readthedocs](http://pandapower.readthedocs.io).
 
+{{ to_the_top }}
 
 # Interactive Tutorials <a name="tutorials"></a>
 
-There are jupyter notebook tutorials on different functionalities of
-pandapower:
+There are jupyter notebook tutorials on different functionalities of pandapower:
 
 Minimal Example introduction:
 
@@ -173,28 +178,22 @@ Running topological searches:
 
 :   -   [topologic searches]
 
-Plotting pandapower networks:
+Plotting pandapower networks (static with matplotlib):
 
-:   -   
+:   -   [basic plotting]
+    -   [plotting with colormaps]
+    -   [plotting without geographical data]
 
-        matplotlib
 
-        :   -   [basic plotting]
-            -   [plotting with colormaps]
-            -   [plotting without geographical data]
+Plotting pandapower networks (interactive with plotly)
 
-    -   
-
-        interactive plots using plotly
-
-        :   -   [built-in plots]
-            -   [custom plots]
-            -   [interactive plots on maps]
+:   -   [built-in plots]
+    -   [custom plots]
+    -   [interactive plots on maps]
 
 Hosting Capacity:
 
-:   -   \`hosting capacity
-        \<<https://github.com/panda-power/pandapower/blob/>
+:   -   [hosting capacity]
 
   [minimal example]: https://github.com/panda-power/pandapower/blob/master/tutorials/minimal_example.ipynb
   [simple network]: https://github.com/panda-power/pandapower/blob/master/tutorials/create_simple.ipynb
@@ -216,5 +215,6 @@ Hosting Capacity:
   [built-in plots]: http://nbviewer.jupyter.org/github/lthurner/pandapower/blob/develop/tutorials/plotly_built-in.ipynb
   [custom plots]: http://nbviewer.jupyter.org/github/lthurner/pandapower/blob/develop/tutorials/plotly_traces.ipynb
   [interactive plots on maps]: http://nbviewer.jupyter.org/github/lthurner/pandapower/blob/develop/tutorials/plotly_maps.ipynb
+  [hosting capacity]: https://github.com/lthurner/pandapower/blob/develop/tutorials/hosting_capacity.ipynb
 
-
+{{ to_the_top }}

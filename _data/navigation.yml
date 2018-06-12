@@ -22,11 +22,11 @@ start:
       
 about:
   - title: About pandapower
-    url: /about/models/
+    url: /about/
     children: 
     - title: Electric Models
-      url: /about/models/
+      url: /about#models
     - title: Power System Analysis
-      url: /about/analysis/
+      url: /about#analysis
     - title: License
-      url: /about/license/
+      url: /about#license
