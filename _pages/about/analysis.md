@@ -1,6 +1,6 @@
 ---
 layout: single
-permalink: /about/analysis
+permalink: /about/analysis/
 author_profile: false
 sidebar:
    nav: "about" 

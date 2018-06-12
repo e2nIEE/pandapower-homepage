@@ -1,6 +1,6 @@
 ---
 layout: single
-permalink: /about/models
+permalink: /about/models/
 author_profile: false
 sidebar:
    nav: "about" 

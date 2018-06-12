@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "License"
-permalink: /about/license
+permalink: /about/license/
 author_profile: false
 sidebar:
    nav: "about"
