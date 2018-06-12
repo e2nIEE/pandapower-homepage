@@ -1,6 +1,6 @@
 main:
   - title: "Getting Started"
-    url: /start/install/
+    url: /start/
   - title: "About pandapower"
     url: /about/
   - title: "About us"
@@ -8,20 +8,21 @@ main:
     
 start:
   - title: Getting Started
-    url: /start/install/
+    url: /start/
     children: 
     - title: Installation
-      url: /start/install/
+      url: /start#install
     - title: Short Introduction
-      url: /start/intro/
-    - title: Interactive Tutorials
-      url: /start/tutorials/
+      url: /start#intro
     - title: Documentation
-      url: http://pandapower.readthedocs.io/
+      url: start#docs
+    - title: Interactive Tutorials
+      url: /start#tutorials
+
       
 about:
   - title: About pandapower
-    url: /about/
+    url: /about/models/
     children: 
     - title: Electric Models
       url: /about/models/
