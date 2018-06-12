@@ -11,13 +11,13 @@ start:
     url: /start/
     children: 
     - title: Installation
-      url: /start#install
+      url: /start/#install
     - title: Short Introduction
-      url: /start#intro
+      url: /start/#intro
     - title: Documentation
-      url: start#docs
+      url: start/#docs
     - title: Interactive Tutorials
-      url: /start#tutorials
+      url: /start/#tutorials
 
       
 about:
@@ -25,8 +25,8 @@ about:
     url: /about/
     children: 
     - title: Electric Models
-      url: /about#models
+      url: /about/#models
     - title: Power System Analysis
-      url: /about#analysis
+      url: /about/#analysis
     - title: License
-      url: /about#license
+      url: /about/#license
