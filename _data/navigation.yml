@@ -1,8 +1,8 @@
 main:
-  - title: "About pandapower"
-    url: /about/
   - title: "Getting Started"
     url: /start/install/
+  - title: "About pandapower"
+    url: /about/
   - title: "About us"
     url: /about_us/
     

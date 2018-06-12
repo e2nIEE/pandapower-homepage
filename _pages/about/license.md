@@ -5,8 +5,6 @@ permalink: /about/license/
 author_profile: false
 sidebar:
    nav: "about"
-classes:
-  - wide
 ---
 
 pandapower is published under the following 3-clause BSD license: 

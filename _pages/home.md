@@ -23,9 +23,9 @@ feature_row:
   - image_path: /assets/images/mm-free-feature.png
     title: "Free and Open"
     excerpt: "Published under a BSD License and therefore free to use, modify and share however you want."
-    url: "about/license"
+    url: "https://github.com/lthurner/pandapower"
     btn_class: "btn--primary"
-    btn_label: "View License"
+    btn_label: "Explore on github"
 ---
 
 {% include feature_row id="intro" type="center" %}
