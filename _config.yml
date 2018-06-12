@@ -19,7 +19,6 @@ author:
   location : "Kassel, Germany"
   email    : "leon.thurner@uni-kassel.de"
   github   : lthurner/pandapower
-  book     : "readthedocs.org" 
 
 # Plugins (previously gems:)
 plugins:
