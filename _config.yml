@@ -12,7 +12,7 @@ defaults:
       layout: single
       author_profile: false
 
-url: https://lthurner.github.io/pandapower/
+url: https://lthurner.github.io/pandapower
       
 author:
 #  name    : "pandapower"
