@@ -67,7 +67,7 @@ example:
 
 ### Creating a Network
 
-The above network can be created in pandapower as follows: :
+The above network can be created in pandapower as follows:
 
     import pandapower as pp
     #create empty net
@@ -83,10 +83,8 @@ The above network can be created in pandapower as follows: :
     pp.create_load(net, bus=b3, p_kw=100, q_kvar=50, name="Load")
 
     #create branch elements
-    tid = pp.create_transformer(net, hv_bus=b1, lv_bus=b2, std_type="0.4 MVA 20/0.4 kV",
-                                name="Trafo")
-    pp.create_line(net, from_bus=b2, to_bus=b3, length_km=0.1, name="Line",
-                   std_type="NAYY 4x50 SE")   
+    tid = pp.create_transformer(net, hv_bus=b1, lv_bus=b2, std_type="0.4 MVA 20/0.4 kV", name="Trafo")
+    pp.create_line(net, from_bus=b2, to_bus=b3, length_km=0.1, name="Line",std_type="NAYY 4x50 SE")   
 
 Note that you do not have to calculate any impedances or tap ratio for
 the equivalent circuit, this is handled internally by pandapower
@@ -99,7 +97,7 @@ The pandapower representation now looks like this:
 
 ### Running a Power Flow
 
-A powerflow can be carried out with the [runpp function][]: :
+A powerflow can be carried out with the [runpp function][]: 
 
     pp.runpp(net)
 

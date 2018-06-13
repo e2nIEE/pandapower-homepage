@@ -11,7 +11,9 @@ defaults:
     values:
       layout: single
       author_profile: false
-        
+
+url: https://lthurner.github.io/pandapower/
+      
 author:
 #  name    : "pandapower"
 #  avatar   : "pp_logo.png"
