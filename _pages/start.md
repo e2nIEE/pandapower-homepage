@@ -7,12 +7,10 @@ sidebar:
 classes:
    - wide
 ---
-{% capture to_the_top %}<div style="text-align: right"> <font size="4"><a href="{{ "/start/#" | relative_url }}">Back to the top</a></font></div>{% endcapture %}
 
-<a name="install"></a>
+{% capture to_the_top %}<div style="text-align: right"> <font size="4"><a href="{{ "/start/" | relative_url }}">Back to the top</a></font></div>{% endcapture %}
 
-# Installation 
-
+# Installation <a name="install"></a>
 
 pandapower is tested with Python 2.7, 3.4, 3.5 and 3.6. We recommend the [Anaconda Distribution], which already contains a lot of modules for scientific computing that are needed for working with pandapower.
 

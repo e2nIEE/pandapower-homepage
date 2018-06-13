@@ -13,12 +13,18 @@ testimonials:
     name: Peter Rottenburg
 developers:
   - name: "Leon Thurner"
+    nickname: Leon
+    email: leon.thurner@uni-kassel.de
     image: "/assets/images/leon.jpg"
     text: "..."
   - name: "Alexander Scheidler"
+    nickname: Alex
+    email: alexander.scheidler@iee.fraunhofer.de
     image: "/assets/images/alex.jpg"
     text: "came up with the idea to pandapower ..."
   - name: "Florian Schäfer"
+    nickname: Florian
+    email: florian.schaefer@uni-kassel.de
     image: "/assets/images/flo.jpg"
     text: "..."
 ---
@@ -36,9 +42,10 @@ And these are some of the people behind pandapower:
 <div class="authors">
   {% for developer in page.developers %}
     <p>
-    <img style="padding:2px 2px 2px 2px; border:2px solid black;" src="{{ developer.image | relative_url }}" width="120" align="left"/> 
-    <span style="margin-left: 15px; margin-top: -5px; display:inline-block; max-width:500px;">
-        <b>{{ developer.name }}</b> {{ developer.text }}
+    <img style="padding:2px 2px 2px 2px; border:2px solid black; margin-right: 15px" src="{{ developer.image | relative_url }}" width="120" align="left"/> 
+    <span style="margin-top: -5px; display:inline-block; max-width:500px;">
+        <b>{{ developer.name }}</b> {{ developer.text }} <br>
+        <a href="mailto:{{developer.email}}">Contact {{developer.nickname}}</a> 
     </span>
     <BR CLEAR="left"/> 
     </p>
