@@ -4,11 +4,11 @@ title: About pandapower
 permalink: /about/
 author_profile: false
 toc: true
+toc_sticky: true
 toc_label: <a href="">About pandapower</a>
 classes:
   - wide
 ---
-{% capture to_the_top %}<div style="text-align: right"> <font size="4"><a href="{{ "/about/#" | relative_url }}">Back to the top</a></font></div>{% endcapture %}
 
 pandapower combines the data analysis library pandas and the power flow solver PYPOWER to create an easy to use network calculation program aimed at automation of analysis and optimization in power systems.
 
@@ -30,8 +30,7 @@ pandapower is an element based network calculation tool that supports the follow
 	- unsymmetric impedances
 	- ward equivalents
 
-{{ to_the_top }}
-    
+   
 ## Power System Analysis <a name="analysis"></a>
 
 pandapower supports the following network analysis functions:
@@ -42,7 +41,7 @@ pandapower supports the following network analysis functions:
 	- short-circuit calculation according to IEC 60909
 	- topological graph searches
 
-{{ to_the_top }}
+
     
 ## License <a name="license"></a>
 
@@ -59,4 +58,4 @@ pandapower is published under the following 3-clause BSD license:
 >     
 > THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, NCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-{{ to_the_top }}
+

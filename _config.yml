@@ -16,10 +16,10 @@ author:
 #  name    : "pandapower"
 #  avatar   : "pp_logo.png"
 #  bio      : "An easy to use open source tool for power system modeling, analysis and optimization with a high degree of automation."
-  location : "Kassel, Germany"
-  email    : "info@pandapower.org"
+  location : Kassel, Germany
+  email    : info@pandapower.org
   github   : lthurner/pandapower
-
+ 
 # Plugins (previously gems:)
 plugins:
   - jekyll-paginate
