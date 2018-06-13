@@ -1,17 +1,20 @@
 ---
 layout: single
+title: About pandapower
 permalink: /about/
 author_profile: false
-sidebar:
-   nav: "about"
+toc: true
+toc_label: <a href="">About pandapower</a>
 classes:
-  - wide   
+  - wide
 ---
 {% capture to_the_top %}<div style="text-align: right"> <font size="4"><a href="{{ "/about/#" | relative_url }}">Back to the top</a></font></div>{% endcapture %}
 
-# Electric Models <a name="models"></a>
-
 pandapower combines the data analysis library pandas and the power flow solver PYPOWER to create an easy to use network calculation program aimed at automation of analysis and optimization in power systems.
+
+
+## Electric Models
+<a name="models"></a>
 
 pandapower is an element based network calculation tool that supports the following components:
 
@@ -29,7 +32,7 @@ pandapower is an element based network calculation tool that supports the follow
 
 {{ to_the_top }}
     
-# Power System Analysis <a name="analysis"></a>
+## Power System Analysis <a name="analysis"></a>
 
 pandapower supports the following network analysis functions:
 
@@ -41,7 +44,7 @@ pandapower supports the following network analysis functions:
 
 {{ to_the_top }}
     
-# License <a name="license"></a>
+## License <a name="license"></a>
 
 pandapower is published under the following 3-clause BSD license: 
 

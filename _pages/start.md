@@ -1,16 +1,18 @@
 ---
 layout: single
+title: Getting Started
 permalink: /start/
 author_profile: false
-sidebar:
-   nav: "start"
+toc: true
+toc_sticky: true
+toc_label: <a href="">Getting Started</a>
 classes:
    - wide
 ---
 
 {% capture to_the_top %}<div style="text-align: right"> <font size="4"><a href="{{ "/start/" | relative_url }}">Back to the top</a></font></div>{% endcapture %}
 
-# Installation <a name="install"></a>
+## Installation <a name="install"></a>
 
 pandapower is tested with Python 2.7, 3.4, 3.5 and 3.6. We recommend the [Anaconda Distribution], which already contains a lot of modules for scientific computing that are needed for working with pandapower.
 
@@ -18,7 +20,7 @@ Here are the installation instructions depending on what your system looks like 
 
 Once you have installed pandapower, be sure to [test if it works]({{ "/start/#test" | relative_url }}).
 
-## Installing from Scratch
+### Installing from Scratch
 
 If you want to use pandapower but don\'t yet have python installed on
 your computer, simply follow these steps:
@@ -29,7 +31,7 @@ your computer, simply follow these steps:
 
         pip install pandapower
 
-## Test your installation <a name="test"></a>
+### Test your installation <a name="test"></a>
 
 The easiest way to test your installation is to import all pandapower
 submodules to see if all dependencies are available:
@@ -53,7 +55,7 @@ If everything is installed correctly, all tests should pass or xfail (expected t
 
 {{ to_the_top }}
   
-# A short introduction <a name="intro"></a>
+## A short introduction <a name="intro"></a>
 
 A network in pandapower is represented in a pandapowerNet object, which
 is a collection of pandas Dataframes. Each dataframe in a pandapowerNet
@@ -66,7 +68,7 @@ example:
 ![](http://pandapower.readthedocs.io/en/latest/_images/3bus-system.png)
 
 
-## Creating a Network
+### Creating a Network
 
 The above network can be created in pandapower as follows: :
 
@@ -98,7 +100,7 @@ The pandapower representation now looks like this:
 
 ![image](http://pandapower.readthedocs.io/en/latest/_images/pandapower_datastructure.png)
 
-## Running a Power Flow
+### Running a Power Flow
 
 A powerflow can be carried out with the [runpp function][]: :
 
@@ -128,13 +130,13 @@ This minimal example is also available as a [jupyter notebook].
 
 {{ to_the_top }}
   
-# Documentation <a name="docs"></a>
+## Documentation <a name="docs"></a>
 
 The pandapower documentation is hosted on [readthedocs](http://pandapower.readthedocs.io).
 
 {{ to_the_top }}
 
-# Interactive Tutorials <a name="tutorials"></a>
+## Interactive Tutorials <a name="tutorials"></a>
 
 There are jupyter notebook tutorials on different functionalities of pandapower:
 

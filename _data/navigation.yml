@@ -5,28 +5,3 @@ main:
     url: /about/
   - title: "About us"
     url: /about_us/
-    
-start:
-  - title: Getting Started
-    url: /start/
-    children: 
-    - title: Installation
-      url: /start/#install
-    - title: Short Introduction
-      url: /start/#intro
-    - title: Documentation
-      url: start/#docs
-    - title: Interactive Tutorials
-      url: /start/#tutorials
-
-      
-about:
-  - title: About pandapower
-    url: /about/
-    children: 
-    - title: Electric Models
-      url: /about/#models
-    - title: Power System Analysis
-      url: /about/#analysis
-    - title: License
-      url: /about/#license

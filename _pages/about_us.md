@@ -4,29 +4,22 @@ permalink: /about_us/
 author_profile: true
 classes:
   - wide
-testimonials:
-  - message: We use Justice Law in all our endeavours. They offer an unparalleled service when it comes to running a business.
-    image: "/images/joice.jpeg"
-    name: Joice Carmold
-  - message: Justice Law are the best of the best. Being local, they care about people and have strong ties to the community.
-    image: "/images/peter.jpeg"
-    name: Peter Rottenburg
 developers:
   - name: "Leon Thurner"
     nickname: Leon
     email: leon.thurner@uni-kassel.de
     image: "/assets/images/leon.jpg"
-    text: "..."
+    text: "only owns one suit, which he is wearing in this picture."
   - name: "Alexander Scheidler"
     nickname: Alex
     email: alexander.scheidler@iee.fraunhofer.de
     image: "/assets/images/alex.jpg"
-    text: "came up with the idea to pandapower ..."
+    text: "thinks the only honest people wearing suits are grave diggers. Prefers red t-shirts."
   - name: "Florian Schäfer"
     nickname: Florian
     email: florian.schaefer@uni-kassel.de
     image: "/assets/images/flo.jpg"
-    text: "..."
+    text: "likes to wear suits to any occasion because it makes him feel fancy."
 ---
 {% capture to_the_top %}<div style="text-align: right"> <font size="4"><a href="{{ "/about_us/#" | relative_url }}">Back to the top</a></font></div>{% endcapture %}
 
