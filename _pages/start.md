@@ -10,29 +10,68 @@ classes:
    - wide
 ---
 
-## Installation <a name="install"></a>
+## Installing Python <a name="install"></a>
 
-pandapower is tested with Python 2.7, 3.4, 3.5 and 3.6. We recommend the [Anaconda Distribution], which already contains a lot of modules for scientific computing that are needed for working with pandapower.
+pandapower is tested with Python 2.7, 3.4, 3.5 and 3.6. We recommend the [Anaconda Distribution](https://www.continuum.io/downloads), which already contains a lot of modules for scientific computing that are needed for working with pandapower.
 
-Here are the installation instructions depending on what your system looks like or which version of pandapower you want to install:
+pandapower can of course also be used with other distributions besides Anaconda. It is however important that the following packages are included:
 
-Once you have installed pandapower, be sure to [test if it works]({{ "/start/#test" | relative_url }}).
+- numpy
+- scipy
+- numba
+- matplotlib
 
-### Installing from Scratch
+Since these packages depend on C-libraries, they cannot be easily installed through pip on Windows systems.
+If you use a distribution that does not include one of these packages, you either have to build these libraries yourself or switch to a different distribution.
 
-If you want to use pandapower but don\'t yet have python installed on
-your computer, simply follow these steps:
+## Installing pandapower
+        
+### Through pip
 
-1.  Go to the [Anaconda Website](https://www.continuum.io/downloads), download Anaconda for your OS and install it
+The easiest way to install pandapower is through pip:
 
-2.  Open a command prompt (e.g. Start\--\>cmd on windows systems) and install pandapower by running :
+1. Open a command prompt (e.g. start-->cmd on windows systems)
+
+2. Install pandapower by running:
 
         pip install pandapower
 
-### Test your installation <a name="test"></a>
 
-The easiest way to test your installation is to import all pandapower
-submodules to see if all dependencies are available:
+### Without pip
+
+If you don't have internet access on your system or don't want to use pip for some other reason, pandapower can also be installed without using pip:
+
+1.  Download and unzip the current pandapower distribution from [PyPi](https://pypi.org/project/pandapower/) under "Download files".
+2.  Open a command prompt (e.g. Start\--\>cmd on Windows) and navigate to the folder that contains the setup.py file with the command cd
+    \<folder\> :
+
+        cd %path_to_pandapower%\pandapower-x.x.x\
+
+3.  Install pandapower by running :
+
+        python setup.py install
+
+### Development Version
+
+To install the latest development version of pandapower from [github](https://github.com/lthurner/pandapower), simply follow these steps:
+
+1. Download and install [git](https://git-scm.com). 
+
+2. Open a git shell and navigate to the directory where you want to keep your pandapower files.
+
+3. Run the following git command:
+
+        git clone https://github.com/lthurner/pandapower develop
+       
+3. Set your python path to the outer pandapower folder (/pandapower, NOT pandapower/pandapower). 
+
+4. If necessary, install missing dependencies via pip install:
+
+        pip install pypower
+        
+## Test your installation <a name="test"></a>
+
+A first basic way to test your installation is to import all pandapower submodules to see if all dependencies are available:
 
     import pandapower
     import pandapower.networks
@@ -41,17 +80,14 @@ submodules to see if all dependencies are available:
     import pandapower.converter
     import pandapower.estimation
 
-If you want to be really sure that everything works fine, you can run
-the pandapower test suite (pytest module is needed): :
+If you want to be really sure that everything works fine, run the pandapower test suite (pytest module is needed): :
 
     import pandapower.test
     pandapower.test.run_all_tests()
 
 If everything is installed correctly, all tests should pass or xfail (expected to fail).
 
-  [Anaconda Distribution]: https://www.continuum.io/downloads
-
-  
+ 
 ## A short introduction <a name="intro"></a>
 
 A network in pandapower is represented in a pandapowerNet object, which

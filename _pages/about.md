@@ -12,24 +12,34 @@ classes:
 
 pandapower combines the data analysis library pandas and the power flow solver PYPOWER to create an easy to use network calculation program aimed at automation of analysis and optimization in power systems.
 
+## Why another tool?
 
-## Electric Models
-<a name="models"></a>
+## Power System Modeling
+
+### Element Based Modeling
+
+### Equivalent Circuit Models <a name="models"></a>
 
 pandapower is an element based network calculation tool that supports the following components:
 
-	- lines
-	- two-winding and three-winding transformers
-	- ideal bus-bus and bus-branch switches
-	- static generators
-	- ZIP loads
-	- shunts
-	- external grid connections
-	- synchronous generators
+	- Lines
+	- Two-winding and three-winding transformers
+	- Ideal bus-bus and bus-branch switches
+	- Static generators
+	- PQ and ZIP Loads
+	- Shunts
+	- External grid connections
+	- Synchronous generators
 	- DC lines
-	- unsymmetric impedances
-	- ward equivalents
+	- Unsymmetric impedances
+	- (Extended) ward equivalents
 
+<img src="/assets/images/open_source_models.png" alt=""/>
+<figcaption>Comparison of open source electric model libraries <a href="https://doi.org/10.1109/TPWRS.2018.2829021" title="L. Thurner, A. Scheidler, F. Schäfer et al, pandapower - an Open Source Python Tool for Convenient Modeling, Analysis and Optimization of Electric Power Systems, IEEE Transactions on Power Systems, 2018.">[1]</a></figcaption>
+
+
+
+### Tabular Data Structure
    
 ## Power System Analysis <a name="analysis"></a>
 
@@ -41,8 +51,37 @@ pandapower supports the following network analysis functions:
 	- short-circuit calculation according to IEC 60909
 	- topological graph searches
 
+### Power Flow
 
-    
+### Optimal Power Flow
+
+### State Estimation
+
+### Short-Circuit Calculation
+
+### Graph Searches
+
+## Tests and Validation
+
+## Publications
+
+A paper describing pandapower has been accepted for publication in IEEE Transaction on Power Systems, a preprint of this paper is available on `arXiv <https://arxiv.org/abs/1709.06743>`_. Please acknowledge the usage of pandapower by citing the Paper as follows:
+
+- **L. Thurner, A. Scheidler, F. Schäfer et al**, [pandapower - an Open Source Python Tool for Convenient Modeling, Analysis and Optimization of Electric Power Systems](https://arxiv.org/abs/1709.06743), IEEE Transactions on Power Systems, [DOI:10.1109/TPWRS.2018.2829021](https://doi.org/10.1109/TPWRS.2018.2829021), 2018.
+
+You can use the following BibTex entry:
+
+	@ARTICLE{pandapower.2018,
+	author={L. Thurner and A. Scheidler and F. Schafer and J. H. Menke and J. Dollichon and F. Meier and S. Meinecke and M. Braun},
+	journal={IEEE Transactions on Power Systems},
+	title={pandapower - an Open Source Python Tool for Convenient Modeling, Analysis and Optimization of Electric Power Systems},
+	year={2018},
+	doi={10.1109/TPWRS.2018.2829021},
+	url={https://arxiv.org/abs/1709.06743},
+	ISSN={0885-8950}
+	}
+
+   
 ## License <a name="license"></a>
 
 pandapower is published under the following 3-clause BSD license: 
