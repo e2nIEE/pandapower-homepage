@@ -61,7 +61,12 @@ To install the latest development version of pandapower from [github](https://gi
 
 3. Run the following git command:
 
-        git clone https://github.com/lthurner/pandapower develop
+        git clone https://github.com/lthurner/pandapower.git
+
+4. Navigate inside the repository and check out the develop branch:
+
+        cd pandapower
+        git checkout develop
        
 3. Set your python path to the outer pandapower folder (/pandapower, NOT pandapower/pandapower). 
 
