@@ -34,7 +34,7 @@ pandapower is an element based network calculation tool that supports the follow
 	- Unsymmetric impedances
 	- (Extended) ward equivalents
 
-<img src="{{/assets/images/open_source_models.png | relative_url }} alt=""/>
+<img src="{{"/assets/images/open_source_models.png" | relative_url }}" alt=""/>
 <figcaption>Comparison of open source electric model libraries <a href="https://doi.org/10.1109/TPWRS.2018.2829021" title="L. Thurner, A. Scheidler, F. Schäfer et al, pandapower - an Open Source Python Tool for Convenient Modeling, Analysis and Optimization of Electric Power Systems, IEEE Transactions on Power Systems, 2018.">[1]</a></figcaption>
 
 
