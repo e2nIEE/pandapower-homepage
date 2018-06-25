@@ -3,5 +3,5 @@ main:
     url: /start/
   - title: "About pandapower"
     url: /about/
-  - title: "About us"
-    url: /about_us/
+  - title: "Contact"
+    url: /contact/

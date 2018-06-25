@@ -1,6 +1,6 @@
 ---
 layout: single
-permalink: /about_us/
+permalink: /contact/
 author_profile: true
 classes:
   - wide
@@ -21,7 +21,7 @@ developers:
     image: "/assets/images/flo.jpg"
     text: "likes to wear suits to any occasion because it makes him feel fancy."
 ---
-{% capture to_the_top %}<div style="text-align: right"> <font size="4"><a href="{{ "/about_us/#" | relative_url }}">Back to the top</a></font></div>{% endcapture %}
+<p></p>
 
 # About us
 
@@ -29,6 +29,18 @@ pandapower is a joint development of the research group Energy Management and Po
 
 [<img src="https://www.uni-kassel.de/eecs/fileadmin/datas/fb16/Fachgebiete/energiemanagement/e2n.png">](https://www.uni-kassel.de/eecs/en/fachgebiete/e2n/home.html)
 [<img src="https://www.uni-kassel.de/eecs/fileadmin/datas/fb16/Fachgebiete/energiemanagement/iee.png">](https://www.iee.fraunhofer.de/en.html)
+
+# Mailing List <a name="list"></a>
+If you want to receive updates about new versions and other news about pandapower, you can subscribe to the pandapower mailing list:
+
+[Subscribe](mailto:sympa@fraunhofer.de?subject=subscribe%20pandapower){: .btn .btn--success .btn--large}
+
+<small>If you no longer want to receive updates, <a href="mailto:sympa@fraunhofer.de?subject=unsubscribe%20pandapower">unsubscribe here</a>.</small>
+
+
+ 
+
+# People
 
 And these are some of the people behind pandapower:
 
@@ -47,5 +59,4 @@ And these are some of the people behind pandapower:
 
 [See Full List of authors and contributors](http://pandapower.readthedocs.io/en/stable/about/authors.html){: .btn .btn--success .btn--large}
 
-{{ to_the_top }}
 
