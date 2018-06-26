@@ -93,7 +93,6 @@ If you want to be really sure that everything works fine, run the pandapower tes
 If everything is installed correctly, all tests should pass or xfail (expected to fail).
 
 
-
 ## A short introduction <a name="intro"></a>
 
 A network in pandapower is represented in a pandapowerNet object, which

@@ -16,7 +16,7 @@ pandapower combines the data analysis library pandas and the power flow solver P
 
 pandapower was developed as a 
 
-<img src="{{"/assets/images/tool_comparison.png" | relative_url }}" alt=""/>
+<img src="{{"/images/about/tool_comparison.png" | relative_url }}" alt=""/>
 <figcaption>Comparison of  <a href="" title="L. Thurner, Structural Optimizations in Strategic Medium Voltage Power System Planning, Dissertation, University of Kassel, 2018.">[2]</a></figcaption>
 
 
@@ -44,7 +44,7 @@ pandapower is an element based network calculation tool that supports the follow
    - Unsymmetric impedances
    - (Extended) ward equivalents
 
-<img src="{{"/assets/images/open_source_models.png" | relative_url }}" alt=""/>
+<img src="{{"/images/about/open_source_models.png" | relative_url }}" alt=""/>
 <figcaption>Comparison of open source electric model libraries <a href="https://doi.org/10.1109/TPWRS.2018.2829021" title="L. Thurner, A. Scheidler, F. Schäfer et al, pandapower - an Open Source Python Tool for Convenient Modeling, Analysis and Optimization of Electric Power Systems, IEEE Transactions on Power Systems, 2018.">[1]</a></figcaption>
 
 ### Standard Type Libraries
@@ -86,7 +86,7 @@ JIT compiler [numba](https://numba.pydata.org/). This makes the pandapower Newto
 To outline the difference in computational time, the convergence times for different standard MATPOWER
 case files are shown here:
 
-<img src="{{"/assets/images/speed_comparison.png" | relative_url }}" alt=""/>
+<img src="{{"/images/about/speed_comparison.png" | relative_url }}" alt=""/>
 <figcaption>Power flow speed convergence time comparison of different open source tools <a href="https://doi.org/10.1109/TPWRS.2018.2829021" title="L. Thurner, A. Scheidler, F. Schäfer et al, pandapower - an Open Source Python Tool for Convenient Modeling, Analysis and Optimization of Electric Power Systems, IEEE Transactions on Power Systems, 2018.">[1]</a></figcaption>
 
 The pandapower timings distinguish between power flow solver and conversion overhead, 
@@ -185,8 +185,8 @@ The results are compared with the following tolerances:
 | Element Loading   | 0.001%              | 
 
 <figure class="third">
-    <a href="{{"/assets/images/validation/test_bus_bus_switch.PNG" | relative_url }}"><img src="{{"/assets/images/validation/test_bus_bus_switch_thumbnail.PNG" | relative_url }}"></a>
-    <a href="{{"/assets/images/validation/test_bus_bus_switch.PNG" | relative_url }}"><img src="{{"/assets/images/validation/test_bus_bus_switch_thumbnail.PNG" | relative_url }}"></a>
+    <a href="{{"/images/about/validation/test_bus_bus_switch.PNG" | relative_url }}"><img src="{{"/images/about/validation/test_bus_bus_switch_thumbnail.PNG" | relative_url }}"></a>
+    <a href="{{"/images/about/validation/test_bus_bus_switch.PNG" | relative_url }}"><img src="{{"/images/about/validation/test_bus_bus_switch_thumbnail.PNG" | relative_url }}"></a>
 	<figcaption>Caption describing these three images.</figcaption>
 </figure>
 

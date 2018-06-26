@@ -8,17 +8,17 @@ developers:
   - name: "Leon Thurner"
     nickname: Leon
     email: leon.thurner@uni-kassel.de
-    image: "/assets/images/leon.jpg"
+    image: "/images/contact/leon.jpg"
     text: "only owns one suit, which he is wearing in this picture."
   - name: "Alexander Scheidler"
     nickname: Alex
     email: alexander.scheidler@iee.fraunhofer.de
-    image: "/assets/images/alex.jpg"
+    image: "/images/contact/images/alex.jpg"
     text: "thinks the only honest people wearing suits are grave diggers. Prefers red t-shirts."
   - name: "Florian Schäfer"
     nickname: Florian
     email: florian.schaefer@uni-kassel.de
-    image: "/assets/images/flo.jpg"
+    image: "/images/contact/images/flo.jpg"
     text: "likes to wear suits to any occasion because it makes him feel fancy."
 ---
 <p></p>
