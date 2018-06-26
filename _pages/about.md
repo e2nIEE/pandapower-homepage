@@ -32,66 +32,124 @@ Instead of a bus-branch model, pandapower uses an element-based model to model e
 
 pandapower is an element based network calculation tool that supports the following components:
 
-	- Lines
-	- Two-winding and three-winding transformers
-	- Ideal bus-bus and bus-branch switches
-	- Static generators
-	- PQ and ZIP Loads
-	- Shunts
-	- External grid connections
-	- Synchronous generators
-	- DC lines
-	- Unsymmetric impedances
-	- (Extended) ward equivalents
+   - Lines
+   - Two-winding and three-winding transformers
+   - Ideal bus-bus and bus-branch switches
+   - Static generators
+   - PQ and ZIP Loads
+   - Shunts
+   - External grid connections
+   - Synchronous generators
+   - DC lines
+   - Unsymmetric impedances
+   - (Extended) ward equivalents
 
 <img src="{{"/assets/images/open_source_models.png" | relative_url }}" alt=""/>
 <figcaption>Comparison of open source electric model libraries <a href="https://doi.org/10.1109/TPWRS.2018.2829021" title="L. Thurner, A. Scheidler, F. Schäfer et al, pandapower - an Open Source Python Tool for Convenient Modeling, Analysis and Optimization of Electric Power Systems, IEEE Transactions on Power Systems, 2018.">[1]</a></figcaption>
 
 ### Standard Type Libraries
-Lines and transformers have two different categories of parameters: parameters that depend on the specific element (e.g. the length of a line or the bus to which a transformer is connected to) and parameters that only depend on the type of line or transformer which is used (e.g. the rated power of a transformer or the resistance per kilometer line). \texttt{pandapower} includes a standard type library that allows the creation of lines and transformers using predefined basic standard type parameters. The user can either define individual standard types or use the predefined \texttt{pandapower} basic standard types for convenient definition of networks.
+Lines and transformers have two different categories of parameters: parameters that depend on the specific element (e.g. the length of a line or the bus to which a transformer is connected to) and parameters that only depend on the type of line or transformer which is used (e.g. the rated power of a transformer or the resistance per kilometer line). pandapower includes a standard type library that allows the creation of lines and transformers using predefined basic standard type parameters. The user can either define individual standard types or use the predefined pandapower basic standard types for convenient definition of networks.
 
 ### Tabular Data Structure
    
 ## Power System Analysis <a name="analysis"></a>
 
 pandapower supports the following network analysis functions:
-
-	- power flow
-	- optimal power flow
-	- state estimation
-	- short-circuit calculation according to IEC 60909
-	- topological graph searches
+   - power flow
+   - optimal power flow
+   - state estimation
+   - short-circuit calculation according to IEC 60909
+   - topological graph searches
 
 ### Power Flow
 
-The \texttt{pandapower} power flow solver is based on the Newton-Raphson method \cite{grainger1994power}. The implementation was originally based on \textsc{pypower}, but has been improved with respect to robustness, runtime and usability.
+The pandapower power flow solver is based on the Newton-Raphson method.
+The implementation was originally based on PYPOWER, but has been improved with respect to
+robustness, runtime and usability.
 
-Internal power flow parameters, such as node type for the power flow calculation (slack, PV or PQ node) or per unit conversions, are carried out automatically by \texttt{pandapower}. This improves user convenience and reduces the risk of incoherent input data. \texttt{pandapower} offers three different methods to initialize the complex voltage vector for the AC power flow calculation. It can either be the result of a previous power flow calculation, the solution of a DC power flow or a flat start. Initializing with a DC power flow is recommended in meshed networks, where large voltage angle differences between the buses might lead to non-convergence in case of a flat start. In radial distribution grids on the other hand, the reference voltage angle is dictated by the external grid so that relative voltage angle shifts of transformers have no impact on the power flow result. That is why \texttt{pandapower} provides the option to neglect the voltage angles to allow faster and more robust convergence in radial distribution grids. The additional conversion step that is necessary to convert the \texttt{pandapower} model to a BBM and map back the results afterwards causes an additional overhead compared to programs that operate directly on the BBM, like \textsc{matpower} or \textsc{pypower}. On the other hand, some parts of the \texttt{pandapower} solver have been accelerated using the just-in-time (jit) compiler numba \cite{Lam.2015}. To outline the difference in computational time, Fig.~\ref{fig:speed_comparison} shows the calculation time for different standard \textsc{matpower} case files. The displayed timings are the shortest of 100 loops of a power flow calculation to minimize the influence of other processes running on the benchmark system. A flat start is chosen for all three tools to have the same initial conditions. The \texttt{pandapower} timings distinguish between power flow solver and conversion overhead, which includes BBM conversion as well as result extraction. It can be seen that \texttt{pandapower} is faster than \textsc{pypower} in all cases due to the jit accelerated building of the Jacobian matrix and other aspects of the Newton-Raphson solver. It can also be seen that while the conversion overhead takes up more than half of the calculation time for small networks, its share decreases significantly for larger networks. While \texttt{pandapower} is slower than \textsc{matpower} for small networks, it is faster for medium sized and large networks, even including the conversion overhead for the BBM. By default, the BBM conversion is carried out before every power flow. However, if multiple subsequent power flows are performed for the same network that only differ in the nodal power injections, the conversion into a BBM becomes redundant. For this reason, \texttt{pandapower} offers the possibility to reuse the BBM and the nodal point admittance matrix from previous power flow calculations. This feature can speed up applications like quasi-static time series simulations or heuristic power set point optimizations. In addition to the default Newton-Raphson solver, \texttt{pandapower} also provides an implementation of a backward/forward sweep \cite{sweep}. It is also possible to use the fast decoupled as well as the Gauss-Seidel power flow algorithms through an interface to \textsc{pypower}.
+Internal power flow parameters, such as node type for the power flow calculation
+(slack, PV or PQ node) or per unit conversions, are carried out automatically by pandapower.
+This improves user convenience and reduces the risk of incoherent input data.
+
+#### Initialization
+
+pandapower offers three different methods to initialize the complex voltage
+vector for the AC power flow calculation:
+   - flat start
+   - voltage vector of a previous calculation
+   - initialization with a DC power flow
+
+#### Performance
+
+Some parts of the pandapower solver have been accelerated using the
+JIT compiler [numba](https://numba.pydata.org/). This makes the pandapower Newton-Raphson
+To outline the difference in computational time, the convergence times for different standard MATPOWER
+case files are shown here:
 
 <img src="{{"/assets/images/speed_comparison.png" | relative_url }}" alt=""/>
 <figcaption>Power flow speed convergence time comparison of different open source tools <a href="https://doi.org/10.1109/TPWRS.2018.2829021" title="L. Thurner, A. Scheidler, F. Schäfer et al, pandapower - an Open Source Python Tool for Convenient Modeling, Analysis and Optimization of Electric Power Systems, IEEE Transactions on Power Systems, 2018.">[1]</a></figcaption>
 
+The pandapower timings distinguish between power flow solver and conversion overhead, 
+which includes BBM conversion as well as result extraction. It can be seen that pandapower
+is faster than PYPOWER in all cases due to the jit accelerated building of the Jacobian
+matrix and other aspects of the Newton-Raphson solver. It can also be seen that while the
+conversion overhead takes up more than half of the calculation time for small networks,
+its share decreases significantly for larger networks. While pandapower is slower than
+MATPOWER for small networks, it is faster for medium sized and large networks, even
+including the conversion overhead for the BBM.
+
+#### Timeseries Simulations
+
+By default, the BBM conversion is carried out before every power flow.
+However, if multiple subsequent power flows are performed for the
+same network that only differ in the nodal power injections, the conversion into a BBM
+becomes redundant. For this reason, pandapower offers the possibility to reuse the BBM
+and the nodal point admittance matrix from previous power flow calculations. This feature
+can speed up applications like quasi-static time series simulations or heuristic power set
+point optimizations.
+
+#### Other solvers
+
+In addition to the default Newton-Raphson solver, pandapower also
+provides an implementation of a backward/forward sweep. It is also possible to use the fast
+decoupled as well as the Gauss-Seidel power flow algorithms through an interface to PYPOWER.
+
+### Unbalanced Power Flow
+
+An unbalanced power flow is currently being implemented and a first version will hopefully be released soon. Follow the progress
+or join the implementation efforts on [github](https://github.com/lthurner/pandapower/issues/96), or subscribe to the [pandapower
+mailing list](/contact/) for updates.
 
 ### Optimal Power Flow
 
-pandapower allows solving AC and DC optimal power flow (OPF) problems through interfacing PYPOWER. The interior point solver provided by PYPOWER is used to solve the problem, while costs, flexibilities and constraints are configured through the element-based pandapower data structure. This allows all electric element models provided by pandapower to be used in the OPF. Branch constraints are given as maximum loading for transformers and lines, instead of absolute limits for power flows. Bus constraints include maximum and minimum voltage magnitude. Active and reactive power limits can be defined for PV/slack-elements like external grids and generators, but also for PQ-elements, such as loads and static generators. This allows flexible consideration of static generators in dispatch optimizations as well as the consideration of load shedding. The cost function for each power injection or load can either be defined by a piecewise linear or a n-polynomial cost function of the active and reactive power output of the respective elements.
+pandapower allows solving AC and DC optimal power flow (OPF) problems through interfacing
+PYPOWER. The interior point solver provided by PYPOWER is used to solve the problem, while
+costs, flexibilities and constraints are configured through the element-based pandapower
+data structure. This allows all electric element models provided by pandapower to be used
+in the OPF. Branch constraints are given as maximum loading for transformers and lines,
+instead of absolute limits for power flows. Bus constraints include maximum and minimum
+voltage magnitude. Active and reactive power limits can be defined for PV/slack-elements
+like external grids and generators, but also for PQ-elements, such as loads and static
+generators. This allows flexible consideration of static generators in dispatch optimizations as well as the consideration of
+load shedding. The cost function for each power injection or load can either be defined by a piecewise linear or a n-polynomial
+cost function of the active and reactive power output of the respective elements.
 
 
 ### State Estimation
 
-\texttt{pandapower} includes a state estimation module that allows to estimate the electrical state of a network by dealing with inaccuracies and errors from measurement data. The weighted-least-squares optimization algorithm minimizes the weighted squared differences between measured values and the corresponding power flow equations \cite{abur2004power}.
+pandapower includes a state estimation module that allows to estimate the electrical state of a network by dealing with inaccuracies and errors from measurement data. The weighted-least-squares optimization algorithm minimizes the weighted squared differences between measured values and the corresponding power flow equations \cite{abur2004power}.
 
-\texttt{pandapower} supports bus, line and transformer measurements. Bus measurements can be given for voltage magnitude or active and reactive power injections. Measurements at lines or transformers can be given for current magnitude or active and reactive power flows at either end of the branch.
+pandapower supports bus, line and transformer measurements. Bus measurements can be given for voltage magnitude or active and reactive power injections. Measurements at lines or transformers can be given for current magnitude or active and reactive power flows at either end of the branch.
 
-The state estimation may not converge if measurements include bad data. Therefore, it is necessary to remove bad data prior to the estimation process. This problem is solved in \texttt{pandapower} with a $\chi^2$ test and a normalized residual test \cite{abur2004power}. A $\chi^2$ test is able to identify the probability that bad measurements exist in the measurement set or if the network topology does not fit the measurement data. A normalized residuals test can take information of the $\chi^2$ test, compute the normalized residuals and remove the measurement with the highest residual. The cycle is repeated until the bad data check passes or no measurements can be removed any more.
+The state estimation may not converge if measurements include bad data. Therefore, it is necessary to remove bad data prior to the estimation process. This problem is solved in pandapower with a $\chi^2$ test and a normalized residual test \cite{abur2004power}. A $\chi^2$ test is able to identify the probability that bad measurements exist in the measurement set or if the network topology does not fit the measurement data. A normalized residuals test can take information of the $\chi^2$ test, compute the normalized residuals and remove the measurement with the highest residual. The cycle is repeated until the bad data check passes or no measurements can be removed any more.
 
 ### Short-Circuit Calculation
 
-While short circuit currents are an inherently transient phenomenon, they can be approximated based on a static network model. The IEC~60909 standard \cite{iec60909} defines rules to calculate certain characteristic values of the short circuit, such as the initial short circuit current $I_k^{''}$, peak short circuit current $i_p$ or long term SC current $I_k$. The calculation of initial sub-transient short circuit currents for symmetrical three-phase short circuits as well as two-phase short circuits  is implemented in \texttt{pandapower}. The necessary correction factors are implemented in \texttt{pandapower} according to the standard and are automatically applied in the conversion to the BBM. Additional input parameters, which are necessary to calculate internal impedances of external grids or synchronous generators, are defined in the element tables, together with the default parameters. The implementation allows modeling power converter elements, such as PV plants or wind parks, as constant current sources according to the 2016 revision of the standard \cite{iec60909}. 
+While short circuit currents are an inherently transient phenomenon, they can be approximated based on a static network model. The IEC~60909 standard \cite{iec60909} defines rules to calculate certain characteristic values of the short circuit, such as the initial short circuit current $I_k^{''}$, peak short circuit current $i_p$ or long term SC current $I_k$. The calculation of initial sub-transient short circuit currents for symmetrical three-phase short circuits as well as two-phase short circuits  is implemented in pandapower. The necessary correction factors are implemented in pandapower according to the standard and are automatically applied in the conversion to the BBM. Additional input parameters, which are necessary to calculate internal impedances of external grids or synchronous generators, are defined in the element tables, together with the default parameters. The implementation allows modeling power converter elements, such as PV plants or wind parks, as constant current sources according to the 2016 revision of the standard \cite{iec60909}. 
 
 ### Graph Searches
 
-\texttt{pandapower} provides the possibility of graph searches using the Python library NetworkX \cite{networkx} by providing a possibility to translate \texttt{pandapower} networks into NetworkX graphs. Once a network is translated into an abstract graph, all graph searches implemented in the NetworkX library can be used to analyze the network structure. It is then possible for example to find connected components or cycles in the graph and transfer the results back to \texttt{pandapower}. The line length can be translated as edge weight in the graph so that it is possible to find the shortest path between two buses or measure distances between buses in the network. The translation of the network into a graph can also be configured depending on the use case. For example, lines with open switches are not transferred as edges into the graph by default, since there is no electric connection between those nodes. If a graph search is however aimed at the physical, rather than the electrical, structure, it might be desired to include those branches into the translation as well. Additionally, \texttt{pandapower} also provides some predefined search algorithms to tackle common graph search problems in electric networks, such as finding all unsupplied buses, finding galvanically connected buses or identifying buses on main or secondary network feeders.
+pandapower provides the possibility of graph searches using the Python library NetworkX \cite{networkx} by providing a possibility to translate pandapower networks into NetworkX graphs. Once a network is translated into an abstract graph, all graph searches implemented in the NetworkX library can be used to analyze the network structure. It is then possible for example to find connected components or cycles in the graph and transfer the results back to pandapower. The line length can be translated as edge weight in the graph so that it is possible to find the shortest path between two buses or measure distances between buses in the network. The translation of the network into a graph can also be configured depending on the use case. For example, lines with open switches are not transferred as edges into the graph by default, since there is no electric connection between those nodes. If a graph search is however aimed at the physical, rather than the electrical, structure, it might be desired to include those branches into the translation as well. Additionally, pandapower also provides some predefined search algorithms to tackle common graph search problems in electric networks, such as finding all unsupplied buses, finding galvanically connected buses or identifying buses on main or secondary network feeders.
 
 ## Tests and Validation
 
@@ -137,27 +195,27 @@ The results are compared with the following tolerances:
 
 To validate the pandapower transformer model, a transformer is created with the same parameters in pandapower and PowerFactory. To test all aspects of the model we use a transformer with
 
-    - both iron and copper losses > 0
-    - nominal voltages that deviate from the nominal bus voltages at both sides
-    - an active tap changer
-    - a voltage angle shift > 0
+   - both iron and copper losses > 0
+   - nominal voltages that deviate from the nominal bus voltages at both sides
+   - an active tap changer
+   - a voltage angle shift > 0
 
 We use a transformer with the following parameters:
 
-    - vsc_percent= 5.0
-    - vscr_percent = 2.0
-    - i0_percent = 0.4
-    - pfe_kw = 2.0
-    - sn_kva = 400
-    - vn_hv_kv = 22
-    - vn_lv_kv = 0.42
-    - tp_max = 10
-    - tp_mid = 5
-    - tp_min = 0
-    - tp_st_percent = 1.25
-    - tp_side = "hv"
-    - tp_pos = 3
-    - shift_degree = 150
+   - vsc_percent= 5.0
+   - vscr_percent = 2.0
+   - i0_percent = 0.4
+   - pfe_kw = 2.0
+   - sn_kva = 400
+   - vn_hv_kv = 22
+   - vn_lv_kv = 0.42
+   - tp_max = 10
+   - tp_mid = 5
+   - tp_min = 0
+   - tp_st_percent = 1.25
+   - tp_side = "hv"
+   - tp_pos = 3
+   - shift_degree = 150
 
 To validate the in_service parameter as well as the transformer switch element, we create three transformers in parallel: one in service, on out of service and one with an open switch in open loop operation.
 All three transformers are connected to a 20kV / 0.4 kV bus network. The test network then looks like this:
@@ -165,7 +223,7 @@ All three transformers are connected to a 20kV / 0.4 kV bus network. The test ne
 .. image:: ../pics/validation/test_trafo.png
 	:width: 10em
 	:align: center
-    
+   
 The loadflow result for the exact same network are now compared in pandapower and PowerFactory. It can be seen that both bus voltages:
 
 .. image:: ../pics/validation/validation_bus.png

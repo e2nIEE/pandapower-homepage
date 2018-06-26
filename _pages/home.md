@@ -16,13 +16,13 @@ excerpt: "An easy to use open source tool for power system modeling, analysis an
 [<img src='https://api.codacy.com/project/badge/Grade/5d749ed6772e47f6b84fb9afb83903d3'>](https://www.codacy.com/app/lthurner/pandapower/dashboard)
 [<img src='/assets/images/shield_bsd.svg'>](https://github.com/lthurner/pandapower/blob/master/LICENSE)"
 feature_row:
-  - image_path: /assets/images/mm-customizable-feature.png
+  - image_path: /assets/images/electric_modeling.png
     title: "Electric Modeling"
     excerpt: "Includes thoroughly validated equivalent circuit models for lines, transformers, switches and more."
     url: "about/#models"
     btn_class: "btn--primary"
     btn_label: "Learn More"
-  - image_path: /assets/images/mm-responsive-feature.png
+  - image_path: /assets/images/power_flow.png
     title: "Power System Analysis"
     excerpt: "Supports power flow, optimal power flow, state estimation, short-circuit calculation and topological graph searches."
     url: "about/#analysis"
