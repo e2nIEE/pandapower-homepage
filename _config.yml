@@ -19,7 +19,10 @@ author:
   location : Kassel, Germany
   email    : info@pandapower.org
   github   : lthurner/pandapower
- 
+
+kramdown:
+  toc_levels: 1..1
+  
 # Plugins (previously gems:)
 plugins:
   - jekyll-paginate
