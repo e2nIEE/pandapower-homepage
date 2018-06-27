@@ -1,5 +1,6 @@
 ---
 layout: single
+title: Contact
 permalink: /contact/
 author_profile: true
 classes:
@@ -9,27 +10,27 @@ developers:
     nickname: Leon
     email: leon.thurner@uni-kassel.de
     image: "/images/contact/leon.jpg"
-    text: "only owns one suit, which he is wearing in this picture."
+    text: "accompanied and shaped the journey of pandapower from a few scripts in a folder to the fully fledged open source power system analysis tool it is today."
   - name: "Alexander Scheidler"
     nickname: Alex
     email: alexander.scheidler@iee.fraunhofer.de
     image: "/images/contact/alex.jpg"
-    text: "thinks the only honest people wearing suits are grave diggers. Prefers red t-shirts."
+    text: "came up with the idea to pandapower in 2013 and never looked back. Has been coordinating and shaping the development of pandapower ever since."
   - name: "Florian Schäfer"
     nickname: Florian
     email: florian.schaefer@uni-kassel.de
     image: "/images/contact/flo.jpg"
-    text: "likes to wear suits to any occasion because it makes him feel fancy."
+    text: "was tasked with accelerating the power flow when he joined the team in 2016 and used the power of numba to make pandapower one of the fastest power flow solvers out there."
 ---
 <p></p>
 
-# Mailing List <a name="list"></a>
+## Mailing List <a name="list"></a>
 If you want to receive updates about new versions and other news about pandapower, you can subscribe to the pandapower mailing list:
 
 [<i class='fas fa-envelope'></i> Subscribe](mailto:sympa@fraunhofer.de?subject=subscribe%20pandapower){: .btn .btn--success .btn--large}<br>
 <small>If you no longer want to receive updates, <a href="mailto:sympa@fraunhofer.de?subject=unsubscribe%20pandapower">unsubscribe here</a>.</small>
 
-# About us
+## About us
 
 pandapower is a joint development of the research group Energy Management and Power System Operation, University of Kassel and the Department for Distribution System Operation at the Fraunhofer Institute for Energy Economics and Energy System Technology (IEE), Kassel.
 
@@ -37,7 +38,7 @@ pandapower is a joint development of the research group Energy Management and Po
 [<img src="https://www.uni-kassel.de/eecs/fileadmin/datas/fb16/Fachgebiete/energiemanagement/iee.png">](https://www.iee.fraunhofer.de/en.html)
  
 
-# Who we are
+## Who we are
 
 And these are some of the people behind pandapower:
 
