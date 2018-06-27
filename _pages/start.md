@@ -167,12 +167,6 @@ This minimal example is also available as a [jupyter notebook].
 
 
   
-## Documentation <a name="docs"></a>
-
-The pandapower documentation is hosted on [readthedocs](http://pandapower.readthedocs.io).
-
-
-
 ## Interactive Tutorials <a name="tutorials"></a>
 
 There are jupyter notebook tutorials on different functionalities of pandapower:

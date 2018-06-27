@@ -3,6 +3,8 @@ main:
     url: /start/
   - title: "About pandapower"
     url: /about/
+  - title: "Documentation"
+    url: http://pandapower.readthedocs.io
   - title: "References"
     url: /references/
   - title: "Contact"
