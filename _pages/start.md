@@ -26,7 +26,7 @@ If you use a distribution that does not include one of these packages, you eithe
 
 ## Installing pandapower
         
-### Through pip
+**Through pip**<br>
 
 The easiest way to install pandapower is through pip:
 
@@ -37,7 +37,7 @@ The easiest way to install pandapower is through pip:
         pip install pandapower
 
 
-### Without pip
+**Without pip**<br>
 
 If you don't have internet access on your system or don't want to use pip for some other reason, pandapower can also be installed without using pip:
 
@@ -51,7 +51,7 @@ If you don't have internet access on your system or don't want to use pip for so
 
         python setup.py install
 
-### Development Version
+**Development Version**<br>
 
 To install the latest development version of pandapower from [github](https://github.com/lthurner/pandapower), simply follow these steps:
 
@@ -85,10 +85,16 @@ A first basic way to test your installation is to import all pandapower submodul
     import pandapower.converter
     import pandapower.estimation
 
-If you want to be really sure that everything works fine, run the pandapower test suite (pytest module is needed): :
+If you want to be really sure that everything works fine, run the pandapower test suite:
 
-    import pandapower.test
-    pandapower.test.run_all_tests()
+1.  Install pytest if it is not yet installed on your system:
+
+        pip install pytest
+
+2. Run the pandapower test suite:
+
+        import pandapower.test
+        pandapower.test.run_all_tests()
 
 If everything is installed correctly, all tests should pass or xfail (expected to fail).
 
@@ -106,7 +112,7 @@ example:
 ![](http://pandapower.readthedocs.io/en/latest/_images/3bus-system.png)
 
 
-### Creating a Network
+**Creating a Network**<br>
 {:.no_toc}
 
 The above network can be created in pandapower as follows:
@@ -137,7 +143,7 @@ The pandapower representation now looks like this:
 
 ![image](http://pandapower.readthedocs.io/en/latest/_images/pandapower_datastructure.png)
 
-### Running a Power Flow
+**Running a Power Flow**<br>
 
 A powerflow can be carried out with the [runpp function][]: 
 

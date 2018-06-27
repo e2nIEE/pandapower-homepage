@@ -27,8 +27,7 @@ Any electric power system analysis function, like power flow or short circuit ca
 
 Instead of a bus-branch model, pandapower uses an element-based model to model electric grids. An element is either connected to one or multiple buses and is defined with characteristic parameters. Instead of a generic branch model, there are separate models for lines, two-winding, three-winding transformers etc. This allows defining the network with nameplate parameters, such as length and relative impedance for lines, or short circuit voltage and rated apparent power for transformers. Where a bus-branch model allows only the definition of a summed power injection at each bus, single-pole elements (such as load or generation elements) can be connected to buses independently. This also allows connecting multiple elements at one bus as well as composite elements that consist of multiple branch and bus properties, such as three-winding transformers or ward equivalents.
 
-### Equivalent Circuit Models <a name="models"></a>
-
+**Equivalent Circuit Models**<br> <a name="models"></a>
 pandapower is an element based network calculation tool that supports the following components:
 
    - Lines
@@ -46,10 +45,10 @@ pandapower is an element based network calculation tool that supports the follow
 <img src="{{"/images/about/open_source_models.png" | relative_url }}" alt=""/>
 <figcaption>Comparison of open source electric model libraries <a href="https://doi.org/10.1109/TPWRS.2018.2829021" title="L. Thurner, A. Scheidler, F. Schäfer et al, pandapower - an Open Source Python Tool for Convenient Modeling, Analysis and Optimization of Electric Power Systems, IEEE Transactions on Power Systems, 2018.">[1]</a></figcaption>
 
-### Standard Type Libraries
+**Standard Type Libraries**<br>
 Lines and transformers have two different categories of parameters: parameters that depend on the specific element (e.g. the length of a line or the bus to which a transformer is connected to) and parameters that only depend on the type of line or transformer which is used (e.g. the rated power of a transformer or the resistance per kilometer line). pandapower includes a standard type library that allows the creation of lines and transformers using predefined basic standard type parameters. The user can either define individual standard types or use the predefined pandapower basic standard types for convenient definition of networks.
 
-### Tabular Data Structure
+**Tabular Data Structure**<br>
    
 ## Power System Analysis <a name="analysis"></a>
 
@@ -60,7 +59,7 @@ pandapower supports the following network analysis functions:
    - short-circuit calculation according to IEC 60909
    - topological graph searches
 
-### Power Flow
+**Power Flow**<br>
 
 The pandapower power flow solver is based on the Newton-Raphson method.
 The implementation was originally based on PYPOWER, but has been improved with respect to
@@ -113,13 +112,13 @@ In addition to the default Newton-Raphson solver, pandapower also
 provides an implementation of a backward/forward sweep. It is also possible to use the fast
 decoupled as well as the Gauss-Seidel power flow algorithms through an interface to PYPOWER.
 
-### Unbalanced Power Flow
+**Unbalanced Power Flow**<br>
 
 An unbalanced power flow is currently being implemented and a first version will hopefully be released soon. Follow the progress
 or join the implementation efforts on [github](https://github.com/lthurner/pandapower/issues/96), or subscribe to the [pandapower
 mailing list](/contact/) for updates.
 
-### Optimal Power Flow
+**Optimal Power Flow**<br>
 
 pandapower allows solving AC and DC optimal power flow (OPF) problems through interfacing
 PYPOWER. The interior point solver provided by PYPOWER is used to solve the problem, while
@@ -134,7 +133,7 @@ load shedding. The cost function for each power injection or load can either be 
 cost function of the active and reactive power output of the respective elements.
 
 
-### State Estimation
+**State Estimation**<br>
 
 pandapower includes a state estimation module that allows to estimate the electrical state of a network by dealing with inaccuracies and errors from measurement data. The weighted-least-squares optimization algorithm minimizes the weighted squared differences between measured values and the corresponding power flow equations \cite{abur2004power}.
 
@@ -142,11 +141,11 @@ pandapower supports bus, line and transformer measurements. Bus measurements can
 
 The state estimation may not converge if measurements include bad data. Therefore, it is necessary to remove bad data prior to the estimation process. This problem is solved in pandapower with a $\chi^2$ test and a normalized residual test \cite{abur2004power}. A $\chi^2$ test is able to identify the probability that bad measurements exist in the measurement set or if the network topology does not fit the measurement data. A normalized residuals test can take information of the $\chi^2$ test, compute the normalized residuals and remove the measurement with the highest residual. The cycle is repeated until the bad data check passes or no measurements can be removed any more.
 
-### Short-Circuit Calculation
+**Short-Circuit Calculation**<br>
 
 While short circuit currents are an inherently transient phenomenon, they can be approximated based on a static network model. The IEC~60909 standard \cite{iec60909} defines rules to calculate certain characteristic values of the short circuit, such as the initial short circuit current $I_k^{''}$, peak short circuit current $i_p$ or long term SC current $I_k$. The calculation of initial sub-transient short circuit currents for symmetrical three-phase short circuits as well as two-phase short circuits  is implemented in pandapower. The necessary correction factors are implemented in pandapower according to the standard and are automatically applied in the conversion to the BBM. Additional input parameters, which are necessary to calculate internal impedances of external grids or synchronous generators, are defined in the element tables, together with the default parameters. The implementation allows modeling power converter elements, such as PV plants or wind parks, as constant current sources according to the 2016 revision of the standard \cite{iec60909}. 
 
-### Graph Searches
+**Graph Searches**<br>
 
 pandapower provides the possibility of graph searches using the Python library NetworkX \cite{networkx} by providing a possibility to translate pandapower networks into NetworkX graphs. Once a network is translated into an abstract graph, all graph searches implemented in the NetworkX library can be used to analyze the network structure. It is then possible for example to find connected components or cycles in the graph and transfer the results back to pandapower. The line length can be translated as edge weight in the graph so that it is possible to find the shortest path between two buses or measure distances between buses in the network. The translation of the network into a graph can also be configured depending on the use case. For example, lines with open switches are not transferred as edges into the graph by default, since there is no electric connection between those nodes. If a graph search is however aimed at the physical, rather than the electrical, structure, it might be desired to include those branches into the translation as well. Additionally, pandapower also provides some predefined search algorithms to tackle common graph search problems in electric networks, such as finding all unsupplied buses, finding galvanically connected buses or identifying buses on main or secondary network feeders.
 
@@ -156,7 +155,7 @@ pandapower is tested with [pytest](https://docs.pytest.org/en/latest/). There ar
 automatic validation of pandapower results from power flow or short circuit calculations against commercial software, to ensure that the
 implementation is correct.
 
-### Continous Integration
+**Continous Integration**<br>
 
 The tests are continously carried out with Travis CI in Python 2.7, 3.4, 3.5 and 3.6:
 
@@ -168,7 +167,7 @@ The test coverage rate is checked with codecov, code quality with codacy:
 [<img src="https://codecov.io/github/lthurner/pandapower/coverage.svg?branch=develop">](https://codecov.io/github/lthurner/pandapower?branch=master)
 [<img src="https://api.codacy.com/project/badge/Grade/5d749ed6772e47f6b84fb9afb83903d3">](https://www.codacy.com/app/lthurner/pandapower/dashboard)
 
-### Model Validation
+**Model Validation**<br>
 
 To ensure that pandapower loadflow results are correct, all pandapower element behaviour is tested against DIgSILENT PowerFactory or PSS Sincal. 
 
@@ -190,7 +189,7 @@ The results are compared with the following tolerances:
 </figure>
 
 
-### Example: Transformer
+**Example: Transformer**<br>
 
 To validate the pandapower transformer model, a transformer is created with the same parameters in pandapower and PowerFactory. To test all aspects of the model we use a transformer with
 
