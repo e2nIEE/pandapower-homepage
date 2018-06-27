@@ -62,10 +62,14 @@ To get started with pandapower, just
         pp.create_ext_grid(net, bus=b1)
         pp.create_load(net, bus=b2, p_kw=1000)
 
-3. Run a power flow and check the results
+3. Run a power flow:
 
         pp.runpp(net)
+        
+4. And check the results:
+
         print(net.res_bus.vm_pu)
+        print(net.res_line.loading_percent)
 
 But of course pandapower can do much more than that - find out what on this page!
 
