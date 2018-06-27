@@ -17,7 +17,7 @@ pandapower combines the data analysis library pandas and the power flow solver P
 pandapower was developed as a 
 
 <img src="{{"/images/about/tool_comparison.png" | relative_url }}" alt=""/>
-<figcaption>Comparison of  <a href="" title="L. Thurner, Structural Optimizations in Strategic Medium Voltage Power System Planning, Dissertation, University of Kassel, 2018.">[2]</a></figcaption>
+<figcaption>Comparison of  <a href="http://www.upress.uni-kassel.de/katalog/abstract.php?978-3-7376-0538-0" title="L. Thurner, Structural Optimizations in Strategic Medium Voltage Power System Planning, Dissertation, University of Kassel, 2018.">[2]</a></figcaption>
 
 
 ## Power System Modeling
@@ -236,6 +236,22 @@ and transformer results:
 
 match within the margins defined above.
 
+## Citing pandapower
+A paper describing pandapower has been accepted for publication in IEEE Transaction on Power Systems, a preprint of this paper is available on [arXiv](https://arxiv.org/abs/1709.06743). Please acknowledge the usage of pandapower by citing the Paper as follows:
+
+- **L. Thurner, A. Scheidler, F. Schäfer et al**, [pandapower - an Open Source Python Tool for Convenient Modeling, Analysis and Optimization of Electric Power Systems](https://arxiv.org/abs/1709.06743), IEEE Transactions on Power Systems, [DOI:10.1109/TPWRS.2018.2829021](https://doi.org/10.1109/TPWRS.2018.2829021), 2018.
+
+You can use the following BibTex entry:
+
+	@ARTICLE{pandapower.2018,
+	author={L. Thurner and A. Scheidler and F. Schafer and J. H. Menke and J. Dollichon and F. Meier and S. Meinecke and M. Braun},
+	journal={IEEE Transactions on Power Systems},
+	title={pandapower - an Open Source Python Tool for Convenient Modeling, Analysis and Optimization of Electric Power Systems},
+	year={2018},
+	doi={10.1109/TPWRS.2018.2829021},
+	url={https://arxiv.org/abs/1709.06743},
+	ISSN={0885-8950}
+	}
    
 ## License <a name="license"></a>
 
