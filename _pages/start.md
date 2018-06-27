@@ -107,6 +107,7 @@ example:
 
 
 ### Creating a Network
+{:.no_toc}
 
 The above network can be created in pandapower as follows:
 

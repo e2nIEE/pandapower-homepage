@@ -49,9 +49,15 @@
         {% endif %}
       </h1>
       {% if page.header.show_overlay_excerpt != false and page.excerpt %}
-        <p class="page__lead">{{ page.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}
-        {{page.header.subtitle | markdownify}}</p>
+        <p class="page__lead">{{ page.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>
       {% endif %}
+      {% for shield in page.shields %}
+        {% if shield.icon contains "://" %}
+            <a href={{shield.url}}><img src="{{shield.icon|relative_url}}"></a>
+        {% else %}
+            <a href={{shield.url}}><img src="{{shield.icon}}"></a>
+        {% endif %}   
+      {% endfor %}
       {% if site.read_time and page.read_time %}
         <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
       {% endif %}

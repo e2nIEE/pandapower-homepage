@@ -21,7 +21,7 @@ author:
   github   : lthurner/pandapower
 
 kramdown:
-  toc_levels: 1..1
+  toc_levels: "1"
   
 # Plugins (previously gems:)
 plugins:

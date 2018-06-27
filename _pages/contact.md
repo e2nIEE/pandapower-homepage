@@ -13,12 +13,12 @@ developers:
   - name: "Alexander Scheidler"
     nickname: Alex
     email: alexander.scheidler@iee.fraunhofer.de
-    image: "/images/contact/images/alex.jpg"
+    image: "/images/contact/alex.jpg"
     text: "thinks the only honest people wearing suits are grave diggers. Prefers red t-shirts."
   - name: "Florian Schäfer"
     nickname: Florian
     email: florian.schaefer@uni-kassel.de
-    image: "/images/contact/images/flo.jpg"
+    image: "/images/contact/flo.jpg"
     text: "likes to wear suits to any occasion because it makes him feel fancy."
 ---
 <p></p>
@@ -26,8 +26,7 @@ developers:
 # Mailing List <a name="list"></a>
 If you want to receive updates about new versions and other news about pandapower, you can subscribe to the pandapower mailing list:
 
-[Subscribe](mailto:sympa@fraunhofer.de?subject=subscribe%20pandapower){: .btn .btn--success .btn--large}
-
+[<i class='fas fa-envelope'></i> Subscribe](mailto:sympa@fraunhofer.de?subject=subscribe%20pandapower){: .btn .btn--success .btn--large}<br>
 <small>If you no longer want to receive updates, <a href="mailto:sympa@fraunhofer.de?subject=unsubscribe%20pandapower">unsubscribe here</a>.</small>
 
 # About us
