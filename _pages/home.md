@@ -13,7 +13,7 @@ header:
 shields:
   - icon: 'https://badge.fury.io/py/pandapower.svg'
     url: https://pypi.python.org/pypi/pandapower
-  - icon: 'pandapower/images/home/shield_python_versions.svg'
+  - icon: 'images/home/shield_python_versions.svg'
     url: https://pypi.python.org/pypi/pandapower
   - icon: https://readthedocs.org/projects/pandapower/badge/
     url: http://pandapower.readthedocs.io/
@@ -21,7 +21,7 @@ shields:
     url: https://codecov.io/github/lthurner/pandapower?branch=master
   - icon: 'https://api.codacy.com/project/badge/Grade/5d749ed6772e47f6b84fb9afb83903d3'
     url: 'https://www.codacy.com/app/lthurner/pandapower/dashboard'
-  - icon: 'pandapower/images/home/shield_bsd.svg'
+  - icon: 'images/home/shield_bsd.svg'
     url: https://github.com/lthurner/pandapower/blob/master/LICENSE
     
 excerpt: An easy to use open source tool for power system modeling, analysis and optimization with a high degree of automation.
