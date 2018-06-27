@@ -52,7 +52,7 @@ To get started with pandapower, just
 
         pip install pandapower
 
-2. Create a simple network:
+2. Create a simple network
 
         import pandapower as pp
         net = pp.create_empty_network() 
@@ -61,7 +61,7 @@ To get started with pandapower, just
         pp.create_line(net, from_bus=b1, to_bus=b2, length_km=2.5, std_type="NAYY 4x50 SE")   
         pp.create_ext_grid(net, bus=b1)
         pp.create_load(net, bus=b2, p_kw=1000)
-
+        
 3. Run a power flow:
 
         pp.runpp(net)

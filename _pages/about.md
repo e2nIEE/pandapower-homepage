@@ -14,36 +14,26 @@ pandapower combines the data analysis library pandas and the power flow solver P
 
 ## Scope and Motivation
 
-pandapower was developed as a 
+pandapower was developed to close the gap between commercial and open source power systems analysis tools.
+While open source power systems tools are flexible and can easily be customized, they often lack the detailed model libraries and
+comfortable usage of commercial power system analysis tools.
 
-<img src="{{"/images/about/tool_comparison.png" | relative_url }}" alt=""/>
-<figcaption>Comparison of  <a href="http://www.upress.uni-kassel.de/katalog/abstract.php?978-3-7376-0538-0" title="L. Thurner, Structural Optimizations in Strategic Medium Voltage Power System Planning, Dissertation, University of Kassel, 2018.">[2]</a></figcaption>
-
+|                                                      | Electric Models                                                                                               | Usability                                                    | Flexibility                                                                |
+|------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------|----------------------------------------------------------------------------|
+| Commercial Tools (e.g. Sincal, PowerFactory, NEPLAN) | Thoroughly validated electric models of lines, transformers, switches etc. including standard type libraries. | Comfortable graphical interface application.                 | Only limited possibilities for customization because of proprietary code.  |
+| Open Source Tools (e.g. MATPOWER, PYPOWER)           | Basic models that require parametrization by the user.                                                        | Console applications, often require expert knowledge to use. | Open source and therefore free to modify and customize.                    |
+| pandapower                                           | Thoroughly validated electric models of lines, transformers, switches etc. including standard type libraries. | Easy to use console application.                             | Open source and therefore free to modify and customize.                    |
 
 ## Power System Modeling
 
-**Element Based Modeling**<br>
-Any electric power system analysis function, like power flow or short circuit calculation, is based on a mathematical model of the electric network. There are different approaches how power system tools allow the user to specify this model. A commonly used approach is the bus-branch model, which defines the network as a collection of buses which are connected by generic branches. Branches are modeled with a predefined equivalent circuit and are used to model multi-pole elements like lines or transformers. Buses are attributed with power injections or shunt admittances to model single-pole elements like loads, generators or capacitor banks. Since the bus-branch model is an accurate mathematical representation of the network, electric equations for power systems analysis can be directly derived from it. The bus-branch model can also be freely parametrized and is not bound to specific models of electric utilities. On the other hand, the user needs to calculate the impedances for each branch and summed power injections at each bus manually from the nameplate data of the grid elements. This can be cumbersome and error-prone especially for complex elements, like transformers with tap changers or more than two windings.
-
-Instead of a bus-branch model, pandapower uses an element-based model to model electric grids. An element is either connected to one or multiple buses and is defined with characteristic parameters. Instead of a generic branch model, there are separate models for lines, two-winding, three-winding transformers etc. This allows defining the network with nameplate parameters, such as length and relative impedance for lines, or short circuit voltage and rated apparent power for transformers. Where a bus-branch model allows only the definition of a summed power injection at each bus, single-pole elements (such as load or generation elements) can be connected to buses independently. This also allows connecting multiple elements at one bus as well as composite elements that consist of multiple branch and bus properties, such as three-winding transformers or ward equivalents.
-
 **Equivalent Circuit Models**<br> <a name="models"></a>
-pandapower is an element based network calculation tool that supports the following components:
-
-   - Lines
-   - Two-winding and three-winding transformers
-   - Ideal bus-bus and bus-branch switches
-   - Static generators
-   - PQ and ZIP Loads
-   - Shunts
-   - External grid connections
-   - Synchronous generators
-   - DC lines
-   - Unsymmetric impedances
-   - (Extended) ward equivalents
+pandapower is an element based network calculation tool that supports a wide variety of electric components. 
+The following table shows that the pandapower model library goes beyond of that of most existing open source tools:
 
 <img src="{{"/images/about/open_source_models.png" | relative_url }}" alt=""/>
 <figcaption>Comparison of open source electric model libraries <a href="https://doi.org/10.1109/TPWRS.2018.2829021" title="L. Thurner, A. Scheidler, F. Schäfer et al, pandapower - an Open Source Python Tool for Convenient Modeling, Analysis and Optimization of Electric Power Systems, IEEE Transactions on Power Systems, 2018.">[1]</a></figcaption>
+
+All equivalent circuit models are [thoroughly validated]() against commercial software tools and therefore allow industry level modeling of electric power systems.
 
 **Standard Type Libraries**<br>
 Lines and transformers have two different categories of parameters: parameters that depend on the specific element (e.g. the length of a line or the bus to which a transformer is connected to) and parameters that only depend on the type of line or transformer which is used (e.g. the rated power of a transformer or the resistance per kilometer line). pandapower includes a standard type library that allows the creation of lines and transformers using predefined basic standard type parameters. The user can either define individual standard types or use the predefined pandapower basic standard types for convenient definition of networks.
@@ -64,10 +54,6 @@ pandapower supports the following network analysis functions:
 The pandapower power flow solver is based on the Newton-Raphson method.
 The implementation was originally based on PYPOWER, but has been improved with respect to
 robustness, runtime and usability.
-
-Internal power flow parameters, such as node type for the power flow calculation
-(slack, PV or PQ node) or per unit conversions, are carried out automatically by pandapower.
-This improves user convenience and reduces the risk of incoherent input data.
 
 #### Initialization
 
@@ -116,7 +102,7 @@ decoupled as well as the Gauss-Seidel power flow algorithms through an interface
 
 An unbalanced power flow is currently being implemented and a first version will hopefully be released soon. Follow the progress
 or join the implementation efforts on [github](https://github.com/lthurner/pandapower/issues/96), or subscribe to the [pandapower
-mailing list](/contact/) for updates.
+mailing list]({{/contact/ | relative_url}}) for updates.
 
 **Optimal Power Flow**<br>
 
