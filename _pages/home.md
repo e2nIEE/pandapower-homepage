@@ -1,6 +1,6 @@
 ---
 layout: splash
-title: pandapower
+title: ""
 permalink: /
 header:
   overlay_image: /images/home/background.png
@@ -46,6 +46,29 @@ feature_row:
     btn_label: "Explore on github"
 ---
 
-{% include feature_row id="intro" type="center" %}
+To get started with pandapower, just
 
+1. Install pandapower through pip:
+
+        pip install pandapower
+
+2. Create a simple network:
+
+        import pandapower as pp
+        net = pp.create_empty_network() 
+        b1 = pp.create_bus(net, vn_kv=20.)
+        b2 = pp.create_bus(net, vn_kv=20.)
+        pp.create_line(net, from_bus=b1, to_bus=b2, length_km=2.5, std_type="NAYY 4x50 SE")   
+        pp.create_ext_grid(net, bus=b1)
+        pp.create_load(net, bus=b2, p_kw=1000)
+
+3. Run a power flow and check the results
+
+        pp.runpp(net)
+        print(net.res_bus.vm_pu)
+
+But of course pandapower can do much more than that - find out what on this page!
+
+{% include feature_row id="intro" type="center" %}
+    
 {% include feature_row %}

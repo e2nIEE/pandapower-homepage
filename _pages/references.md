@@ -32,6 +32,7 @@ classes:
 - **D. Büchner, L. Thurner, T. Kneiske, M. Braun**, Automated Network Reinforcement including a Model for an Asset Management Strategy, International ETG Congress 2017, Bonn, Germany, November 2017
 - **L. Thurner, A. Scheidler, M. Braun**, pandapower – an Open Source Framework for Automated Evaluations of Future Power Systems, 1st International Conference on Large-Scale Grid Integration of Renewable Energy in India, New-Delhi, India, September 2017
 - **A. Scheidler, L. Thurner, M. Kraiczy, M. Braun**, [Automated Grid Planning for Distribution Grids with Increasing PV Penetration](https://www.uni-kassel.de/eecs/fileadmin/datas/fb16/Fachgebiete/energiemanagement/Mitarbeitende/Scheidler__Thurner__Kraiczy__Braun_-_Automated_Grid_Planning_for_Distribution_Grids_with_Increasing_PV_Penetration.pdf), 6th International Workshop on Integration of Solar Power into Power Systems, Vienna, Austria, November 2016
+- **D. Pesendorfer, E. Widl, W. Gawlik, R. Hofmann**, Co-simulation and control of power-to-heat units in coupled electrical and thermal distribution networks,  Workshop on Modeling and Simulation of Cyber-Physical Energy Systems, Porto, Portugal, April 2018
 
 **Others** <br>
 - **P. Ahlgren, E. Handberg**, [System performance analysis of an isolated microgrid with renewable energy sources and a battery and hydrogen storage system](http://lup.lub.lu.se/luur/download?func=downloadFile&recordOId=8937880&fileOId=8937884), Masters Thesis, Lund University, 2018.
