@@ -20,17 +20,27 @@ pandapower was developed to close the gap between commercial and open source pow
 While open source power systems tools are flexible and can easily be customized, they often lack the detailed model libraries and
 comfortable usage of commercial power system analysis tools.
 
-|                                                      | Electric Models                                                                                                                               | Automation                                                                                                               | Customization                                                                                           |
-|------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Commercial Tools (e.g. Sincal, PowerFactory, NEPLAN) | <span style="color:green">Thoroughly validated electric models of lines, transformers, switches etc. that are easy to parametrize.</span>     | <span style="color:red">Graphical Interface Application that are difficult to automate.</span>                           | <span style="color:red">Restricted possibilities for customization due to proprietary code base.</span> |
-| Open Source Tools (e.g. MATPOWER, PYPOWER)           | <span style="color:red">Basic models that require parametrization by the user with expert knowledge.</span>                                   | <span style="color:green">Console application that can be freely customized and easily automated.</span>                 | <span style="color:green">Open Source code base that can be freely modified and customized.</span>      |
-| **pandapower**                                       | <span style="color:green">**Thoroughly validated electric models of lines, transformers, switches etc. that are easy to parametrize.**</span> | <span style="color:green">**Easy to use console application that can be freely customized and easily automated.**</span> | <span style="color:green">**Open source code base that can be freely modified and customized.**</span>  |
+|                                                      | Electric Models                                                                                                                                | Automation                                                                                                               | Customization                                                                                           |
+|------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
+| Commercial Tools (e.g. Sincal, PowerFactory, NEPLAN) | <span style="color:green">Thoroughly validated and easy to parametrize electric models of lines, transformers, switches etc.</span>            | <span style="color:red">Graphical User Interface applications that are difficult to automate.</span>                     | <span style="color:red">Restricted possibilities for customization due to proprietary code base.</span> |
+| Open Source Tools (e.g. MATPOWER, PYPOWER)           | <span style="color:red">Basic models that require parametrization by the user with expert knowledge.</span>                                    | <span style="color:green">Console application that are designed for automated evaluations.</span>                        | <span style="color:green">Open Source code base that can be freely modified and customized.</span>      |
+| **pandapower**                                       | <span style="color:green">**Thoroughly validated and easy to parametrize electric models of lines, transformers, switches etc.**</span>        | <span style="color:green">**Console application that is designed for automated evaluations.**</span>                     | <span style="color:green">**Open source code base that can be freely modified and customized.**</span>  |
+
+This is of course a very broad classification of tools that is only supposed to illustrate the focus of pandapower without
+doing the diverse landscape of existing tools justice. More detailed overviews of existing open source tools can be found for example in
+<a href="https://doi.org/10.1109/TPWRS.2018.2829021" title="L. Thurner, A. Scheidler, F. Schäfer et al, pandapower - an Open Source Python Tool for Convenient Modeling, Analysis and Optimization of Electric Power Systems, IEEE Transactions on Power Systems, 2018.">[1]</a>
+,<a href="https://doi.org/10.1016/j.esr.2017.12.002" title="S. Pfenninger, L. Hirth, I. Schlecht et. al - Opening the black box of energy modelling: Strategies and lessons learned, Energy Strategy Reviews, Volume 19, Pages 63-71, 2018">[2]</a>
+ or <a href="https://doi.org/10.1109/PES.2009.5275920" title="F. Milano, L. Vanfretti - State of the Art and Future of OSS for Power Systems, 2009 IEEE Power & Energy Society General Meeting, Calgary, AB, 2009">[3]</a>
+.
 
 **Scope**<br>
 
-pandapower is aimed at static analysis of balanced power systems. This allows analysis in **transmission** and **subtransmission systems**,
-which are typically operated symmetrically. It also allows analysis of **symmetric distribution systems**, which are commonly found
-in Europe. Distribution grids with unbalanced power flows, such as the feeder design common in North America, can currently not be
+pandapower is aimed at **static** analysis of **balanced** power systems. This allows analysis of:
+- **transmission** and **subtransmission systems**, which are typically operated symmetrically.
+- **symmetric distribution systems**, which are commonly found
+in Europe.
+
+Distribution grids with unbalanced power flows, such as the feeder design common in North America, can currently not be
 analysed with pandapower.
 
 
@@ -48,6 +58,13 @@ All equivalent circuit models are [thoroughly validated]() against commercial so
 
 **Tabular Data Structure**<br>
 
+pandapower is based on a tabular data structure, where every element type is represented by a table that holds all parameters for a specific
+element and a result table which contains the element specific results of the different analysis methods. The tabular data structure is
+based on the Python library pandas. It allows storing variables of any data type, so that electrical parameters can be stored
+together with status variables and meta-data, such as names or descriptions. The tables can be easily expanded and customized by adding new
+columns without influencing the pandapower functionality. All inherent pandas methods can be used to efficiently read, write and
+analyze the network and results data.
+
 
 **Standard Type Libraries**<br>
 pandapower includes a standard type library that allows the creation of lines and transformers using predefined basic standard type parameters. The user can either define individual standard types or use the predefined pandapower basic standard types for convenient definition of networks.
@@ -55,12 +72,13 @@ pandapower includes a standard type library that allows the creation of lines an
    
 ## Power System Analysis <a name="analysis"></a>
 
-pandapower supports the following network analysis functions:
-   - power flow
-   - optimal power flow
-   - state estimation
-   - short-circuit calculation according to IEC 60909
-   - topological graph searches
+pandapower supports the followin power systems analysis functions:
+
+- Power Flow
+- Optimal Power Flow (OPF)
+- State Estimation
+- Short-Circuit Calculation
+- Topological Graph Searches
 
 **Power Flow**<br>
 
@@ -108,14 +126,16 @@ point optimizations.
 #### Other solvers
 
 In addition to the default Newton-Raphson solver, pandapower also
-provides an implementation of a backward/forward sweep. It is also possible to use the fast
-decoupled as well as the Gauss-Seidel power flow algorithms through an interface to PYPOWER.
+provides an implementation of a backward/forward sweep. pandapower also includes an Iwamoto variant of the Newton-Raphson,
+which includes a damping factor that can help convergence in ill-conditioned problems. It is also possible to use the fast
+decoupled as well as the Gauss-Seidel power flow algorithms through an interface to PYPOWER, although some features, such as ZIP loads
+or unsymmetrical impedances will only work with the pandapower solvers.
 
 #### Unbalanced Power Flow
 
 An unbalanced power flow is currently being implemented and a first version will hopefully be released soon. Follow the progress
 or join the implementation efforts on [github](https://github.com/lthurner/pandapower/issues/96), or subscribe to the [pandapower
-mailing list]({{/contact/ | relative_url}}) for updates.
+mailing list](contact.md) for updates.
 
 **Optimal Power Flow**<br>
 
