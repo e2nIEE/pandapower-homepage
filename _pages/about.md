@@ -72,13 +72,13 @@ pandapower includes a standard type library that allows the creation of lines an
 
 pandapower supports the following power systems analysis functions:
 
-- Power Flow
-- Optimal Power Flow (OPF)
-- State Estimation
-- Short-Circuit Calculation
-- Topological Graph Searches
+- [Power Flow](#pf)
+- [Optimal Power Flow](#opf)
+- [State Estimation](#se)
+- [Short-Circuit Calculation](#sc)
+- [Topological Graph Searches](#topology)
 
-**Power Flow**<br>
+**Power Flow**<br> <a name="pf"></a>
 
 The pandapower power flow solver is based on the Newton-Raphson method.
 The implementation was originally based on PYPOWER, but has been improved with respect to
@@ -135,7 +135,7 @@ An unbalanced power flow is currently being implemented and a first version will
 or join the implementation efforts on [github](https://github.com/lthurner/pandapower/issues/96), or subscribe to the [pandapower
 mailing list](contact.md) for updates.
 
-**Optimal Power Flow**<br>
+**Optimal Power Flow**<br> <a name="opf"></a>
 
 pandapower allows solving AC and DC optimal power flow (OPF) problems through interfacing
 PYPOWER. The interior point solver provided by PYPOWER is used to solve the problem, while
@@ -145,20 +145,20 @@ load shedding. The cost function for each power injection or load can either be 
 cost function of the active and reactive power output of the respective elements.
 
 
-**State Estimation**<br>
+**State Estimation**<br> <a name="se"></a>
 
 pandapower includes a state estimation module that allows to estimate the electrical state of a network by dealing with inaccuracies
 and errors from measurement data. pandapower supports measurement of voltages, active and reactive power or currents at bus, lines and
 transformers. The state estimation is solved with a weighted-least-square method. It also includes a bad-data detection method based
 on a chi2 and a normalized residuals test.
 
-**Short-Circuit Calculation**<br>
+**Short-Circuit Calculation**<br> <a name="sc"></a>
 
 pandapower includes a short-circuit calculation that allows to calculate fault currents for three-phase, two-phase and single phase 
 short-circuits according to the IEC 60909 standard. The implementation also allows modeling power converter elements, such as 
 PV plants or wind parks, according to the 2016 revision of the standard.
 
-**Graph Searches**<br>
+**Graph Searches**<br> <a name="topology"></a>
 
 pandapower provides the possibility of graph searches using the Python library [NetworkX](https://networkx.github.io/) by providing a
 possibility to translate pandapower networks into NetworkX graphs.
