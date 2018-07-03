@@ -27,9 +27,9 @@ comfortable usage of commercial power system analysis tools.
 | **pandapower**                                       | <span style="color:green">**Thoroughly validated and easy to parametrize electric models of lines, transformers, switches etc.**</span>        | <span style="color:green">**Console application that is designed for automated evaluations.**</span>                     | <span style="color:green">**Open source code base that can be freely modified and customized.**</span>  |
 
 This is of course a very broad classification of tools that is only supposed to illustrate the focus of pandapower without
-doing the diverse landscape of existing tools justice. More detailed overviews of existing open source tools can be found for example in
-<a href="https://doi.org/10.1109/TPWRS.2018.2829021" title="L. Thurner, A. Scheidler, F. Schäfer et al, pandapower - an Open Source Python Tool for Convenient Modeling, Analysis and Optimization of Electric Power Systems, IEEE Transactions on Power Systems, 2018.">[1]</a>
-,<a href="https://doi.org/10.1016/j.esr.2017.12.002" title="S. Pfenninger, L. Hirth, I. Schlecht et. al - Opening the black box of energy modelling: Strategies and lessons learned, Energy Strategy Reviews, Volume 19, Pages 63-71, 2018">[2]</a>
+considering the diverse landscape of existing tools. A more detailed analysis of existing open source tools and 
+the gap that pandapower closes can be found in <a href="https://doi.org/10.1109/TPWRS.2018.2829021" title="L. Thurner, A. Scheidler, F. Schäfer et al, pandapower - an Open Source Python Tool for Convenient Modeling, Analysis and Optimization of Electric Power Systems, IEEE Transactions on Power Systems, 2018.">[1]</a>.
+Overviews over existing open source tools can also be found in <a href="https://doi.org/10.1016/j.esr.2017.12.002" title="S. Pfenninger, L. Hirth, I. Schlecht et. al - Opening the black box of energy modelling: Strategies and lessons learned, Energy Strategy Reviews, Volume 19, Pages 63-71, 2018">[2]</a>
  or <a href="https://doi.org/10.1109/PES.2009.5275920" title="F. Milano, L. Vanfretti - State of the Art and Future of OSS for Power Systems, 2009 IEEE Power & Energy Society General Meeting, Calgary, AB, 2009">[3]</a>
 .
 
@@ -37,12 +37,10 @@ doing the diverse landscape of existing tools justice. More detailed overviews o
 
 pandapower is aimed at **static** analysis of **balanced** power systems. This allows analysis of:
 - **transmission** and **subtransmission systems**, which are typically operated symmetrically.
-- **symmetric distribution systems**, which are commonly found
-in Europe.
+- **symmetric distribution systems**, which are commonly found in Europe.
 
 Distribution grids with unbalanced power flows, such as the feeder design common in North America, can currently not be
 analysed with pandapower.
-
 
 
 ## Power System Modeling
@@ -54,7 +52,7 @@ The following table shows that the pandapower model library goes beyond of that 
 <img src="{{"/images/about/open_source_models.png" | relative_url }}" alt=""/>
 <figcaption>Comparison of open source electric model libraries <a href="https://doi.org/10.1109/TPWRS.2018.2829021" title="L. Thurner, A. Scheidler, F. Schäfer et al, pandapower - an Open Source Python Tool for Convenient Modeling, Analysis and Optimization of Electric Power Systems, IEEE Transactions on Power Systems, 2018.">[1]</a></figcaption>
 
-All equivalent circuit models are [thoroughly validated]() against commercial software tools and therefore allow industry level modeling of electric power systems.
+All equivalent circuit models are [thoroughly validated](#tests) against commercial software tools and therefore allow industry level modeling of electric power systems.
 
 **Tabular Data Structure**<br>
 
@@ -72,7 +70,7 @@ pandapower includes a standard type library that allows the creation of lines an
    
 ## Power System Analysis <a name="analysis"></a>
 
-pandapower supports the followin power systems analysis functions:
+pandapower supports the following power systems analysis functions:
 
 - Power Flow
 - Optimal Power Flow (OPF)
@@ -169,7 +167,7 @@ the network structure. Additionally, pandapower also provides some predefined se
 in electric networks, such as finding unsupplied buses or identifying buses on main or 
 secondary network feeders.
 
-## Tests and Validation
+## Tests and Validation <a name="tests"></a>
 
 pandapower is tested with [pytest](https://docs.pytest.org/en/latest/). There are currently over 250 tests testing all kinds of pandapower functionality. The tests also include
 automatic validation of pandapower results from power flow or short circuit calculations against commercial software, to ensure that the
@@ -177,15 +175,10 @@ implementation is correct.
 
 **Continous Integration**<br>
 
-The tests are continously carried out with Travis CI in Python 2.7, 3.4, 3.5 and 3.6:
-
-[<img src="https://travis-ci.org/lthurner/pandapower.svg?branch=develop">](https://travis-ci.org/lthurner/pandapower)
-[<img src="https://img.shields.io/pypi/pyversions/pandapower.svg">](https://pypi.python.org/pypi/pandapower)
-
-The test coverage rate is checked with codecov, code quality with codacy:
-
-[<img src="https://codecov.io/github/lthurner/pandapower/coverage.svg?branch=develop">](https://codecov.io/github/lthurner/pandapower?branch=master)
-[<img src="https://api.codacy.com/project/badge/Grade/5d749ed6772e47f6b84fb9afb83903d3">](https://www.codacy.com/app/lthurner/pandapower/dashboard)
+The tests are continuously carried out with Travis CI <a href="https://travis-ci.org/lthurner/pandapower"><img src="https://travis-ci.org/lthurner/pandapower.svg?branch=develop"></a>
+in Python 2.7, 3.4, 3.5 and 3.6 <a href="https://pypi.python.org/pypi/pandapower"><img src="{{"/images/home/shield_python_versions.svg"|relative_url}}"></a>.
+The test coverage rate is checked with codecov <a href="https://codecov.io/github/lthurner/pandapower?branch=master"><img src="https://codecov.io/github/lthurner/pandapower/coverage.svg?branch=develop"></a>
+, code quality with codacy <a href="https://www.codacy.com/app/lthurner/pandapower/dashboard"><img src="https://api.codacy.com/project/badge/Grade/5d749ed6772e47f6b84fb9afb83903d3"></a>.
 
 **Model Validation**<br>
 

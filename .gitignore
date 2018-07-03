@@ -1,6 +1,8 @@
 .DS_Store
 
 _site/
+.cache/
+*__pycache__*
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
