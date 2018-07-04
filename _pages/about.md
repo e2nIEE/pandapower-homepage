@@ -43,9 +43,9 @@ Distribution grids with unbalanced power flows, such as the feeder design common
 analysed with pandapower.
 
 
-## Power System Modeling
+<h2 id="modeling">Power System Modeling</h2>
 
-**Equivalent Circuit Models**<br> <a name="models"></a>
+**Equivalent Circuit Models**<br>
 pandapower is an element based network calculation tool that supports a wide variety of electric components. 
 The following table shows that the pandapower model library goes beyond of that of most existing open source tools:
 
@@ -68,7 +68,7 @@ analyze the network and results data.
 pandapower includes a standard type library that allows the creation of lines and transformers using predefined basic standard type parameters. The user can either define individual standard types or use the predefined pandapower basic standard types for convenient definition of networks.
 
    
-## Power System Analysis <a name="analysis"></a>
+<h2 id="analysis">Power System Analysis</h2>
 
 pandapower supports the following power systems analysis functions:
 
@@ -251,7 +251,7 @@ and transformer results:
 
 match within the margins defined above.
 
-## Citing pandapower
+<h2 id="cite">Citing pandapower</h2>
 A paper describing pandapower has been accepted for publication in IEEE Transaction on Power Systems, a preprint of this paper is available on [arXiv](https://arxiv.org/abs/1709.06743). Please acknowledge the usage of pandapower by citing the Paper as follows:
 
 - **L. Thurner, A. Scheidler, F. Schäfer et al**, [pandapower - an Open Source Python Tool for Convenient Modeling, Analysis and Optimization of Electric Power Systems](https://arxiv.org/abs/1709.06743), IEEE Transactions on Power Systems, [DOI:10.1109/TPWRS.2018.2829021](https://doi.org/10.1109/TPWRS.2018.2829021), 2018.
@@ -268,7 +268,7 @@ You can use the following BibTex entry:
 	ISSN={0885-8950}
 	}
    
-## License <a name="license"></a>
+<h2 id="license">License</h2>
 
 pandapower is published under the following 3-clause BSD license: 
 

@@ -29,7 +29,7 @@ feature_row:
   - image_path: /images/home/electric_modeling.png
     title: "Electric Modeling"
     excerpt: "Includes thoroughly validated equivalent circuit models for lines, transformers, switches and more."
-    url: "about/#models"
+    url: "about/#modeling"
     btn_class: "btn--primary"
     btn_label: "Learn More"
   - image_path: /images/home/power_flow.png
