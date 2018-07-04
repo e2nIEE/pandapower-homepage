@@ -6,8 +6,8 @@ header:
   overlay_image: /images/home/background.png
   cta_label: "<i class='fas fa-download'></i> Install Now"
   cta_label2: "<i class='fas fa-envelope'></i> Get Updates"
-  cta_url: "/start/#install/"
-  cta_url2: "/contact/#list/"
+  cta_url: "/start/#install"
+  cta_url2: "/contact/#list"
   subtitle: <a href='https://pypi.python.org/pypi/pandapower'> <img src='{{"/images/home/shield_python_versions.svg" | relative_url}}'></a>
   
 shields:
