@@ -5,7 +5,7 @@ permalink: /references/
 author_profile: false
 toc: true
 toc_sticky: true
-toc_label: <a href="">References</a>
+toc_label: <a href="#site-nav">References</a>
 classes:
   - wide
 ---

@@ -5,7 +5,7 @@ permalink: /start/
 author_profile: false
 toc: true
 toc_sticky: true
-toc_label: <a href="">Getting Started</a>
+toc_label: <a href="#site-nav">Getting Started</a>
 classes:
    - wide
 ---
