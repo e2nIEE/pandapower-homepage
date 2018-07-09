@@ -27,6 +27,7 @@ classes:
 - **L. Thurner, A. Scheidler, A. Probst, M. Braun**, [Heuristic Optimization for Network Restoration and Expansion in Compliance with the Single Contingency Policy](https://ieeexplore.ieee.org/document/8128873/), IET Generation, Transmission and Distribution, vol. 11, no. 17, pp. 4264–4273, 2017
 - **M. Vogt, F. Marten, M. Braun**, [A survey and statistical analysis of smart grid co-simulations](https://doi.org/10.1016/j.apenergy.2018.03.123), Applied Energy, Volume 222,Pages 67-78, 2018
 - **S. Pfenninger, L. Hirth, I. Schlecht et. al**, [Opening the black box of energy modelling: Strategies and lessons learned](https://doi.org/10.1016/j.esr.2017.12.002), Energy Strategy Reviews, Volume 19, Pages 63-71, 2018
+- **J.-H. Menke, J. Hegemann, S. Gehler, M. Braun**, [Heuristic Monitoring Method for Sparsely Measured Distribution Grids](https://www.sciencedirect.com/science/article/pii/S0142061517310311), International Journal of Electrical Power and Energy Systems 95C, pp. 146-155, 2018
 
 **Conference Papers** <br>
 - **D. Büchner, L. Thurner, T. Kneiske, M. Braun**, Automated Network Reinforcement including a Model for an Asset Management Strategy, International ETG Congress 2017, Bonn, Germany, November 2017
