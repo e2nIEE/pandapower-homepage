@@ -7,8 +7,43 @@ toc: true
 toc_sticky: true
 toc_label: <a href="#site-nav">About pandapower</a>
 classes:
-  - wide
+  - wide   
+gallery:
+  - url:        /images/about/validation/test_trafo3w.png
+    image_path: /images/about/validation/test_trafo3w_tn.png
+    title:      "External grid test network"
+  - url:        /images/about/validation/test_ward.png
+    image_path: /images/about/validation/test_ward_tn.png
+    title:      "External grid test network"
+  - url:        /images/about/validation/test_gen.png
+    image_path: /images/about/validation/test_gen_tn.png
+    title:      "External grid test network"
+  - url:        /images/about/validation/test_ext_grid.png
+    image_path: /images/about/validation/test_ext_grid_tn.png
+    title:      "External grid test network"
+  - url:        /images/about/validation/test_line.png
+    image_path: /images/about/validation/test_line_tn.png
+    title:      "External grid test network"
+  - url:        /images/about/validation/test_bus_bus_switch.png
+    image_path: /images/about/validation/test_bus_bus_switch_tn.png
+    title:      "Bus-bus switch test network"
+  - url:        /images/about/validation/test_load_sgen.png
+    image_path: /images/about/validation/test_load_sgen_tn.png
+    title:      "External grid test network"
+  - url:        /images/about/validation/test_impedance.png
+    image_path: /images/about/validation/test_impedance_tn.png
+    title:      "External grid test network"    
+  - url:        /images/about/validation/test_shunt.png
+    image_path: /images/about/validation/test_shunt_tn.png
+    title:      "External grid test network"
+  - url:        /images/about/validation/test_trafo.png
+    image_path: /images/about/validation/test_trafo_tn.png
+    title:      "External grid test network"    
+  - url:        /images/about/validation/test_xward.png
+    image_path: /images/about/validation/test_xward_tn.png
+    title:      "External grid test network"    
 ---
+
 
 pandapower combines the data analysis library pandas and the power flow solver PYPOWER to create an easy to use network calculation program aimed at automation of analysis and optimization in power systems.
 
@@ -185,7 +220,13 @@ The test coverage rate is checked with codecov <a href="https://codecov.io/githu
 To ensure that pandapower loadflow results are correct, all pandapower element behaviour is tested against DIgSILENT PowerFactory or PSS Sincal. 
 
 There is a result test for each of the pandapower elements that checks loadflow results in pandapower against results from a commercial tools. 
-The results are compared with the following tolerances:
+
+Here is an overview of all test networks that are used to validate the electric models:
+
+{% include gallery caption="The pandapower test grids for validation of the electric models." %}
+
+These minimal networks are used to compare power flow results with commercial tools. The tests ensure deviation
+do not surpass the following tolerances:
 
 | **Parameter**     | **Max. Deviation**  | 
 |-------------------|---------------------| 
@@ -195,16 +236,12 @@ The results are compared with the following tolerances:
 | Power             | 0.005 kW            | 
 | Element Loading   | 0.001%              | 
 
-<figure class="third">
-    <a href="{{"/images/about/validation/test_bus_bus_switch.PNG" | relative_url }}"><img src="{{"/images/about/validation/test_bus_bus_switch_thumbnail.PNG" | relative_url }}"></a>
-    <a href="{{"/images/about/validation/test_bus_bus_switch.PNG" | relative_url }}"><img src="{{"/images/about/validation/test_bus_bus_switch_thumbnail.PNG" | relative_url }}"></a>
-	<figcaption>Caption describing these three images.</figcaption>
-</figure>
-
+The validation process is explained in the following for the transformer as an example.
 
 **Example: Transformer**<br>
 
-To validate the pandapower transformer model, a transformer is created with the same parameters in pandapower and PowerFactory. To test all aspects of the model we use a transformer with
+To validate the pandapower transformer model, a transformer is created with the same parameters in pandapower and PowerFactory.
+To test all aspects of the model we use a transformer with:
 
  <ul>
  <small>
@@ -212,6 +249,7 @@ To validate the pandapower transformer model, a transformer is created with the 
    <li>nominal voltages that deviate from the nominal bus voltages at both sides</li>
    <li>an active tap changer</li>
    <li>a voltage angle shift > 0</li>
+   <li>more than one parallel transformer</li>
   </small>
   </ul> 
 
