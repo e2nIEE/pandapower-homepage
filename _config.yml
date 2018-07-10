@@ -17,7 +17,7 @@ title : pandapower
       
 author:
   name    : "pandapower"
-  avatar   : "/images/pp.svg"
+#  avatar   : "/images/pp.svg"
   bio      : "An easy to use open source tool for power system modeling, analysis and optimization with a high degree of automation. "
   location : Kassel, Germany
   email    : info@pandapower.org
