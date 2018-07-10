@@ -11,37 +11,37 @@ classes:
 gallery:
   - url:        /images/about/validation/test_trafo3w.png
     image_path: /images/about/validation/test_trafo3w_tn.png
-    title:      "External grid test network"
+    title:      "Three-winding transformer test network"
   - url:        /images/about/validation/test_ward.png
     image_path: /images/about/validation/test_ward_tn.png
-    title:      "External grid test network"
+    title:      "Ward equivalent test network"
   - url:        /images/about/validation/test_gen.png
     image_path: /images/about/validation/test_gen_tn.png
-    title:      "External grid test network"
+    title:      "Generator test network"
   - url:        /images/about/validation/test_ext_grid.png
     image_path: /images/about/validation/test_ext_grid_tn.png
     title:      "External grid test network"
   - url:        /images/about/validation/test_line.png
     image_path: /images/about/validation/test_line_tn.png
-    title:      "External grid test network"
+    title:      "Line test network"
   - url:        /images/about/validation/test_bus_bus_switch.png
     image_path: /images/about/validation/test_bus_bus_switch_tn.png
     title:      "Bus-bus switch test network"
   - url:        /images/about/validation/test_load_sgen.png
     image_path: /images/about/validation/test_load_sgen_tn.png
-    title:      "External grid test network"
+    title:      "Static generator test network"
   - url:        /images/about/validation/test_impedance.png
     image_path: /images/about/validation/test_impedance_tn.png
-    title:      "External grid test network"    
+    title:      "Impedance test network"    
   - url:        /images/about/validation/test_shunt.png
     image_path: /images/about/validation/test_shunt_tn.png
-    title:      "External grid test network"
+    title:      "Shunt test network"
   - url:        /images/about/validation/test_trafo.png
     image_path: /images/about/validation/test_trafo_tn.png
-    title:      "External grid test network"    
+    title:      "Two-winding transformer test network"    
   - url:        /images/about/validation/test_xward.png
     image_path: /images/about/validation/test_xward_tn.png
-    title:      "External grid test network"    
+    title:      "Extended ward equivalent test network"    
 ---
 
 
@@ -113,11 +113,12 @@ pandapower supports the following power systems analysis functions:
 - [Short-Circuit Calculation](#sc)
 - [Topological Graph Searches](#topology)
 
-<span id="pf">**Power Flow**</span>
+<h3 id="pf">Power Flow</h3>
 
 The pandapower power flow solver is based on the Newton-Raphson method.
 The implementation was originally based on PYPOWER, but has been improved with respect to
 robustness, runtime and usability.
+<br><small>[Learn more](http://pandapower.readthedocs.io/en/stable/powerflow/ac.html)</small>
 
 #### Initialization
 
@@ -126,38 +127,24 @@ vector for the AC power flow calculation:
    - flat start
    - voltage vector of a previous calculation
    - initialization with a DC power flow
+   
 
 #### Performance
-
 Some parts of the pandapower solver have been accelerated using the
-JIT compiler [numba](https://numba.pydata.org/). This makes the pandapower Newton-Raphson
+JIT compiler [numba](https://numba.pydata.org/). This makes the pandapower Newton-Raphson significantly faster
+than the PYPOWER solver from which it was originally derived.
 To outline the difference in computational time, the convergence times for different standard MATPOWER
-case files are shown here:
+case files are shown here for MATPOWER, PYPOWER and pandapower:
 
 <img src="{{"/images/about/speed_comparison.png" | relative_url }}" alt=""/>
 <figcaption>Power flow speed convergence time comparison of different open source tools <a href="https://doi.org/10.1109/TPWRS.2018.2829021" title="L. Thurner, A. Scheidler, F. Schäfer et al, pandapower - an Open Source Python Tool for Convenient Modeling, Analysis and Optimization of Electric Power Systems, IEEE Transactions on Power Systems, 2018.">[1]</a></figcaption>
 
-The pandapower timings distinguish between power flow solver and conversion overhead, 
-which includes BBM conversion as well as result extraction. It can be seen that pandapower
-is faster than PYPOWER in all cases due to the jit accelerated building of the Jacobian
-matrix and other aspects of the Newton-Raphson solver. It can also be seen that while the
-conversion overhead takes up more than half of the calculation time for small networks,
-its share decreases significantly for larger networks. While pandapower is slower than
-MATPOWER for small networks, it is faster for medium sized and large networks, even
-including the conversion overhead for the BBM.
-
-#### Timeseries Simulations
-
-By default, the BBM conversion is carried out before every power flow.
-However, if multiple subsequent power flows are performed for the
-same network that only differ in the nodal power injections, the conversion into a BBM
-becomes redundant. For this reason, pandapower offers the possibility to reuse the BBM
-and the nodal point admittance matrix from previous power flow calculations. This feature
-can speed up applications like quasi-static time series simulations or heuristic power set
-point optimizations.
+While PYPOWER and MATPOWER operate directly on the bus-branch model of the grid, the element based power system model in pandapower
+requires mappings and conversions of grid data and results into the tabular data structure. The graph shows that this
+conversion can take a significant amount of time in smaller networks, but its share decreases in larger networks. Even with 
+the conversion overhead, pandapower is the fastest of the three tools in large grids with >1000 nodes.
 
 #### Other solvers
-
 In addition to the default Newton-Raphson solver, pandapower also
 provides an implementation of a backward/forward sweep. pandapower also includes an Iwamoto variant of the Newton-Raphson,
 which includes a damping factor that can help convergence in ill-conditioned problems. It is also possible to use the fast
@@ -165,42 +152,40 @@ decoupled as well as the Gauss-Seidel power flow algorithms through an interface
 or unsymmetrical impedances will only work with the pandapower solvers.
 
 #### Unbalanced Power Flow
-
 An unbalanced power flow is currently being implemented and a first version will hopefully be released soon. Follow the progress
 or join the implementation efforts on [github](https://github.com/lthurner/pandapower/issues/96), or subscribe to the [pandapower
 mailing list](contact.md) for updates.
 
-<span id="opf">**Optimal Power Flow**<br> </span>
-
+<h3 id="opf">Optimal Power Flow<br> </h3>
 pandapower allows solving AC and DC optimal power flow (OPF) problems through interfacing
 PYPOWER. The interior point solver provided by PYPOWER is used to solve the problem, while
 costs, flexibilities and constraints are configured through the element-based pandapower
-data structure. Static loads can be used as flexibilities in the OPF, so that tion of static generators in dispatch optimizations as well as the consideration of
-load shedding. The cost function for each power injection or load can either be defined by a piecewise linear or a n-polynomial
+data structure. Static loads can be used as flexibilities in the OPF, which allows optimization dispatch of static generators as well 
+as load shedding. The cost function for each power injection or load can either be defined by a piecewise linear or a n-polynomial
 cost function of the active and reactive power output of the respective elements.
+<br><small>[Learn more](http://pandapower.readthedocs.io/en/stable/powerflow/opf.html)</small>
 
-
-<span id="se">**State Estimation**<br></span>
-
+<h3 id="se">State Estimation<br></h3>
 pandapower includes a state estimation module that allows to estimate the electrical state of a network by dealing with inaccuracies
 and errors from measurement data. pandapower supports measurement of voltages, active and reactive power or currents at bus, lines and
 transformers. The state estimation is solved with a weighted-least-square method. It also includes a bad-data detection method based
-on a chi2 and a normalized residuals test.
+on a Chi-squared and a normalized residuals test.
+<br><small>[Learn more](http://pandapower.readthedocs.io/en/stable/estimation.html)</small>
 
-<span id="sc">**Short-Circuit Calculation**<br></span>
-
+<h3 id="sc">Short-Circuit Calculation<br></h3>
 pandapower includes a short-circuit calculation that allows to calculate fault currents for three-phase, two-phase and single phase 
 short-circuits according to the IEC 60909 standard. The implementation also allows modeling power converter elements, such as 
 PV plants or wind parks, according to the 2016 revision of the standard.
+<br><small>[Learn more](http://pandapower.readthedocs.io/en/stable/shortcircuit.html)</small>
 
-<span id="topology">**Graph Searches**<br></span>
-
+<h3 id="topology">Graph Searches<br></h3>
 pandapower provides the possibility of graph searches using the Python library [NetworkX](https://networkx.github.io/) by providing a
 possibility to translate pandapower networks into NetworkX graphs.
 Once a network is translated into an abstract graph, all graph searches implemented in the NetworkX library can be used to analyze
 the network structure. Additionally, pandapower also provides some predefined search algorithms to tackle common graph search problems
 in electric networks, such as finding unsupplied buses or identifying buses on main or 
 secondary network feeders.
+<br><small>[Learn more](http://pandapower.readthedocs.io/en/stable/topology.html)</small>
 
 <h2 id="tests">Tests and Validation</h2>
 
