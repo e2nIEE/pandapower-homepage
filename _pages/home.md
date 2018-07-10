@@ -1,6 +1,6 @@
 ---
 layout: splash
-title: ""
+title: "pandapower"
 permalink: /
 header:
   overlay_image: /images/home/background.png
