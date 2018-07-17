@@ -10,7 +10,9 @@ classes:
   - wide
 ---
 
-## Publications about pandapower
+## Publications
+
+### About pandapower
 
 Publications discussing the implemenation and usage of pandapower itself:
 
@@ -20,7 +22,7 @@ Publications discussing the implemenation and usage of pandapower itself:
 - **F. Schäfer, M. Braun**, An efficient open-source implementation to compute the Jacobian matrix for the Newton-Raphson power flow algorithm, ISGT Europe 2018, Sarajevo, Bosnia and Herzegovina, October 2018
 - **L. Thurner, A. Scheidler, M. Braun**, pandapower – an Open Source Framework for Automated Evaluations of Future Power Systems, 1st International Conference on Large-Scale Grid Integration of Renewable Energy in India, New-Delhi, India, September 2017
 
-## Publications using pandapower
+### Using pandapower
 
 Publications using pandapower as a tool for power system calculations:
 
@@ -48,7 +50,7 @@ Publications using pandapower as a tool for power system calculations:
 
 - **G. Cardoso, M. Heleno, S. Mashayekh et. al**, [Integrated Modeling Tool for Regulators - Proof of Concept and Prototype](https://www.districtenergy.org/HigherLogic/System/DownloadDocumentFile.ashx?DocumentFileKey=c7b57d8f-13ad-9bd7-1361-8a21a8a72a50&forceDialog=0), Lawrence Berkeley National Laboratory, 2017.
 
-## Others
+### Others
 
 Other papers mentioning or referencing pandapower that might be of interest:
 
