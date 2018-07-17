@@ -259,7 +259,7 @@ We use a transformer with the following parameters:
   </small>
   </ul> 
 
-To validate the in_service parameter as well as the transformer switch element, we create three transformers in parallel: one in service, on out of service and one with an open switch in open loop operation.
+To validate the in_service parameter as well as the transformer switch element, we create three transformers in parallel: one in service, one out of service and one with an open switch in open loop operation.
 All three transformers are connected to a 20kV / 0.4 kV bus network. The test network then looks like this:
 
 <img src="{{"/images/about/validation/test_trafo.png" | relative_url }}" alt=""/>
