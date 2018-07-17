@@ -17,12 +17,12 @@ shields:
     url: https://pypi.python.org/pypi/pandapower
   - icon: https://readthedocs.org/projects/pandapower/badge/
     url: http://pandapower.readthedocs.io/
-  - icon: 'https://codecov.io/github/lthurner/pandapower/coverage.svg?branch=develop'
-    url: https://codecov.io/github/lthurner/pandapower?branch=master
+  - icon: 'https://codecov.io/github/e2nIEE/pandapower/coverage.svg?branch=develop'
+    url: https://codecov.io/github/e2nIEE/pandapower?branch=master
   - icon: 'https://api.codacy.com/project/badge/Grade/5d749ed6772e47f6b84fb9afb83903d3'
-    url: 'https://www.codacy.com/app/lthurner/pandapower/dashboard'
+    url: 'https://app.codacy.com/project/lthurner/pandapower/dashboard'
   - icon: 'images/home/shield_bsd.svg'
-    url: https://github.com/lthurner/pandapower/blob/master/LICENSE
+    url: https://github.com/e2nIEE/pandapower/blob/master/LICENSE
     
 excerpt: An easy to use open source tool for power system modeling, analysis and optimization with a high degree of automation.
 feature_row:
@@ -41,7 +41,7 @@ feature_row:
   - image_path: /images/home/osi_symbol.png
     title: "Free and Open"
     excerpt: "Published under a BSD License and therefore free to use, modify and share however you want."
-    url: "https://github.com/lthurner/pandapower"
+    url: "https://github.com/e2nIEE/pandapower"
     btn_class: "btn--primary"
     btn_label: "Explore on github"
 ---

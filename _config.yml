@@ -1,6 +1,6 @@
 remote_theme: "mmistakes/minimal-mistakes"
 
-repository: lthurner/pandapower
+repository: e2nIEE/pandapower
 
 include:
   - _pages
@@ -18,7 +18,7 @@ author:
   bio      : "An easy to use open source tool for power system modeling, analysis and optimization with a high degree of automation. "
   location : Kassel, Germany
   email    : info@pandapower.org
-  github   : lthurner/pandapower
+  github   : e2nIEE/pandapower
   
 # Plugins (previously gems:)
 plugins:

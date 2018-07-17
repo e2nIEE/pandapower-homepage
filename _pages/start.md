@@ -53,7 +53,7 @@ If you don't have internet access on your system or don't want to use pip for so
 
 **Development Version**<br>
 
-To install the latest development version of pandapower from [github](https://github.com/lthurner/pandapower), simply follow these steps:
+To install the latest development version of pandapower from [github](https://github.com/e2nIEE/pandapower), simply follow these steps:
 
 1. Download and install [git](https://git-scm.com). 
 
@@ -61,7 +61,7 @@ To install the latest development version of pandapower from [github](https://gi
 
 3. Run the following git command:
 
-        git clone https://github.com/lthurner/pandapower.git
+        git clone https://github.com/e2nIEE/pandapower.git
 
 4. Navigate inside the repository and check out the develop branch:
 
@@ -169,7 +169,7 @@ This minimal example is also available as a [jupyter notebook].
   [transformer model]: http://pandapower.readthedocs.io/en/latest/elements/trafo.html#electric-model
   [standard type library]: http://pandapower.readthedocs.io/en/latest/std_types.html
   [runpp function]: http://pandapower.readthedocs.io/en/latest/powerflow/ac.html
-  [jupyter notebook]: https://github.com/lthurner/pandapower/blob/develop/tutorials/minimal_example.ipynb
+  [jupyter notebook]: https://github.com/e2nIEE/pandapower/blob/develop/tutorials/minimal_example.ipynb
 
 
   
@@ -242,14 +242,14 @@ Hosting Capacity:
   [data_analysis]: https://github.com/panda-power/pandapower/blob/master/tutorials/data_analysis.ipynb
   [diagnostic]: https://github.com/panda-power/pandapower/blob/master/tutorials/diagnostic.ipynb
   [state estimation]: https://github.com/panda-power/pandapower/blob/master/tutorials/state_estimation.ipynb
-  [short-circuit calculation]: https://github.com/lthurner/pandapower/blob/develop/tutorials/shortcircuit.ipynb
-  [considering renewable energy (2016 revision)]: https://github.com/lthurner/pandapower/blob/develop/tutorials/shortcircuit_renewables.ipynb
+  [short-circuit calculation]: https://github.com/e2nIEE/pandapower/blob/develop/tutorials/shortcircuit.ipynb
+  [considering renewable energy (2016 revision)]: https://github.com/e2nIEE/pandapower/blob/develop/tutorials/shortcircuit_renewables.ipynb
   [standard types]: https://github.com/panda-power/pandapower/blob/master/tutorials/std_types.ipynb
   [topologic searches]: https://github.com/panda-power/pandapower/blob/master/tutorials/topology.ipynb
   [basic plotting]: https://github.com/panda-power/pandapower/blob/master/tutorials/plotting_basic.ipynb
   [plotting with colormaps]: https://github.com/panda-power/pandapower/blob/master/tutorials/plotting_colormaps.ipynb
   [plotting without geographical data]: https://github.com/panda-power/pandapower/blob/master/tutorials/plotting_structural.ipynb
-  [built-in plots]: http://nbviewer.jupyter.org/github/lthurner/pandapower/blob/develop/tutorials/plotly_built-in.ipynb
-  [custom plots]: http://nbviewer.jupyter.org/github/lthurner/pandapower/blob/develop/tutorials/plotly_traces.ipynb
-  [interactive plots on maps]: http://nbviewer.jupyter.org/github/lthurner/pandapower/blob/develop/tutorials/plotly_maps.ipynb
-  [hosting capacity]: https://github.com/lthurner/pandapower/blob/develop/tutorials/hosting_capacity.ipynb
+  [built-in plots]: http://nbviewer.jupyter.org/github/e2nIEE/pandapower/blob/develop/tutorials/plotly_built-in.ipynb
+  [custom plots]: http://nbviewer.jupyter.org/github/e2nIEE/pandapower/blob/develop/tutorials/plotly_traces.ipynb
+  [interactive plots on maps]: http://nbviewer.jupyter.org/github/e2nIEE/pandapower/blob/develop/tutorials/plotly_maps.ipynb
+  [hosting capacity]: https://github.com/e2nIEE/pandapower/blob/develop/tutorials/hosting_capacity.ipynb

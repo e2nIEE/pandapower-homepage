@@ -153,7 +153,7 @@ or unsymmetrical impedances will only work with the pandapower solvers.
 
 #### Unbalanced Power Flow
 An unbalanced power flow is currently being implemented and a first version will hopefully be released soon. Follow the progress
-or join the implementation efforts on [github](https://github.com/lthurner/pandapower/issues/96), or subscribe to the [pandapower
+or join the implementation efforts on [github](https://github.com/e2nIEE/pandapower/issues/96), or subscribe to the [pandapower
 mailing list](contact.md) for updates.
 
 <h3 id="opf">Optimal Power Flow<br> </h3>
@@ -195,10 +195,10 @@ implementation is correct.
 
 **Continous Integration**<br>
 
-The tests are continuously carried out with Travis CI <a href="https://travis-ci.org/lthurner/pandapower"><img src="https://travis-ci.org/lthurner/pandapower.svg?branch=develop"></a>
+The tests are continuously carried out with Travis CI <a href="https://travis-ci.org/e2nIEE/pandapower"><img src="https://travis-ci.org/e2nIEE/pandapower.svg?branch=develop"></a>
 in Python 2.7, 3.4, 3.5 and 3.6 <a href="https://pypi.python.org/pypi/pandapower"><img src="{{"/images/home/shield_python_versions.svg"|relative_url}}"></a>.
-The test coverage rate is checked with codecov <a href="https://codecov.io/github/lthurner/pandapower?branch=master"><img src="https://codecov.io/github/lthurner/pandapower/coverage.svg?branch=develop"></a>
-, code quality with codacy <a href="https://www.codacy.com/app/lthurner/pandapower/dashboard"><img src="https://api.codacy.com/project/badge/Grade/5d749ed6772e47f6b84fb9afb83903d3"></a>.
+The test coverage rate is checked with codecov <a href="https://codecov.io/github/e2nIEE/pandapower?branch=master"><img src="https://codecov.io/github/e2nIEE/pandapower/coverage.svg?branch=develop"></a>
+, code quality with codacy <a href="https://www.codacy.com/app/e2nIEE/pandapower/dashboard"><img src="https://api.codacy.com/project/badge/Grade/5d749ed6772e47f6b84fb9afb83903d3"></a>.
 
 **Model Validation**<br>
 
@@ -281,13 +281,15 @@ A paper describing pandapower has been accepted for publication in IEEE Transact
 
 You can use the following BibTex entry:
 
+```
 	@ARTICLE{pandapower.2018,
-	author = {{Thurner}, L. and {Scheidler}, A. and {Sch{\"a}fer}, F. and {Menke}, J.-H. and {Dollichon}, J. and {Meier}, F. and {Meinecke}, S. and {Braun}, M.},
+	author = {L. Thurner and A. Scheidler and F. Sch{\"a}fer and J.-H. Menke and J. Dollichon and F. Meier and S. Meinecke and M. Braun},
 	journal={IEEE Transactions on Power Systems},
 	title={pandapower - an Open Source Python Tool for Convenient Modeling, Analysis and Optimization of Electric Power Systems},
 	year={2018},
 	doi={10.1109/TPWRS.2018.2829021}
 	}
+```
    
 <h2 id="license">License</h2>
 
