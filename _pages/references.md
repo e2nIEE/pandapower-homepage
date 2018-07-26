@@ -14,7 +14,7 @@ classes:
 
 ### About pandapower
 
-Publications discussing the implemenation and usage of pandapower itself:
+Publications discussing the tool itself:
 
 - **L. Thurner, A. Scheidler, F. Schäfer et al**, [pandapower - an Open Source Python Tool for Convenient Modeling, Analysis and Optimization of Electric Power Systems](https://arxiv.org/abs/1709.06743), IEEE Transactions on Power Systems, 2018.
 

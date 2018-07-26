@@ -9,18 +9,38 @@ developers:
   - name: "Leon Thurner"
     nickname: Leon
     email: leon.thurner@uni-kassel.de
-    image: "/images/contact/leon.jpg"
+    image: "/images/contact/Thurner.jpg"
     text: "accompanied and shaped the journey of pandapower from a few scripts in a folder to the fully fledged open source power system analysis tool it is today."
   - name: "Alexander Scheidler"
     nickname: Alex
     email: alexander.scheidler@iee.fraunhofer.de
-    image: "/images/contact/alex.jpg"
+    image: "/images/contact/Scheidler.jpg"
     text: "came up with the idea to pandapower in 2013 and never looked back. Has been coordinating and shaping the development of pandapower ever since."
   - name: "Florian Schäfer"
     nickname: Florian
     email: florian.schaefer@uni-kassel.de
-    image: "/images/contact/flo.jpg"
+    image: "/images/contact/Schaefer.jpg"
     text: "was tasked with accelerating the power flow when he joined the team in 2016 and used the power of numba to make pandapower one of the fastest power flow solvers out there."
+  - name: "Jan-Hendrik Menke"
+    nickname: Jan-Hendrik
+    email: jan-hendrik.menke@uni-kassel.de
+    image: "/images/contact/Menke.jpg"
+    text: ""
+  - name: "Julian Dollichon"
+    nickname: Julian
+    email: julian.dollichon@iee.fraunhofer.de
+    image: "/images/contact/Dollichon.jpg"
+    text: ""
+  - name: "Friederike Meier"
+    nickname: Friederike
+    email: friederike.meier@iee.fraunhofer.de
+    image: "/images/contact/Meier.jpg"
+    text: ""
+  - name: "Steffen Meinecke"
+    nickname: Steffen
+    email: steffen.meinecke@uni-kassel.de
+    image: "/images/contact/Meinecke.jpg"
+    text: ""    
 ---
 <p></p>
 
