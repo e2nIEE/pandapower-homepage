@@ -40,12 +40,6 @@ Publications using pandapower as a tool for power system calculations:
 
 - **D. Hölker**, ["Qualitätsbewertung von Energiemanagement-Algorithmen unter Berücksichtigung eingeschränkter Kommunikationsparameter"](https://www.uni-oldenburg.de/fileadmin/user_upload/informatik/hoequa18.pdf), Dissertation, University of Oldenburg, 2018.
 
-- **T. Deß**, 
-- **J. Dollichon**, 
-- **M. Dipp**, University of Kassel, 
-- **J. Ulffers**, University of Kassel, 
-- **J. Kupka**, University of Kassel, 
-- **M. Dipp**, University of Kassel, 
 - **P. Ahlgren, E. Handberg**, [System performance analysis of an isolated microgrid with renewable energy sources and a battery and hydrogen storage system](http://lup.lub.lu.se/luur/download?func=downloadFile&recordOId=8937880&fileOId=8937884), Masters Thesis, Lund University, 2018.
 
 - **G. Cardoso, M. Heleno, S. Mashayekh et. al**, [Integrated Modeling Tool for Regulators - Proof of Concept and Prototype](https://www.districtenergy.org/HigherLogic/System/DownloadDocumentFile.ashx?DocumentFileKey=c7b57d8f-13ad-9bd7-1361-8a21a8a72a50&forceDialog=0), Lawrence Berkeley National Laboratory, 2017.
