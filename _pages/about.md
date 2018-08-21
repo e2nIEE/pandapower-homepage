@@ -45,7 +45,9 @@ gallery:
 ---
 
 
-pandapower combines the data analysis library pandas and the power flow solver PYPOWER to create an easy to use network calculation program aimed at automation of analysis and optimization in power systems.
+pandapower builds on the data analysis library pandas and the power system analysis toolbox PYPOWER to create an easy to use network calculation program aimed at automation of analysis and optimization in power systems.
+What started as a convenience wrapper around PYPOWER has evolved into a stand-alone power systems analysis toolbox with extensive power system [model library](#modeling),
+an [improved power flow solver](#pf) and many other [power systems analysis functions](#analysis).
 
 ## Why another tool?
 
@@ -273,24 +275,7 @@ and transformer results:
 <img src="{{"/images/about/validation/validation_trafo.png" | relative_url }}" alt=""/>
 
 match within the margins defined above.
-
-<h2 id="cite">Citing pandapower</h2>
-A paper describing pandapower has been accepted for publication in IEEE Transaction on Power Systems, a preprint of this paper is available on [arXiv](https://arxiv.org/abs/1709.06743). Please acknowledge the usage of pandapower by citing the Paper as follows:
-
-- **L. Thurner, A. Scheidler, F. Schäfer et al**, [pandapower - an Open Source Python Tool for Convenient Modeling, Analysis and Optimization of Electric Power Systems](https://arxiv.org/abs/1709.06743), IEEE Transactions on Power Systems, [DOI:10.1109/TPWRS.2018.2829021](https://doi.org/10.1109/TPWRS.2018.2829021), 2018.
-
-You can use the following BibTex entry:
-
-```
-	@ARTICLE{pandapower.2018,
-	author = {L. Thurner and A. Scheidler and F. Sch{\"a}fer and J.-H. Menke and J. Dollichon and F. Meier and S. Meinecke and M. Braun},
-	journal={IEEE Transactions on Power Systems},
-	title={pandapower - an Open Source Python Tool for Convenient Modeling, Analysis and Optimization of Electric Power Systems},
-	year={2018},
-	doi={10.1109/TPWRS.2018.2829021}
-	}
-```
-   
+  
 <h2 id="license">License</h2>
 
 pandapower is published under the following 3-clause BSD license: 

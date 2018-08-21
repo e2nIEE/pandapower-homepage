@@ -14,9 +14,23 @@ classes:
 
 ### About pandapower
 
-Publications discussing the tool itself:
+A paper describing pandapower has been published in [IEEE Transaction on Power Systems](https://doi.org/10.1109/TPWRS.2018.2829021), a preprint of the paper is also available on [arXiv](https://arxiv.org/abs/1709.06743). Please acknowledge the usage of pandapower by citing this paper:
 
 - **L. Thurner, A. Scheidler, F. Schäfer et al**, [pandapower - an Open Source Python Tool for Convenient Modeling, Analysis and Optimization of Electric Power Systems](https://arxiv.org/abs/1709.06743), IEEE Transactions on Power Systems, 2018.
+
+You can use the following BibTex entry:
+
+```
+	@ARTICLE{pandapower.2018,
+	author = {L. Thurner and A. Scheidler and F. Sch{\"a}fer and J.-H. Menke and J. Dollichon and F. Meier and S. Meinecke and M. Braun},
+	journal={IEEE Transactions on Power Systems},
+	title={pandapower - an Open Source Python Tool for Convenient Modeling, Analysis and Optimization of Electric Power Systems},
+	year={2018},
+	doi={10.1109/TPWRS.2018.2829021}
+	}
+```
+
+The following publications also discuss the tool itself and implementation details:
 
 - **L. Thurner, M. Braun**, Vectorized calculation of short circuit currents considering distributed generation - an open source implementation of IEC 60909, ISGT Europe 2018, Sarajevo, Bosnia and Herzegovina, October 2018
 - **F. Schäfer, M. Braun**, An efficient open-source implementation to compute the Jacobian matrix for the Newton-Raphson power flow algorithm, ISGT Europe 2018, Sarajevo, Bosnia and Herzegovina, October 2018
