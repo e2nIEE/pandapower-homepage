@@ -45,7 +45,7 @@ developers:
     nickname: Martin Braun
     email: martin.braun@uni-kassel.de
     image: "/images/contact/Braun.jpg"
-    text: "Martin Braun is strategically guiding and paving the way towards new fields of application."    
+    text: "is strategically guiding and paving the way towards new fields of application."    
 ---
 <p></p>
 
