@@ -100,7 +100,7 @@ together with status variables and meta-data, such as names or descriptions. The
 columns without influencing the pandapower functionality. All inherent pandas methods can be used to efficiently read, write and
 analyze the network and results data.
 
-<h3 id="datastructure">Standard Type Libraries</h3>
+<h3 id="std_types">Standard Type Libraries</h3>
 
 pandapower includes a standard type library that allows the creation of lines and transformers using predefined basic standard type parameters. The user can either define individual standard types or use the predefined pandapower basic standard types for convenient definition of networks.
 
