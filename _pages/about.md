@@ -82,7 +82,7 @@ analysed with pandapower.
 
 <h2 id="modeling">Power System Modeling</h2>
 
-**Equivalent Circuit Models**<br>
+<h3 id="circuits">Equivalent Circuit Models</h3>
 pandapower is an element based network calculation tool that supports a wide variety of electric components. 
 The following table shows that the pandapower model library goes beyond of that of most existing open source tools:
 
@@ -91,7 +91,7 @@ The following table shows that the pandapower model library goes beyond of that 
 
 All equivalent circuit models are [thoroughly validated](#tests) against commercial software tools and therefore allow industry level modeling of electric power systems.
 
-**Tabular Data Structure**<br>
+<h3 id="datastructure">Tabular Data Structure</h3>
 
 pandapower is based on a tabular data structure, where every element type is represented by a table that holds all parameters for a specific
 element and a result table which contains the element specific results of the different analysis methods. The tabular data structure is
@@ -100,8 +100,8 @@ together with status variables and meta-data, such as names or descriptions. The
 columns without influencing the pandapower functionality. All inherent pandas methods can be used to efficiently read, write and
 analyze the network and results data.
 
+<h3 id="datastructure">Standard Type Libraries</h3>
 
-**Standard Type Libraries**<br>
 pandapower includes a standard type library that allows the creation of lines and transformers using predefined basic standard type parameters. The user can either define individual standard types or use the predefined pandapower basic standard types for convenient definition of networks.
 
    
@@ -122,7 +122,7 @@ The implementation was originally based on PYPOWER, but has been improved with r
 robustness, runtime and usability.
 <br><small>[Learn more](http://pandapower.readthedocs.io/en/stable/powerflow/ac.html)</small>
 
-#### Initialization
+<font size="4"><b>Initialization</b></font>
 
 pandapower offers three different methods to initialize the complex voltage
 vector for the AC power flow calculation:
@@ -130,8 +130,8 @@ vector for the AC power flow calculation:
    - voltage vector of a previous calculation
    - initialization with a DC power flow
    
+<font size="4"><b>Performance</b></font>
 
-#### Performance
 Some parts of the pandapower solver have been accelerated using the
 JIT compiler [numba](https://numba.pydata.org/). This makes the pandapower Newton-Raphson significantly faster
 than the PYPOWER solver from which it was originally derived.
@@ -146,14 +146,16 @@ requires mappings and conversions of grid data and results into the tabular data
 conversion can take a significant amount of time in smaller networks, but its share decreases in larger networks. Even with 
 the conversion overhead, pandapower is the fastest of the three tools in large grids with >1000 nodes.
 
-#### Other solvers
+<font size="4"><b>Other solvers</b></font>
+
 In addition to the default Newton-Raphson solver, pandapower also
 provides an implementation of a backward/forward sweep. pandapower also includes an Iwamoto variant of the Newton-Raphson,
 which includes a damping factor that can help convergence in ill-conditioned problems. It is also possible to use the fast
 decoupled as well as the Gauss-Seidel power flow algorithms through an interface to PYPOWER, although some features, such as ZIP loads
 or unsymmetrical impedances will only work with the pandapower solvers.
 
-#### Unbalanced Power Flow
+<font size="4"><b>Unbalanced Power Flow</b></font>
+
 An unbalanced power flow is currently being implemented and a first version will hopefully be released soon. Follow the progress
 or join the implementation efforts on [github](https://github.com/e2nIEE/pandapower/issues/96), or subscribe to the [pandapower
 mailing list](contact.md) for updates.
@@ -195,14 +197,14 @@ pandapower is tested with [pytest](https://docs.pytest.org/en/latest/). There ar
 automatic validation of pandapower results from power flow or short circuit calculations against commercial software, to ensure that the
 implementation is correct.
 
-**Continous Integration**<br>
+<font size="5"><b>Continous Integration</b></font>
 
 The tests are continuously carried out with Travis CI <a href="https://travis-ci.org/e2nIEE/pandapower"><img src="https://travis-ci.org/e2nIEE/pandapower.svg?branch=develop"></a>
 in Python 2.7, 3.4, 3.5 and 3.6 <a href="https://pypi.python.org/pypi/pandapower"><img src="{{"/images/home/shield_python_versions.svg"|relative_url}}"></a>.
 The test coverage rate is checked with codecov <a href="https://codecov.io/github/e2nIEE/pandapower?branch=master"><img src="https://codecov.io/github/e2nIEE/pandapower/coverage.svg?branch=develop"></a>
 , code quality with codacy <a href="https://www.codacy.com/app/e2nIEE/pandapower/dashboard"><img src="https://api.codacy.com/project/badge/Grade/5d749ed6772e47f6b84fb9afb83903d3"></a>.
 
-**Model Validation**<br>
+<font size="5"><b>Model Validation</b></font>
 
 To ensure that pandapower loadflow results are correct, all pandapower element behaviour is tested against DIgSILENT PowerFactory or PSS Sincal. 
 
@@ -225,7 +227,7 @@ do not surpass the following tolerances:
 
 The validation process is explained in the following for the transformer as an example.
 
-**Example: Transformer**<br>
+<font size="5"><b>Example: Transformer</b></font>
 
 To validate the pandapower transformer model, a transformer is created with the same parameters in pandapower and PowerFactory.
 To test all aspects of the model we use a transformer with:

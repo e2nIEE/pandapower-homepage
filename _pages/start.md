@@ -26,7 +26,7 @@ If you use a distribution that does not include one of these packages, you eithe
 
 <h2 id="install">Installing pandapower</h2>
         
-**Through pip**<br>
+<h3 id="pip">Through pip</h3>
 
 The easiest way to install pandapower is through pip:
 
@@ -36,8 +36,7 @@ The easiest way to install pandapower is through pip:
 
         pip install pandapower
 
-
-**Without pip**<br>
+<h3 id="nopip">Without pip</h3>
 
 If you don't have internet access on your system or don't want to use pip for some other reason, pandapower can also be installed without using pip:
 
@@ -51,7 +50,7 @@ If you don't have internet access on your system or don't want to use pip for so
 
         python setup.py install
 
-**Development Version**<br>
+<h3 id="develop">Development Version</h3>
 
 To install the latest development version of pandapower from [github](https://github.com/e2nIEE/pandapower), simply follow these steps:
 
@@ -112,8 +111,7 @@ example:
 ![](http://pandapower.readthedocs.io/en/latest/_images/3bus-system.png)
 
 
-**Creating a Network**<br>
-{:.no_toc}
+### Creating a network
 
 The above network can be created in pandapower as follows:
 
@@ -143,7 +141,7 @@ The pandapower representation now looks like this:
 
 ![image](http://pandapower.readthedocs.io/en/latest/_images/pandapower_datastructure.png)
 
-**Running a Power Flow**<br>
+### Running a Power Flow
 
 A powerflow can be carried out with the [runpp function][]: 
 
