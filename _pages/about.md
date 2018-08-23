@@ -277,7 +277,12 @@ and transformer results:
 <img src="{{"/images/about/validation/validation_trafo.png" | relative_url }}" alt=""/>
 
 match within the margins defined above.
-  
+
+<h2 id="citing">Citing pandapower</h2>
+
+If you use pandapower in your work, we kindly ask you to cite the [pandapower reference paper](/references/#citing)
+
+
 <h2 id="license">License</h2>
 
 pandapower is published under the following 3-clause BSD license: 
