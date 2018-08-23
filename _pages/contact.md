@@ -82,4 +82,18 @@ And these are some of the people behind pandapower:
 
 [See Full List of authors and contributors](http://pandapower.readthedocs.io/en/stable/about/authors.html){: .btn .btn--success .btn--large}
 
+## Impressum
+
+### Anschrift
+
+Universität Kassel<br>
+FB 16 - Elektrotechnik/ Informatik<br>
+Fachgebiet e²n<br>
+Prof. Dr.-Ing. Martin Braun<br>
+Wilhelmshöher Allee 73<br>
+34121 Kassel 
+
+### Urheberrecht und Haftungshinweis 
+
+Das Layout der Homepage, die verwendeten Grafiken und Logos, sowie die Sammlung der Beiträge sind urheberrechtlich geschützt. Die Seiten dürfen nur zum privaten Gebrauch vervielfältigt, Änderungen nicht vorgenommen und Vervielfältigungsstücke weder verbreitet noch zur öffentlichen Wiedergabe benutzt werden. Die einzelnen Beiträge sind ebenfalls urheberrechtlich geschützt. Alle Informationen auf diesem Server erfolgen ohne Gewähr für ihre Richtigkeit. In keinem Fall wird für Schäden, die sich aus der Verwendung der abgerufenen Informationen ergeben, eine Haftung übernommen. Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für Inhalte und Richtigkeit externer Links und Veröffentlichungen. Für den Inhalt der verlinkten Seiten und der Veröffentlichungen sind ausschließlich deren Betreiber bzw. Autoren verantwortlich. 
 
