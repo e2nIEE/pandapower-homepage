@@ -84,16 +84,16 @@ And these are some of the people behind pandapower:
 
 ## Impressum
 
-### Anschrift
+### Adress
 
-Universität Kassel<br>
-FB 16 - Elektrotechnik/ Informatik<br>
-Fachgebiet e²n<br>
+University of Kassel<br>
+FB 16 - Electrical Engineering and Computer Science<br>
+Department e²n<br>
 Prof. Dr.-Ing. Martin Braun<br>
 Wilhelmshöher Allee 73<br>
 34121 Kassel 
 
-### Urheberrecht und Haftungshinweis 
+### Copyright und Liability 
 
-Das Layout der Homepage, die verwendeten Grafiken und Logos, sowie die Sammlung der Beiträge sind urheberrechtlich geschützt. Die Seiten dürfen nur zum privaten Gebrauch vervielfältigt, Änderungen nicht vorgenommen und Vervielfältigungsstücke weder verbreitet noch zur öffentlichen Wiedergabe benutzt werden. Die einzelnen Beiträge sind ebenfalls urheberrechtlich geschützt. Alle Informationen auf diesem Server erfolgen ohne Gewähr für ihre Richtigkeit. In keinem Fall wird für Schäden, die sich aus der Verwendung der abgerufenen Informationen ergeben, eine Haftung übernommen. Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für Inhalte und Richtigkeit externer Links und Veröffentlichungen. Für den Inhalt der verlinkten Seiten und der Veröffentlichungen sind ausschließlich deren Betreiber bzw. Autoren verantwortlich. 
+The layout of the homepage, the graphics it contains, as well as the collection of documents are protected by copyright. Reproduction of these pages is authorized exclusively for personal use, no alterations are permitted, and any reproduced material may not be disseminated or displayed in public. All individual documents are likewise protected by copyright. All information on this server is provided without guarantee as to its accuracy. Under no circumstances will liability be assumed for loss or damage sustained through use of the information provided. Despite thorough control we do not take liability upon the content and correctness of external links. The operators respectively the authors are solely responsible for the linked web sides and publications. 
 
