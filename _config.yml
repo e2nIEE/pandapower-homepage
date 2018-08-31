@@ -1,7 +1,7 @@
 remote_theme: "mmistakes/minimal-mistakes"
 
 repository: e2nIEE/pandapower
-
+title: "pandapower"
 include:
   - _pages
 
