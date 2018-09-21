@@ -108,7 +108,7 @@ load transformer etc.
 We consider the following simple 3-bus example network as a minimal
 example:
 
-![](http://pandapower.readthedocs.io/en/latest/_images/3bus-system.png)
+![](/images/getting_started/3bus-system.png)
 
 
 ### Creating a network
@@ -139,7 +139,7 @@ library] allows comfortable creation of line and transformer elements.
 
 The pandapower representation now looks like this:
 
-![image](http://pandapower.readthedocs.io/en/latest/_images/pandapower_datastructure.png)
+![image](/images/getting_started/pandapower_datastructure.png)
 
 ### Running a Power Flow
 
@@ -156,7 +156,7 @@ pandapower:
 
 For the 3-bus example network, the result tables look like this:
 
-![image](http://pandapower.readthedocs.io/en/latest/_images/pandapower_results.png)
+![image](/images/getting_started/pandapower_results.png)
 
 All other pandapower elements and network analysis functionality (e.g.
 optimal power flow, state estimation or short-circuit calculation) is
