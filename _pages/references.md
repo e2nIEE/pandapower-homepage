@@ -15,6 +15,9 @@ testimonials:
   - quote: I am working on the development of software for power systems research for 7 years, and pandapower is one of the most useful things developed by the community. Brilliant idea, amazing implementation and very easy to use. Congratulations!
     name: Miguel Heleno
     affiliation: Postdoctoral Fellow at Lawrence Berkeley National Laboratory, USA
+  - quote: Firstly, congratulations to the pandapower team for developing such an easy to use the tool. I  have introduced pandapower to my final year project students. Many of them start with no background in power system analysis as they take the courses in this subject concurrently. I find that they are able to easily pick up working the with pandapower and carry out projects in renewable energy integration and electric vehicle integration. I too use pandapower to carry out preliminary studies on renewables in the grid. Pandapower has been a very useful tool. I would encourage the pandapower team to add new features such as modal analysis, electricity market engine and if possible RMS dynamics to the package. It will make pandapower the preferred open source tool.
+    name: Ashwin M Khambadkone
+    affiliation: Associate Professor at National University of Singapore
 ---
 
 ## Citing pandapower <a name="citing"></a>
