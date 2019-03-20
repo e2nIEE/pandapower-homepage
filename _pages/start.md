@@ -67,11 +67,11 @@ To install the latest development version of pandapower from [github](https://gi
         cd pandapower
         git checkout develop
        
-3. Set your python path to the outer pandapower folder (/pandapower, NOT pandapower/pandapower). 
+5. Open a command prompt (cmd or anaconda command prompt) and navigate to the folder where the pandapower files are located. Run:
 
-4. If necessary, install missing dependencies via pip install:
-
-        pip install pypower
+        pip install -e .
+        
+   This registers your local pandapower installation with pip.
         
 ## Test your installation <a name="test"></a>
 

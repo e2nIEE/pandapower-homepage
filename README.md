@@ -1,8 +1,6 @@
 
 # Development Notes
-Build locally with, 
+Build locally with: 
 ```
-bundle exec jekyll serve --incremental
+bundle exec jekyll serve
 ```
-
-s
