@@ -126,7 +126,7 @@ The above network can be created in pandapower as follows:
 
     #create bus elements
     pp.create_ext_grid(net, bus=b1, vm_pu=1.02, name="Grid Connection")
-    pp.create_load(net, bus=b3, p_kw=100, q_kvar=50, name="Load")
+    pp.create_load(net, bus=b3, p_mw=0.1, q_mvar=0.05, name="Load")
 
     #create branch elements
     tid = pp.create_transformer(net, hv_bus=b1, lv_bus=b2, std_type="0.4 MVA 20/0.4 kV", name="Trafo")
@@ -175,79 +175,51 @@ This minimal example is also available as a [jupyter notebook].
 
 There are jupyter notebook tutorials on different functionalities of pandapower:
 
-Minimal Example introduction:
+Basic introduction:
 
-:   -   [minimal example]
-
-Creating networks:
-
-:   -   [simple network]
-    -   [advanced network]
-
-Running (optimal) power flows:
-
-:   -   [power flow]
-    -   [optimal power flow]
-    -   [active power curtailment with OPF]
-    -   [DC line dispatch with OPF]
+   -   [Minimal example](https://github.com/panda-power/pandapower/blob/master/tutorials/minimal_example.ipynb)
+   -   [Creating a simple network](https://github.com/panda-power/pandapower/blob/master/tutorials/create_simple.ipynb)
+   -   [Running a power flow](https://github.com/panda-power/pandapower/blob/master/tutorials/powerflow.ipynb)
+   -   [Creating an advanced network](https://github.com/panda-power/pandapower/blob/master/tutorials/create_advanced.ipynb)
+   -   [Working with the pandapower standard type library](https://github.com/panda-power/pandapower/blob/master/tutorials/std_types.ipynb)
+   -   [Application example: calculate hosting capacity with pandapower](https://github.com/e2nIEE/pandapower/blob/develop/tutorials/hosting_capacity.ipynb)
 
 Data analysis and modelling error diagnostic:
 
-:   -   [data_analysis]
-    -   [diagnostic]
+   -   [Analysing data in pandapower tables](https://github.com/panda-power/pandapower/blob/master/tutorials/data_analysis.ipynb)
+   -   [Diagnosing inconsistent or incorrect data](https://github.com/panda-power/pandapower/blob/master/tutorials/diagnostic.ipynb)
+   -   [About the internal data structure of pandapower](https://github.com/panda-power/pandapower/blob/master/tutorials/internal_datastructure.ipynb)
 
-Configure and run a state estimation:
+Optimal power flow:
 
-:   -   [state estimation]
+   -   [Configuring and running an optimal power flow](https://github.com/panda-power/pandapower/blob/master/tutorials/opf_basic.ipynb)
+   -   [Using PowerModels.jl to carry out an OPF](https://github.com/panda-power/pandapower/blob/master/tutorials/opf_powermodels.ipynb)
+   -   [Calculate power curtailment with an OPF](https://github.com/panda-power/pandapower/blob/master/tutorials/opf_curtail.ipynb)
+   -   [Calculate DC line dispatch with an OPF](https://github.com/panda-power/pandapower/blob/master/tutorials/opf_dcline.ipynb)
+    
+State estimation:
 
-Run a short-circuit calculation according to IEC 60909:
+   -   [Configure and run a state estimation](https://github.com/panda-power/pandapower/blob/master/tutorials/state_estimation.ipynb)
 
-:   -   [short-circuit calculation]
-    -   [considering renewable energy (2016 revision)]
+Short-circuits:
 
-Working with the pandapower standard type library:
+   -   [Run a short-circuit calculation according to IEC 60909](https://github.com/e2nIEE/pandapower/blob/develop/tutorials/shortcircuit.ipynb)
+   -   [Short-circuit calculations considering renewable energy (2016 revision)](https://github.com/e2nIEE/pandapower/blob/develop/tutorials/shortcircuit_renewables.ipynb)
 
-:   -   [standard types]
+Topology package:
 
-Running topological searches:
-
-:   -   [topologic searches]
+   -   [Running topological graph searches](https://github.com/panda-power/pandapower/blob/master/tutorials/topology.ipynb)
 
 Plotting pandapower networks (static with matplotlib):
 
-:   -   [basic plotting]
-    -   [plotting with colormaps]
-    -   [plotting without geographical data]
+   -   [Plotting grographic network plans](https://github.com/panda-power/pandapower/blob/master/tutorials/plotting_basic.ipynb)
+   -   [Plotting network plans with colormaps](https://github.com/panda-power/pandapower/blob/master/tutorials/plotting_colormaps.ipynb)
+   -   [Plotting structural plans without geographical data](https://github.com/panda-power/pandapower/blob/master/tutorials/plotting_structural.ipynb)
+   -   [Embedding matplotlib colormaps in PyQt](https://github.com/panda-power/pandapower/blob/master/tutorials/plotting_pyqt.ipynb)
 
 
 Plotting pandapower networks (interactive with plotly)
 
-:   -   [built-in plots]
-    -   [custom plots]
-    -   [interactive plots on maps]
-
-Hosting Capacity:
-
-:   -   [hosting capacity]
-
-  [minimal example]: https://github.com/panda-power/pandapower/blob/master/tutorials/minimal_example.ipynb
-  [simple network]: https://github.com/panda-power/pandapower/blob/master/tutorials/create_simple.ipynb
-  [advanced network]: https://github.com/panda-power/pandapower/blob/master/tutorials/create_advanced.ipynb
-  [power flow]: https://github.com/panda-power/pandapower/blob/master/tutorials/powerflow.ipynb
-  [optimal power flow]: https://github.com/panda-power/pandapower/blob/master/tutorials/opf_basic.ipynb
-  [active power curtailment with OPF]: https://github.com/panda-power/pandapower/blob/master/tutorials/opf_curtail.ipynb
-  [DC line dispatch with OPF]: https://github.com/panda-power/pandapower/blob/master/tutorials/opf_dcline.ipynb
-  [data_analysis]: https://github.com/panda-power/pandapower/blob/master/tutorials/data_analysis.ipynb
-  [diagnostic]: https://github.com/panda-power/pandapower/blob/master/tutorials/diagnostic.ipynb
-  [state estimation]: https://github.com/panda-power/pandapower/blob/master/tutorials/state_estimation.ipynb
-  [short-circuit calculation]: https://github.com/e2nIEE/pandapower/blob/develop/tutorials/shortcircuit.ipynb
-  [considering renewable energy (2016 revision)]: https://github.com/e2nIEE/pandapower/blob/develop/tutorials/shortcircuit_renewables.ipynb
-  [standard types]: https://github.com/panda-power/pandapower/blob/master/tutorials/std_types.ipynb
-  [topologic searches]: https://github.com/panda-power/pandapower/blob/master/tutorials/topology.ipynb
-  [basic plotting]: https://github.com/panda-power/pandapower/blob/master/tutorials/plotting_basic.ipynb
-  [plotting with colormaps]: https://github.com/panda-power/pandapower/blob/master/tutorials/plotting_colormaps.ipynb
-  [plotting without geographical data]: https://github.com/panda-power/pandapower/blob/master/tutorials/plotting_structural.ipynb
-  [built-in plots]: http://nbviewer.jupyter.org/github/e2nIEE/pandapower/blob/develop/tutorials/plotly_built-in.ipynb
-  [custom plots]: http://nbviewer.jupyter.org/github/e2nIEE/pandapower/blob/develop/tutorials/plotly_traces.ipynb
-  [interactive plots on maps]: http://nbviewer.jupyter.org/github/e2nIEE/pandapower/blob/develop/tutorials/plotly_maps.ipynb
-  [hosting capacity]: https://github.com/e2nIEE/pandapower/blob/develop/tutorials/hosting_capacity.ipynb
+   -   [Creating interactive plots with plotly](http://nbviewer.jupyter.org/github/e2nIEE/pandapower/blob/develop/tutorials/plotly_built-in.ipynb)
+   -   [Customize plotly plots](http://nbviewer.jupyter.org/github/e2nIEE/pandapower/blob/develop/tutorials/plotly_traces.ipynb)
+   -   [Include interactive maps as background](http://nbviewer.jupyter.org/github/e2nIEE/pandapower/blob/develop/tutorials/plotly_maps.ipynb)

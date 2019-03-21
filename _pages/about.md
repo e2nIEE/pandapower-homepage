@@ -162,9 +162,9 @@ mailing list](contact.md) for updates.
 
 <h3 id="opf">Optimal Power Flow<br> </h3>
 pandapower allows solving AC and DC optimal power flow (OPF) problems through interfacing
-PYPOWER. The interior point solver provided by PYPOWER is used to solve the problem, while
-costs, flexibilities and constraints are configured through the element-based pandapower
-data structure. Static loads can be used as flexibilities in the OPF, which allows optimization dispatch of static generators as well 
+PYPOWER or [PowerModels.jl](https://github.com/lanl-ansi/PowerModels.jl). Costs, flexibilities and constraints are configured through
+the element-based pandapower data structure and internally converted to a PYPOWER or PowerModels data structure where the optimization
+is carried out. Static loads can be used as flexibilities in the OPF, which allows optimization dispatch of static generators as well 
 as load shedding. The cost function for each power injection or load can either be defined by a piecewise linear or a n-polynomial
 cost function of the active and reactive power output of the respective elements.
 <br><small>[Learn more](http://pandapower.readthedocs.io/en/stable/powerflow/opf.html)</small>
@@ -246,19 +246,19 @@ We use a transformer with the following parameters:
 
  <ul>
  <small>
-  <li>vsc_percent= 5.0</li>
-  <li>vscr_percent = 2.0</li>
+  <li>vk_percent= 5.0</li>
+  <li>vkr_percent = 2.0</li>
   <li>i0_percent = 0.4</li>
   <li>pfe_kw = 2.0</li>
-  <li>sn_kva = 400</li>
+  <li>sn_mva = 0.4</li>
   <li>vn_hv_kv = 22</li>
   <li>vn_lv_kv = 0.42</li>
-  <li>tp_max = 10</li>
-  <li>tp_mid = 5</li>
-  <li>tp_min = 0</li>
-  <li>tp_st_percent = 1.25</li>
-  <li>tp_side = "hv"</li>
-  <li>tp_pos = 3</li>
+  <li>tap_max = 10</li>
+  <li>tap_neutral = 5</li>
+  <li>tap_min = 0</li>
+  <li>tap_st_percent = 1.25</li>
+  <li>tap_side = "hv"</li>
+  <li>tap_pos = 3</li>
   <li>shift_degree = 150</li>
   </small>
   </ul> 
