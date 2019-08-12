@@ -193,9 +193,12 @@ Data analysis and modelling error diagnostic:
 Optimal power flow:
 
    -   [Configuring and running an optimal power flow](https://github.com/panda-power/pandapower/blob/master/tutorials/opf_basic.ipynb)
-   -   [Using PowerModels.jl to carry out an OPF](https://github.com/panda-power/pandapower/blob/master/tutorials/opf_powermodels.ipynb)
    -   [Calculate power curtailment with an OPF](https://github.com/panda-power/pandapower/blob/master/tutorials/opf_curtail.ipynb)
    -   [Calculate DC line dispatch with an OPF](https://github.com/panda-power/pandapower/blob/master/tutorials/opf_dcline.ipynb)
+   -   [Using PowerModels.jl to carry out an OPF](https://github.com/panda-power/pandapower/blob/master/tutorials/opf_powermodels.ipynb)
+   -   [Using PowerModels.jl TNEP (transmission network expansion planning) interface](https://github.com/e2nIEE/pandapower/blob/develop/tutorials/tnep_powermodels.ipynb)
+   -   [Using PowerModels.jl OTS (optimal transmission switching) interface](https://github.com/e2nIEE/pandapower/blob/develop/tutorials/ost_powermodels.ipynb)
+   -   [Using PowerModels.jl storage interface](https://github.com/e2nIEE/pandapower/blob/develop/tutorials/storage_powermodels.ipynb)
     
 State estimation:
 
@@ -223,3 +226,14 @@ Plotting pandapower networks (interactive with plotly)
    -   [Creating interactive plots with plotly](http://nbviewer.jupyter.org/github/e2nIEE/pandapower/blob/develop/tutorials/plotly_built-in.ipynb)
    -   [Customize plotly plots](http://nbviewer.jupyter.org/github/e2nIEE/pandapower/blob/develop/tutorials/plotly_traces.ipynb)
    -   [Include interactive maps as background](http://nbviewer.jupyter.org/github/e2nIEE/pandapower/blob/develop/tutorials/plotly_maps.ipynb)
+
+Time series calculation with the pandapower control module
+
+   -   [Basic time series calculation](https://github.com/e2nIEE/pandapower/blob/develop/tutorials/time_series.ipynb)
+   -   [Advanced time series calculation](https://github.com/e2nIEE/pandapower/blob/develop/tutorials/time_series_advanced_output.ipynb)
+   
+## YouTube Tutorials <a name="youtube_tutorials"></a>
+
+You can also find some tutorials about the basics of pandapower on YouTube:
+
+[pandapower on YouTube](https://www.youtube.com/channel/UC0iZbJpDu5--fa8A2GWCa0Q?view_as=subscriber)
