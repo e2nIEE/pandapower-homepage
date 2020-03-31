@@ -70,7 +70,7 @@ And these are some of the people behind pandapower:
 <div class="authors">
   {% for developer in page.developers %}
     <p>
-    <img style="padding:2px 2px 2px 2px; border:2px solid dark-gray; margin-right: 15px" src="{{ developer.image | relative_url }}" width="120" align="left"/> 
+    <img style="padding:2px 2px 2px 2px; border:2px solid gray; margin-right: 15px" src="{{ developer.image | relative_url }}" width="120" align="left"/> 
     <span style="margin-top: -5px; display:inline-block; max-width:500px;">
         <b>{{ developer.name }}</b> {{ developer.text }} <br>
         <a href="mailto:{{developer.email}}">Contact {{developer.nickname}}</a> 
