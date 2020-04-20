@@ -12,7 +12,7 @@ classes:
 
 ## Installing Python
 
-pandapower is tested with Python 2.7, 3.4, 3.5 and 3.6. We recommend the [Anaconda Distribution](https://www.anaconda.com/), which provides a Python distribution that already includes a lot of modules for scientific computing that are needed. Simply [download](https://www.anaconda.com/download) and install the newest version of Anaconda and you are all set to run pandapower.
+pandapower is tested with Python 3.5, 3.6 and 3.7. We recommend the [Anaconda Distribution](https://www.anaconda.com/), which provides a Python distribution that already includes a lot of modules for scientific computing that are needed. Simply [download](https://www.anaconda.com/download) and install the newest version of Anaconda and you are all set to run pandapower.
 
 Of course it is also possible to use pandapower with other distributions besides Anaconda. It is however important that the following packages are included:
 
