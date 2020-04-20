@@ -35,3 +35,5 @@ whitelist:
   - jekyll-gist
   - jekyll-feed
   - jemoji
+
+theme: jekyll-theme-slate
