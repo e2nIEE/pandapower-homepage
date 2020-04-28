@@ -215,7 +215,7 @@ Topology package:
 
 Plotting pandapower networks (static with matplotlib):
 
-   -   [Plotting grographic network plans](https://github.com/panda-power/pandapower/blob/master/tutorials/plotting_basic.ipynb)
+   -   [Plotting geographic network plans](https://github.com/panda-power/pandapower/blob/master/tutorials/plotting_basic.ipynb)
    -   [Plotting network plans with colormaps](https://github.com/panda-power/pandapower/blob/master/tutorials/plotting_colormaps.ipynb)
    -   [Plotting structural plans without geographical data](https://github.com/panda-power/pandapower/blob/master/tutorials/plotting_structural.ipynb)
    -   [Embedding matplotlib colormaps in PyQt](https://github.com/panda-power/pandapower/blob/master/tutorials/plotting_pyqt.ipynb)
