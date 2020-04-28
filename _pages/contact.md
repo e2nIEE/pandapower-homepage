@@ -70,7 +70,7 @@ And these are some of the people behind pandapower:
 <div class="authors">
   {% for developer in page.developers %}
     <p>
-    <img style="padding:2px 2px 2px 2px; border:2px solid black; margin-right: 15px" src="{{ developer.image | relative_url }}" width="120" align="left"/> 
+    <img style="padding:2px 2px 2px 2px; border:2px solid gray; margin-right: 15px" src="{{ developer.image | relative_url }}" width="120" align="left"/> 
     <span style="margin-top: -5px; display:inline-block; max-width:500px;">
         <b>{{ developer.name }}</b> {{ developer.text }} <br>
         <a href="mailto:{{developer.email}}">Contact {{developer.nickname}}</a> 
@@ -82,9 +82,9 @@ And these are some of the people behind pandapower:
 
 [See Full List of authors and contributors](http://pandapower.readthedocs.io/en/stable/about/authors.html){: .btn .btn--success .btn--large}
 
-## Impressum
+## Impressum - Legal Notice
 
-### Adress
+### Address
 
 University of Kassel<br>
 FB 16 - Electrical Engineering and Computer Science<br>
