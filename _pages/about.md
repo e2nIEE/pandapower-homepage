@@ -72,12 +72,12 @@ Overviews over existing open source tools can also be found in <a href="https://
 
 **Scope**<br>
 
-pandapower is aimed at **static** analysis of **balanced** power systems. This allows analysis of:
+pandapower is aimed at **static** analysis of **three-phase** power systems. This allows analysis of:
 - **transmission** and **subtransmission systems**, which are typically operated symmetrically.
-- **symmetric distribution systems**, which are commonly found in Europe.
+- **three-phase distribution systems**, which are commonly found in Europe.
 
-Distribution grids with unbalanced power flows, such as the feeder design common in North America, can currently not be
-analysed with pandapower.
+Three-phase power flow allows considering asymmetrical loads and generators. Distribution grids with unsymmetrical design of power lines, 
+such as the feeder design common in North America, can currently not be analysed with pandapower.
 
 
 <h2 id="modeling">Power System Modeling</h2>
@@ -156,9 +156,8 @@ or unsymmetrical impedances will only work with the pandapower solvers.
 
 <font size="4"><b>Unbalanced Power Flow</b></font>
 
-An unbalanced power flow is currently being implemented and a first version will hopefully be released soon. Follow the progress
-or join the implementation efforts on [github](https://github.com/e2nIEE/pandapower/issues/96), or subscribe to the [pandapower
-mailing list](contact.md) for updates.
+The three-phase power flow calculation has been released recently. Follow the progress or join the implementation efforts on 
+[github](https://github.com/e2nIEE/pandapower/issues/96), or subscribe to the [pandapower mailing list](contact.md) for updates.
 
 <h3 id="opf">Optimal Power Flow<br> </h3>
 pandapower allows solving AC and DC optimal power flow (OPF) problems through interfacing
