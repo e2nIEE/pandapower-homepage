@@ -19,8 +19,8 @@ shields:
     url: http://pandapower.readthedocs.io/
   - icon: 'https://codecov.io/github/e2nIEE/pandapower/coverage.svg?branch=develop'
     url: https://codecov.io/github/e2nIEE/pandapower?branch=master
-  - icon: 'https://api.codacy.com/project/badge/Grade/5d749ed6772e47f6b84fb9afb83903d3'
-    url: 'https://app.codacy.com/project/lthurner/pandapower/dashboard'
+  - icon: 'https://api.codacy.com/project/badge/Grade/e2ce960935fd4f96b4be4dff9a0c76e3'
+    url: 'https://app.codacy.com/gh/e2nIEE/pandapower?branch=master'
   - icon: 'images/home/shield_bsd.svg'
     url: https://github.com/e2nIEE/pandapower/blob/master/LICENSE
     
