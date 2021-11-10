@@ -13,7 +13,7 @@ header:
 shields:
   - icon: 'https://badge.fury.io/py/pandapower.svg'
     url: https://pypi.python.org/pypi/pandapower
-  - icon: 'images/home/shield_python_versions.svg'
+  - icon: 'https://img.shields.io/pypi/pyversions/pandapower.svg'
     url: https://pypi.python.org/pypi/pandapower
   - icon: https://readthedocs.org/projects/pandapower/badge/
     url: http://pandapower.readthedocs.io/
