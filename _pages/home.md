@@ -16,7 +16,7 @@ shields:
   - icon: 'https://img.shields.io/pypi/pyversions/pandapower.svg'
     url: https://pypi.python.org/pypi/pandapower
   - icon: https://readthedocs.org/projects/pandapower/badge/
-    url: http://pandapower.readthedocs.io/
+    url: https://pandapower.readthedocs.io/en/latest/
   - icon: 'https://codecov.io/github/e2nIEE/pandapower/coverage.svg?branch=develop'
     url: https://codecov.io/github/e2nIEE/pandapower?branch=master
   - icon: 'https://api.codacy.com/project/badge/Grade/e2ce960935fd4f96b4be4dff9a0c76e3'
