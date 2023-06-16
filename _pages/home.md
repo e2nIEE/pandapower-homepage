@@ -8,7 +8,7 @@ header:
   cta_label2: "<i class='fas fa-envelope'></i> Get Updates"
   cta_url: "/start/#install"
   cta_url2: "/contact/#list"
-  subtitle: <a href='https://pypi.python.org/pypi/pandapower'> <img src='{{"/images/home/shield_python_versions.svg" | relative_url}}'></a>
+  subtitle: <a href='https://pypi.python.org/pypi/pandapower'> <img src='{{"https://img.shields.io/pypi/pyversions/pandapower.svg"}}'></a>
   
 shields:
   - icon: 'https://badge.fury.io/py/pandapower.svg'
