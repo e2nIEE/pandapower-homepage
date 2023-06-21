@@ -59,8 +59,8 @@ If you want to receive updates about new versions and other news about pandapowe
 
 pandapower is a joint development of the research group Energy Management and Power System Operation, University of Kassel and the Grid Planning and Grid Operation Division at the Fraunhofer Institute for Energy Economics and Energy System Technology (IEE), Kassel.
 
-[<img src="/images/contact/Logo_e2n.png">](https://www.uni-kassel.de/eecs/en/fachgebiete/e2n/home.html)
-[<img src="/images/contact/Logo_Fraunhofer_IEE.png">](https://www.iee.fraunhofer.de/en.html)
+[<img src="/images/contact/Logo_e2n.png" alt="Department of Energy Management and Power System Operation" width="35%">](https://www.uni-kassel.de/eecs/en/sections/energiemanagement-und-betrieb-elektrischer-netze/home)
+[<img src="/images/contact/Logo_Fraunhofer_IEE.png" alt="Fraunhofer Institute for Energy Economics and Energy System Technology" width="50%">](https://www.iee.fraunhofer.de/en.html)
  
 
 ## Who we are
