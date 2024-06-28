@@ -37,21 +37,25 @@ The easiest way to install pandapower is through pip:
 
 2. Install pandapower by running:
 
-        pip install pandapower
+        pip install pandapower[all]
 
-<h3 id="nopip">Without pip</h3>
+<h3 id="nopip">Without internet connection</h3>
 
-If you don't have internet access on your system or don't want to use pip for some other reason, pandapower can also be installed without using pip:
+If you don't have internet access on your system, pandapower can also be installed from local files:
 
 1.  Download and unzip the current pandapower distribution from [PyPi](https://pypi.org/project/pandapower/) under "Download files".
-2.  Open a command prompt (e.g. Start\--\>cmd on Windows) and navigate to the folder that contains the setup.py file with the command cd
+2.  Open a command prompt (e.g. Start\--\>cmd on Windows) and navigate to the folder that contains the pandapower code with the command cd
     \<folder\> :
 
         cd %path_to_pandapower%\pandapower-x.x.x\
 
 3.  Install pandapower by running :
 
-        python setup.py install
+        pip install -e .[all]
+
+The option "-e" means that pip will provide an editable environment. In other words, the changes in the files in the directory with pandapower code will be considered. In case this is not necessary, an installation without the option -e will install the files in the environment as a copy, and the downloaded folder can be safely removed.
+
+The option "all" means that not only the strictly required dependencies are installed, but also all the optional packages. Other options are: "docs", "plotting", "test", "performance" (includes ortools for faster state estimation, numba and lightsim2grid that substantially improve the performance of power flow calculations), "fileio", "converter", "pgm" (includes the interface to power-grid-model as a power flow calculation engine). Most users can use the version "all" unless there are resons to avoid certain depemdencies.
 
 <h3 id="develop">Development Version</h3>
 
@@ -72,10 +76,10 @@ To install the latest development version of pandapower from [github](https://gi
 
 5. Open a command prompt (cmd or anaconda command prompt) and navigate to the folder where the pandapower files are located. Run:
 
-        pip install -e .
-
-   This registers your local pandapower installation with pip.
-
+        pip install -e .[all]
+        
+   This registers your local pandapower installation with pip, the option -e ensures the edits in the files have a direct impact on the pandapower installation, and "all" installs all the optional dependencies.
+        
 ## Test your installation <a name="test"></a>
 
 A first basic way to test your installation is to import all pandapower submodules to see if all dependencies are available:
