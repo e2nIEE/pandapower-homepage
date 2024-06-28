@@ -12,20 +12,23 @@ classes:
 
 ## Installing Python
 
-pandapower is tested with Python 3.6, 3.7, 3.8 and 3.9. We recommend the [Anaconda Distribution](https://www.anaconda.com/), which provides a Python distribution that already includes a lot of modules for scientific computing that are needed. Simply [download](https://www.anaconda.com/download) and install the newest version of Anaconda and you are all set to run pandapower.
+pandapower is tested with up-to-date Python version, as listed at [pypi](https://pypi.org/project/pandapower/). We recommend the [Anaconda Distribution](https://www.anaconda.com/), which provides a Python distribution that already includes a lot of modules for scientific computing that are needed. Simply [download](https://www.anaconda.com/download) and install the newest version of Anaconda and you are all set to run pandapower.
 
 Of course it is also possible to use pandapower with other distributions besides Anaconda. It is however important that the following packages are included:
 
 - numpy
 - scipy
-- numba
-- matplotlib
+- pandas
+- networkx
+- packaging
+- tqdm
+- deepdiff
 
-Since these packages depend on C-libraries, they cannot be easily installed through pip on Windows systems.
+Since some of these packages depend on C-libraries, they cannot be easily installed through pip on Windows systems.
 If you use a distribution that does not include one of these packages, you either have to build these libraries yourself or switch to a different distribution.
 
 <h2 id="install">Installing pandapower</h2>
-        
+
 <h3 id="pip">Through pip</h3>
 
 The easiest way to install pandapower is through pip:
@@ -58,7 +61,7 @@ The option "all" means that not only the strictly required dependencies are inst
 
 To install the latest development version of pandapower from [github](https://github.com/e2nIEE/pandapower), simply follow these steps:
 
-1. Download and install [git](https://git-scm.com). 
+1. Download and install [git](https://git-scm.com).
 
 2. Open a git shell and navigate to the directory where you want to keep your pandapower files.
 
@@ -70,7 +73,7 @@ To install the latest development version of pandapower from [github](https://gi
 
         cd pandapower
         git checkout develop
-       
+
 5. Open a command prompt (cmd or anaconda command prompt) and navigate to the folder where the pandapower files are located. Run:
 
         pip install -e .[all]
@@ -120,21 +123,21 @@ example:
 The above network can be created in pandapower as follows:
 
     import pandapower as pp
-    #create empty net
-    net = pp.create_empty_network() 
+    # create empty net
+    net = pp.create_empty_network()
 
-    #create buses
+    # create buses
     b1 = pp.create_bus(net, vn_kv=20., name="Bus 1")
     b2 = pp.create_bus(net, vn_kv=0.4, name="Bus 2")
     b3 = pp.create_bus(net, vn_kv=0.4, name="Bus 3")
 
-    #create bus elements
+    # create bus elements
     pp.create_ext_grid(net, bus=b1, vm_pu=1.02, name="Grid Connection")
     pp.create_load(net, bus=b3, p_mw=0.1, q_mvar=0.05, name="Load")
 
-    #create branch elements
-    tid = pp.create_transformer(net, hv_bus=b1, lv_bus=b2, std_type="0.4 MVA 20/0.4 kV", name="Trafo")
-    pp.create_line(net, from_bus=b2, to_bus=b3, length_km=0.1, name="Line",std_type="NAYY 4x50 SE")   
+    # create branch elements
+    pp.create_transformer(net, hv_bus=b1, lv_bus=b2, std_type="0.4 MVA 20/0.4 kV", name="Trafo")
+    pp.create_line(net, from_bus=b2, to_bus=b3, length_km=0.1, name="Line",std_type="NAYY 4x50 SE")
 
 Note that you do not have to calculate any impedances or tap ratio for
 the equivalent circuit, this is handled internally by pandapower
@@ -147,7 +150,7 @@ The pandapower representation now looks like this:
 
 ### Running a Power Flow
 
-A powerflow can be carried out with the [runpp function][]: 
+A powerflow can be carried out with the [runpp function][]:
 
     pp.runpp(net)
 
@@ -174,7 +177,7 @@ This minimal example is also available as a [jupyter notebook].
   [jupyter notebook]: https://github.com/e2nIEE/pandapower/blob/develop/tutorials/minimal_example.ipynb
 
 
-  
+
 ## Interactive Tutorials <a name="tutorials"></a>
 
 There are jupyter notebook tutorials on different functionalities of pandapower:
@@ -203,7 +206,7 @@ Optimal power flow:
    -   [Using PowerModels.jl TNEP (transmission network expansion planning) interface](https://github.com/e2nIEE/pandapower/blob/develop/tutorials/tnep_powermodels.ipynb)
    -   [Using PowerModels.jl OTS (optimal transmission switching) interface](https://github.com/e2nIEE/pandapower/blob/develop/tutorials/ost_powermodels.ipynb)
    -   [Using PowerModels.jl storage interface](https://github.com/e2nIEE/pandapower/blob/develop/tutorials/storage_powermodels.ipynb)
-    
+
 State estimation:
 
    -   [Configure and run a state estimation](https://github.com/panda-power/pandapower/blob/master/tutorials/state_estimation.ipynb)
@@ -235,7 +238,7 @@ Time series calculation with the pandapower control module
 
    -   [Basic time series calculation](https://github.com/e2nIEE/pandapower/blob/develop/tutorials/time_series.ipynb)
    -   [Advanced time series calculation](https://github.com/e2nIEE/pandapower/blob/develop/tutorials/time_series_advanced_output.ipynb)
-   
+
 ## YouTube Tutorials <a name="youtube_tutorials"></a>
 
 You can also find some tutorials about the basics of pandapower on YouTube:
