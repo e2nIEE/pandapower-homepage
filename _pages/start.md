@@ -35,9 +35,11 @@ The easiest way to install pandapower is through pip:
 
 1. Open a command prompt (e.g. start-->cmd on windows systems)
 
-2. Install pandapower by running:
+2. Install pandapower by running: 
 
-        pip install pandapower[all]
+    ```
+pip install pandapower[all]
+    ```
 
 <h3 id="nopip">Without internet connection</h3>
 
@@ -45,13 +47,17 @@ If you don't have internet access on your system, pandapower can also be install
 
 1.  Download and unzip the current pandapower distribution from [PyPi](https://pypi.org/project/pandapower/) under "Download files".
 2.  Open a command prompt (e.g. Start\--\>cmd on Windows) and navigate to the folder that contains the pandapower code with the command cd
-    \<folder\> :
+    \<folder\>: 
 
-        cd %path_to_pandapower%\pandapower-x.x.x\
+    ```
+cd %path_to_pandapower%\pandapower-x.x.x\
+    ```
 
-3.  Install pandapower by running :
+3.  Install pandapower by running: 
 
-        pip install -e .[all]
+    ```
+pip install -e .[all]
+    ```
 
 The option "-e" means that pip will provide an editable environment. In other words, the changes in the files in the directory with pandapower code will be considered. In case this is not necessary, an installation without the option -e will install the files in the environment as a copy, and the downloaded folder can be safely removed.
 
@@ -65,42 +71,55 @@ To install the latest development version of pandapower from [github](https://gi
 
 2. Open a git shell and navigate to the directory where you want to keep your pandapower files.
 
-3. Run the following git command:
+3. Run the following git command: 
 
-        git clone https://github.com/e2nIEE/pandapower.git
+    ```
+git clone https://github.com/e2nIEE/pandapower.git
+    ```
 
-4. Navigate inside the repository and check out the develop branch:
+4. Navigate inside the repository and check out the develop branch: 
 
-        cd pandapower
-        git checkout develop
+    ```
+cd pandapower
+git checkout develop
+    ```
 
-5. Open a command prompt (cmd or anaconda command prompt) and navigate to the folder where the pandapower files are located. Run:
+5. Open a command prompt (cmd or anaconda command prompt) and navigate to the folder where the pandapower files are located. Run: 
 
-        pip install -e .[all]
-        
+    ```
+pip install -e .[all]
+    ```
+
    This registers your local pandapower installation with pip, the option -e ensures the edits in the files have a direct impact on the pandapower installation, and "all" installs all the optional dependencies.
-        
+
+
 ## Test your installation <a name="test"></a>
 
-A first basic way to test your installation is to import all pandapower submodules to see if all dependencies are available:
+A first basic way to test your installation is to import all pandapower submodules to see if all dependencies are available: 
 
-    import pandapower
-    import pandapower.networks
-    import pandapower.topology
-    import pandapower.plotting
-    import pandapower.converter
-    import pandapower.estimation
+```python
+import pandapower
+import pandapower.networks
+import pandapower.topology
+import pandapower.plotting
+import pandapower.converter
+import pandapower.estimation
+```
 
 If you want to be really sure that everything works fine, run the pandapower test suite:
 
-1.  Install pytest if it is not yet installed on your system:
+1.  Install pytest if it is not yet installed on your system: 
 
-        pip install pytest
+    ```
+pip install pytest
+    ```
 
-2. Run the pandapower test suite:
+2. Run the pandapower test suite: 
 
-        import pandapower.test
-        pandapower.test.run_all_tests()
+    ```python
+import pandapower.test
+pandapower.test.run_all_tests()
+    ```
 
 If everything is installed correctly, all tests should pass or xfail (expected to fail).
 
@@ -120,24 +139,26 @@ example:
 
 ### Creating a network
 
-The above network can be created in pandapower as follows:
+The above network can be created in pandapower as follows: 
 
-    import pandapower as pp
-    # create empty net
-    net = pp.create_empty_network()
+```python
+import pandapower as pp
+# create empty net
+net = pp.create_empty_network()
 
-    # create buses
-    b1 = pp.create_bus(net, vn_kv=20., name="Bus 1")
-    b2 = pp.create_bus(net, vn_kv=0.4, name="Bus 2")
-    b3 = pp.create_bus(net, vn_kv=0.4, name="Bus 3")
+# create buses
+b1 = pp.create_bus(net, vn_kv=20., name="Bus 1")
+b2 = pp.create_bus(net, vn_kv=0.4, name="Bus 2")
+b3 = pp.create_bus(net, vn_kv=0.4, name="Bus 3")
 
-    # create bus elements
-    pp.create_ext_grid(net, bus=b1, vm_pu=1.02, name="Grid Connection")
-    pp.create_load(net, bus=b3, p_mw=0.1, q_mvar=0.05, name="Load")
+# create bus elements
+pp.create_ext_grid(net, bus=b1, vm_pu=1.02, name="Grid Connection")
+pp.create_load(net, bus=b3, p_mw=0.1, q_mvar=0.05, name="Load")
 
-    # create branch elements
-    pp.create_transformer(net, hv_bus=b1, lv_bus=b2, std_type="0.4 MVA 20/0.4 kV", name="Trafo")
-    pp.create_line(net, from_bus=b2, to_bus=b3, length_km=0.1, name="Line",std_type="NAYY 4x50 SE")
+# create branch elements
+pp.create_transformer(net, hv_bus=b1, lv_bus=b2, std_type="0.4 MVA 20/0.4 kV", name="Trafo")
+pp.create_line(net, from_bus=b2, to_bus=b3, length_km=0.1, name="Line",std_type="NAYY 4x50 SE")
+```
 
 Note that you do not have to calculate any impedances or tap ratio for
 the equivalent circuit, this is handled internally by pandapower
@@ -152,7 +173,9 @@ The pandapower representation now looks like this:
 
 A powerflow can be carried out with the [runpp function][]:
 
-    pp.runpp(net)
+```python
+pp.runpp(net)
+```
 
 When a power flow is run, pandapower combines the information of all
 element tables into one pypower case file and uses pypower to run the
@@ -175,7 +198,6 @@ This minimal example is also available as a [jupyter notebook].
   [standard type library]: http://pandapower.readthedocs.io/en/latest/std_types.html
   [runpp function]: http://pandapower.readthedocs.io/en/latest/powerflow/ac.html
   [jupyter notebook]: https://github.com/e2nIEE/pandapower/blob/develop/tutorials/minimal_example.ipynb
-
 
 
 ## Interactive Tutorials <a name="tutorials"></a>
