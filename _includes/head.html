@@ -1,0 +1,26 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+  {% seo %}
+  {%- if page.ref %}
+  {%- for l in site.languages -%}
+    {%- assign code = l[0] -%}
+    {%- include alt-url.html to=code %}
+  <link rel="alternate" hreflang="{{ code }}" href="{{ alt_url | absolute_url }}">
+  {%- endfor %}
+  {%- endif %}
+  <link rel="icon" type="image/svg+xml" href="{{ '/favicon.svg' | relative_url }}">
+  <link rel="preload" href="{{ '/assets/fonts/source-sans-3-latin-wght-normal.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  {% feed_meta %}
+  {%- if site.math and page.math != false %}{% include math.html %}{% endif %}
+</head>

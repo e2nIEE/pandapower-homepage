@@ -1,0 +1,26 @@
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a class="brand footer-brand" href="{{ prefix | append: '/' | relative_url }}" aria-label="{{ site.title }}">{% include logo.html %}</a>
+      <p class="muted">{{ t.tagline }}</p>
+    </div>
+    <div>
+      <h4>{{ t.links }}</h4>
+      <ul>
+        {% for item in site.data.navigation.footer %}<li><a href="{{ prefix | append: item.url | relative_url }}">{{ item.title[lang] }}</a></li>{% endfor %}
+        <li><a href="{{ site.github_repo }}">{{ t.github }}</a></li>
+        <li><a href="{{ '/feed.xml' | relative_url }}">{{ t.rss }}</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>{{ t.contact }}</h4>
+      <p class="muted">{{ site.institution.name }}<br>{{ site.institution.address }}<br>
+      <a href="mailto:{{ site.institution.email }}">{{ site.institution.email }}</a></p>
+    </div>
+  </div>
+  <div class="container footer-bottom muted">
+    © {{ site.time | date: "%Y" }} pandapower developers · BSD-3-Clause · {{ t.built_with }}
+  </div>
+</footer>
+<script src="{{ '/assets/js/theme.js' | relative_url }}" defer></script>
+{%- if page.mermaid %}{% include mermaid.html %}{% endif %}

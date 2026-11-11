@@ -1,0 +1,10 @@
+{%- comment -%}
+  Finds the translation of the current page in include.to (language code).
+  Result in `alt_url`; falls back to the home page of that language.
+{%- endcomment -%}
+{%- assign alt_url = site.languages[include.to].prefix | append: "/" -%}
+{%- if page.ref -%}
+  {%- if page.collection == "posts" -%}{%- assign pool = site.posts -%}{%- else -%}{%- assign pool = site.pages -%}{%- endif -%}
+  {%- assign match = pool | where: "ref", page.ref | where: "lang", include.to | first -%}
+  {%- if match -%}{%- assign alt_url = match.url -%}{%- endif -%}
+{%- endif -%}

@@ -1,0 +1,36 @@
+en:
+  tagline: Easy to use open source tool for power system modeling, analysis and optimization
+  skip: Skip to content
+  menu: Menu
+  toggle_theme: Toggle theme
+  language: Language
+  get_started: Get started
+  github: GitHub
+  features: Features
+  ecosystem: Ecosystem
+  latest_news: Latest news
+  all_news: All news
+  links: Links
+  contact: Contact
+  docs: Docs
+  rss: RSS
+  built_with: Built with Jekyll
+  coming_soon: Content coming soon.
+de:
+  tagline: Einfach zu nutzendes Open-Source-Werkzeug für Modellierung, Analyse und Optimierung von Energiesystemen
+  skip: Zum Inhalt springen
+  menu: Menü
+  toggle_theme: Design wechseln
+  language: Sprache
+  get_started: Loslegen
+  github: GitHub
+  features: Funktionen
+  ecosystem: Ökosystem
+  latest_news: Aktuelles
+  all_news: Alle Neuigkeiten
+  links: Links
+  contact: Kontakt
+  docs: Doku
+  rss: RSS
+  built_with: Erstellt mit Jekyll
+  coming_soon: Inhalt folgt in Kürze.

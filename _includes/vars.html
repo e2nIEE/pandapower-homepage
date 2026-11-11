@@ -1,0 +1,4 @@
+{%- comment -%} Sets lang, prefix and t (UI strings) for the current page. {%- endcomment -%}
+{%- assign lang = page.lang | default: site.default_lang -%}
+{%- assign prefix = site.languages[lang].prefix -%}
+{%- assign t = site.data.i18n[lang] -%}

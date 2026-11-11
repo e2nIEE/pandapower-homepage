@@ -1,0 +1,8 @@
+<article class="card">
+  <h3 class="card-title">{% if include.item.icon %}<img class="card-logo" src="{{ include.item.icon | relative_url }}" alt="" width="40" height="38">{% endif %}{{ include.item.title }}</h3>
+  <p>{{ include.item.text[lang] }}</p>
+  <div class="card-links">
+    {% if include.item.docs %}<a href="{{ include.item.docs }}">{{ t.docs }}</a>{% endif %}
+    {% if include.item.github %}<a href="{{ include.item.github }}">{{ t.github }}</a>{% endif %}
+  </div>
+</article>

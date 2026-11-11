@@ -1,0 +1,29 @@
+<script type="module">
+  import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+  // kramdown emits <pre><code class="language-mermaid"> (or a rouge wrapper div); handle both.
+  document.querySelectorAll("code.language-mermaid").forEach(function (code) {
+    var pre = document.createElement("pre");
+    pre.className = "mermaid";
+    pre.textContent = code.textContent;
+    (code.closest("div.language-mermaid") || code.closest("pre") || code).replaceWith(pre);
+  });
+  var css = getComputedStyle(document.documentElement);
+  function v(n) { return css.getPropertyValue(n).trim(); }
+  var dark = document.documentElement.getAttribute("data-theme") === "dark";
+  mermaid.initialize({
+    startOnLoad: false,
+    theme: "base",
+    fontFamily: v("--font"),
+    themeVariables: {
+      darkMode: dark,
+      background: v("--bg"),
+      primaryColor: v("--accent-soft"),
+      primaryBorderColor: v("--accent"),
+      primaryTextColor: v("--fg"),
+      lineColor: v("--muted"),
+      textColor: v("--fg"),
+      edgeLabelBackground: v("--bg")
+    }
+  });
+  mermaid.run({ querySelector: "pre.mermaid" });
+</script>

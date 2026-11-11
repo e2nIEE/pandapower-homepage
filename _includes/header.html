@@ -1,0 +1,19 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="{{ prefix | append: '/' | relative_url }}" aria-label="{{ site.title }}">{% include logo.html %}</a>
+    <button class="nav-toggle" aria-label="{{ t.menu }}" aria-expanded="false" aria-controls="site-nav">☰</button>
+    <nav id="site-nav" class="site-nav">
+      <div class="main-menu">{% include nav-items.html items=site.data.navigation.main %}</div>
+      <div class="nav-tools">
+        {% include lang-switch.html %}
+        {% for s in site.data.navigation.social %}
+        <a class="icon-btn" href="{{ s.url }}" aria-label="{{ s.title }}" rel="noopener">{% include icons.html name=s.icon %}</a>
+        {% endfor %}
+        <button class="icon-btn theme-toggle" aria-label="{{ t.toggle_theme }}">
+          <span class="icon-sun">{% include icons.html name="sun" %}</span>
+          <span class="icon-moon">{% include icons.html name="moon" %}</span>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
