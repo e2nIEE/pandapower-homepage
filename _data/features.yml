@@ -1,0 +1,20 @@
+- icon: bolt
+  title: { en: Electric Modeling, de: Elektrische Modellierung }
+  text:
+    en: Validated electric models of lines, transformers, generators, loads, switches and more, defined through a flexible, table-based data structure built on pandas.
+    de: Validierte Modelle von Leitungen, Transformatoren, Generatoren, Lasten, Schaltern und mehr, abgebildet in einer flexiblen, tabellenbasierten Datenstruktur auf Basis von pandas.
+- icon: chart
+  title: { en: Power System Analysis, de: Netzanalyse }
+  text:
+    en: Power flow, optimal power flow, state estimation, short-circuit calculation and topological graph searches with a high degree of automation.
+    de: Lastfluss, optimaler Lastfluss, Zustandsschätzung, Kurzschlussberechnung und topologische Graphensuchen mit hohem Automatisierungsgrad.
+- icon: unlock
+  title: { en: Free and Open, de: Frei und offen }
+  text:
+    en: Released under the BSD license — free to use, modify and distribute, in research and commercial applications alike.
+    de: Unter BSD-Lizenz veröffentlicht – frei nutzbar, veränderbar und weitergebbar, in Forschung wie kommerziellen Anwendungen.
+- icon: code
+  title: { en: Python Ecosystem, de: Python-Ökosystem }
+  text:
+    en: Built on pandas, numpy and scipy. Combine it with plotting, optimization and machine learning libraries you already know.
+    de: Aufbauend auf pandas, numpy und scipy. Kombinierbar mit Visualisierungs-, Optimierungs- und Machine-Learning-Bibliotheken, die du bereits kennst.

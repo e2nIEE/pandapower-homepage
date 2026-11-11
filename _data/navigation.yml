@@ -1,11 +1,38 @@
+# Internal urls are language-neutral; the language prefix is added automatically.
+# Items may be nested with `children:` (up to 3 levels). An item without `url`
+# acts as a pure dropdown label.
 main:
-  - title: "Getting Started"
-    url: /start/
-  - title: "About pandapower"
-    url: /about/
-  - title: "Documentation"
-    url: https://pandapower.readthedocs.io/en/latest/
-  - title: "References"
+  - title: { en: Getting Started, de: Erste Schritte }
+    url: /getting-started/
+  - title: { en: Features, de: Funktionen }
+    url: /#features
+  - title: { en: Ecosystem, de: Ökosystem }
+    url: /#ecosystem
+  - title: { en: Resources, de: Ressourcen }
+    children:
+      - title: { en: Formulas, de: Formeln }
+        url: /formulas/
+      - title: { en: News, de: Neuigkeiten }
+        url: /news/
+      - title: { en: References, de: Referenzen }
+        url: /references/
+      - title: { en: About, de: Über uns }
+        children:
+          - title: { en: Contact, de: Kontakt }
+            url: /contact/
+          - title: { en: Imprint, de: Impressum }
+            url: /imprint/
+  - title: { en: Docs, de: Dokumentation }
+    url: https://pandapower.readthedocs.io
+    external: true
+social:
+  - title: GitHub
+    url: https://github.com/e2nIEE/pandapower
+    icon: github
+footer:
+  - title: { en: References, de: Referenzen }
     url: /references/
-  - title: "Contact"
+  - title: { en: Contact, de: Kontakt }
     url: /contact/
+  - title: { en: Imprint, de: Impressum }
+    url: /imprint/

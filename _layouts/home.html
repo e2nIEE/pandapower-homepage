@@ -1,0 +1,69 @@
+---
+layout: default
+---
+{% include vars.html %}
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <h1>{{ page.headline | default: site.title }}</h1>
+      <p class="hero-claim">{{ page.claim }}</p>
+      <p class="lead">{{ page.lead | default: t.tagline }}</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="{{ prefix | append: '/getting-started/' | relative_url }}">{{ t.get_started }}</a>
+        <a class="btn" href="{{ site.github_repo }}">{{ t.github }}</a>
+      </div>
+    </div>
+    <div class="code-card">
+      <div class="code-head">quickstart.py</div>
+{% highlight python %}
+import pandapower as pp
+
+net = pp.create_empty_network()
+b1 = pp.create_bus(net, vn_kv=20.)
+b2 = pp.create_bus(net, vn_kv=20.)
+pp.create_ext_grid(net, bus=b1)
+pp.create_line(net, b1, b2, length_km=5.,
+               std_type="NAYY 4x50 SE")
+pp.create_load(net, bus=b2, p_mw=1.)
+
+pp.runpp(net)
+print(net.res_bus)
+{% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section id="features" class="section">
+  <div class="container">
+    <h2>{{ t.features }}</h2>
+    <div class="grid grid-2">
+      {% for f in site.data.features %}
+      <article class="card"><div class="card-icon">{% include icons.html name=f.icon size=28 %}</div><h3>{{ f.title[lang] }}</h3><p>{{ f.text[lang] }}</p></article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="ecosystem" class="section section-alt">
+  <div class="container">
+    <h2>{{ t.ecosystem }}</h2>
+    <div class="grid grid-3">
+      {% for e in site.data.ecosystem %}{% include card.html item=e %}{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>{{ t.latest_news }}</h2>
+    <ul class="news-list">
+      {% assign shown = 0 %}
+      {% for post in site.posts %}{% if post.lang == lang and shown < 3 %}
+      {% assign shown = shown | plus: 1 %}
+      <li><span class="muted">{{ post.date | date: "%Y-%m-%d" }}</span> <a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+      {% endif %}{% endfor %}
+    </ul>
+    <p><a href="{{ prefix | append: '/news/' | relative_url }}">{{ t.all_news }} →</a></p>
+  </div>
+</section>
+{{ content }}

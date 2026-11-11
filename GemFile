@@ -1,3 +1,18 @@
 source "https://rubygems.org"
 
-gem "github-pages", group: :jekyll_plugins
+# Local preview only.
+#
+# GitHub Pages builds the live site with its own pinned toolchain (the
+# github-pages gem) and ignores this file when resolving gems. The github-pages
+# gem pins Jekyll 3.9 + Liquid 4.0.3, which call String#tainted? -- removed in
+# Ruby 3.2 -- so local preview uses Jekyll 4 with the same plugins instead.
+# See Gemfile.github-pages for the exact-version-parity setup (Ruby <= 3.3).
+gem "jekyll", "~> 4.4"
+gem "webrick", "~> 1.8"
+gem "tzinfo-data", platforms: [:windows, :jruby]
+
+group :jekyll_plugins do
+  gem "jekyll-feed"
+  gem "jekyll-seo-tag"
+  gem "jekyll-sitemap"
+end

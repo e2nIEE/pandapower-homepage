@@ -1,0 +1,18 @@
+- title: pandapower
+  icon: /assets/svg/Logo_pandapower_icon.svg
+  text: { en: The core power system analysis library., de: Die zentrale Bibliothek zur Netzanalyse. }
+  docs: https://pandapower.readthedocs.io
+  github: https://github.com/e2nIEE/pandapower
+- title: pandapipes
+  icon: /assets/svg/Logo_pandapipes_icon.svg
+  text:
+    en: Pipe network simulation for gas, heat and water, sharing the pandapower data model.
+    de: Rohrnetzsimulation für Gas, Wärme und Wasser auf Basis des pandapower-Datenmodells.
+  docs: https://pandapipes.readthedocs.io
+  github: https://github.com/e2nIEE/pandapipes
+- title: SimBench
+  text:
+    en: Benchmark datasets for grid analysis and simulation.
+    de: Benchmark-Datensätze für Netzanalyse und Simulation.
+  docs: https://simbench.de
+  github: https://github.com/e2nIEE/simbench

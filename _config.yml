@@ -1,39 +1,61 @@
-remote_theme: "mmistakes/minimal-mistakes@4.12.2"
+title: pandapower
+description: >-
+  pandapower is a Python-based, BSD-licensed power system analysis tool aimed at
+  automation of static and quasi-static analysis and optimization of power systems.
+url: "https://www.pandapower.org"
+baseurl: ""
 
-repository: e2nIEE/pandapower
-title: "pandapower"
-include:
-  - _pages
+# --- Languages -------------------------------------------------------------
+# Default language lives at the site root, other languages under their prefix.
+# UI strings: _data/i18n.yml. To add a language: add it here, in i18n.yml and
+# in the translatable data files, then add pages with lang/ref front matter.
+default_lang: en
+languages:
+  en: { name: English, prefix: "" }
+  de: { name: Deutsch, prefix: "/de" }
+
+# --- Site links ------------------------------------------------------------
+github_repo: https://github.com/e2nIEE/pandapower
+docs_url: https://pandapower.readthedocs.io
+pypi_url: https://pypi.org/project/pandapower/
+
+institution:
+  name: Fraunhofer IEE & University of Kassel
+  address: Königstor 59, 34119 Kassel, Germany
+  email: pandapower@e2n.uni-kassel.de
+
+# --- Math ------------------------------------------------------------------
+# MathJax 3 is loaded on every page; disable per page with `math: false`,
+# or globally here.
+math: true
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  math_engine: null   # leave $$...$$ as \(...\) / \[...\] for MathJax
+  syntax_highlighter: rouge
+permalink: /news/:year/:month/:day/:title/
+
+sass:
+  style: compressed
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 defaults:
-  - scope:
-      path: "_pages"
-    values:
-      layout: single
-      author_profile: false
-     
-author:
-  name    : "pandapower"
-#  avatar   : "/images/pandapower_color.svg"
-  bio      : "An easy to use open source tool for power system modeling, analysis and optimization with a high degree of automation. "
-  location : Kassel, Germany
-  email    : info@pandapower.org
-  github   : e2nIEE/pandapower
-  
-# Plugins (previously gems:)
-plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
-  
-# mimic GitHub Pages with --safe
-whitelist:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
+  - scope: { path: "" }
+    values: { lang: en }
+  - scope: { path: "de" }
+    values: { lang: de }
+  - scope: { path: "pages/en" }
+    values: { layout: page, lang: en }
+  - scope: { path: "pages/de" }
+    values: { layout: page, lang: de }
+  - scope: { path: "", type: posts }
+    values: { layout: post, lang: en }
+  - scope: { path: "_posts/de", type: posts }
+    values: { layout: post, lang: de, permalink: "/de/news/:year/:month/:day/:title/" }
 
-theme: jekyll-theme-slate
+exclude: [Gemfile, Gemfile.lock, Gemfile.github-pages, Gemfile.github-pages.lock, README.md, vendor, node_modules]

@@ -1,0 +1,29 @@
+{%- comment -%}
+  Recursive menu renderer. Params: items (list). Uses lang/prefix from context.
+  Marks the current page with aria-current="page" (exact match, or section match
+  for non-root urls, e.g. /news/ stays active on /news/2026/...). Ancestors of the
+  current page are highlighted via CSS (:has).
+{%- endcomment -%}
+<ul>
+{%- for item in include.items -%}
+  {%- assign is_current = false -%}
+  {%- unless item.external or item.url contains "#" -%}
+    {%- assign full = prefix | append: item.url -%}
+    {%- assign n = full | size -%}
+    {%- assign head = page.url | slice: 0, n -%}
+    {%- if page.url == full -%}
+      {%- assign is_current = true -%}
+    {%- elsif item.url != "/" and head == full -%}
+      {%- assign is_current = true -%}
+    {%- endif -%}
+  {%- endunless -%}
+  <li{% if item.children %} class="has-children"{% endif %}>
+    {%- if item.url -%}
+    <a href="{% if item.external %}{{ item.url }}{% else %}{{ prefix | append: item.url | relative_url }}{% endif %}"{% if item.external %} rel="noopener"{% endif %}{% if is_current %} aria-current="page" class="active"{% endif %}>{{ item.title[lang] }}</a>
+    {%- else -%}
+    <span class="nav-label" tabindex="0">{{ item.title[lang] }}</span>
+    {%- endif -%}
+    {%- if item.children -%}{% include nav-items.html items=item.children %}{%- endif -%}
+  </li>
+{%- endfor -%}
+</ul>

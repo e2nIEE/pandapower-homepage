@@ -1,0 +1,12 @@
+---
+layout: default
+---
+{% include vars.html %}
+<div class="container prose-wrap">
+  <h1>{{ page.title }}</h1>
+  <ul class="news-list">
+    {% for post in site.posts %}{% if post.lang == lang %}
+    <li><span class="muted">{{ post.date | date: "%Y-%m-%d" }}</span> <a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+    {% endif %}{% endfor %}
+  </ul>
+</div>

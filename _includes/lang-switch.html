@@ -1,0 +1,11 @@
+<div class="lang-switch" role="group" aria-label="{{ t.language }}">
+  {%- for l in site.languages -%}
+    {%- assign code = l[0] -%}
+    {%- if code == lang -%}
+      <span class="lang-current" aria-current="true" lang="{{ code }}">{{ code | upcase }}</span>
+    {%- else -%}
+      {%- include alt-url.html to=code -%}
+      <a href="{{ alt_url | relative_url }}" lang="{{ code }}" hreflang="{{ code }}" title="{{ l[1].name }}">{{ code | upcase }}</a>
+    {%- endif -%}
+  {%- endfor -%}
+</div>
